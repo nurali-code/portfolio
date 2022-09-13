@@ -6,12 +6,11 @@
 
 main
     background-color: #000
-    min-height: 600px
-    margin-bottom: 100px
+    min-height: 640px
     background-image: url('../img/bg.svg')
     background-repeat: no-repeat
     background-position: center center
-    background-size: 1200px auto 
+    background-size: 1200px auto
     position: relative
     z-index: 1
     &::before
@@ -22,13 +21,40 @@ main
         position: absolute
         top: 0
         left: 0
-        background: rgba(0, 0, 0, 0.25)
+        background: rgba(255, 255, 255, 0.1)
         backdrop-filter: blur(30px)
 
-    h1 
+    h1
+        font-weight: 900
+        font-size: 95px
+        line-height: 150%
         font-size: 100px
         color: #fff
         text-align: center
+
+    .upper
+        text-transform: uppercase
+        padding-top: 20px
+        display: block
+
+    .round
+        border: 3px solid #CD9400
+        border-radius: 300px
+        padding: 0px 30px
+        color: #FFF500
+
+.marquee
+    background-color: #FFF500
+    border: 1px solid #000000
+    padding: 13px 0
+    font-weight: 700
+    font-size: 31px
+    line-height: 150%
+    text-align: center
+    text-transform: uppercase
+    display: flex
+    justify-content: space-between
+    margin-bottom: 120px
 
 .item
     width: 49%
