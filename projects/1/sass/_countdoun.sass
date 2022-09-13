@@ -1,0 +1,152 @@
+
+.timeout
+    .container
+        max-width: 750px
+    &__descr
+        font-weight: 400
+        font-size: 32px
+        line-height: 130%
+    &__heading
+        font-weight: 600
+        font-size: 56px
+        line-height: 100%
+
+.timer
+    margin: 10px auto 0px auto
+    font-size: 20px
+    color: #fff
+    cursor: default
+    text-align: center
+    line-height: 40px
+    border-radius: 10px
+    cursor: default
+    .col
+        justify-content: center
+        display: flex
+        flex-wrap: wrap
+        position: relative
+        z-index: 1
+        &::before,
+        &::after
+            content: ''
+            display: block
+            width: 100%
+            height: 0
+            box-shadow: 0px 0px 14px 20px $black
+            position: absolute
+            z-index: 10
+            bottom: 30px
+            left: 0
+        &::after
+            bottom: auto
+            top: 2px
+            box-shadow: 0px 0px 14px 20px $black
+
+    &__text
+        width: 100%
+        font-weight: 400
+        font-size: 24px
+        line-height: 32px
+        position: relative
+        z-index: 2000
+
+.display
+    display: flex
+    justify-content: space-between
+    margin: 0px auto 0px auto
+    color: #ffffff
+    padding: 10px 0px 10px 0px
+
+.symbol
+    width: 82px
+    height: 164px
+    overflow: hidden
+    position: relative
+    z-index: 1
+    &.anim
+        div
+            transform: translateY(0px)
+            transition: transform .7s ease-in-out
+
+.cur,
+.old
+    width: 80px
+    height: 164px
+    font-weight: 500
+    font-size: 140px
+    line-height: 164px
+    text-align: center
+    background-color: transparent
+    border-radius: 3px
+    margin: 0px 1px 0
+    transform: translateY(-164px)
+
+.delimeter
+    width: 9px
+    float: left
+    line-height: 47px
+    margin-left: 0px
+    text-indent: 0px
+
+@media screen and ( max-width: 1170px )
+    .timeout
+        .container
+            max-width: 750px
+        &__descr
+            font-size: 24px
+            line-height: 32px
+        &__heading
+            font-size: 32px
+            line-height: 120%
+            margin-bottom: 18px
+    .cur, .old
+        width: 70px
+        font-size: 120px
+        line-height: 140px
+        height: 140px
+        transform: translateY(-140px)
+
+    .symbol
+        width: 70px
+        height: 140px
+
+    .timer
+        &__text
+            font-size: 20px
+            line-height: 26px
+
+@media screen and ( max-width: 700px )
+    .timeout
+        .container
+            max-width: 750px
+        &__descr
+            font-size: 20px
+            line-height: 26px
+            max-width: 210px
+        &__heading
+            font-size: 24px
+            line-height: 32px
+            margin-bottom: 10px
+    .cur, .old
+        font-weight: 800
+        width: 38px
+        font-size: 56px
+        line-height: 70px
+        height: 70px
+        transform: translateY(-70px)
+
+    .symbol
+        width: 38px
+        height: 70px
+
+    .timer
+        &__text
+            font-size: 16px
+            line-height: 22px
+
+        .col
+            &::before
+                bottom: 15px
+            &::after
+                top: -0px
+                box-shadow: 0px 0px 10px 12px #1c2529

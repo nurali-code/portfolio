@@ -1,0 +1,160 @@
+.start
+    background-color: #fff
+    color: $black
+    padding: 0px 0 120px
+    position: relative
+    z-index: 100
+    &::before
+        position: relative
+        content: ''
+        display: block
+        background-color: $black
+        height: 128px
+        border-radius: 0px 0px 140px 0px
+        margin-bottom: 120px
+
+    .container
+        background-image: url('../img/watermark_dark.svg')
+        background-repeat: no-repeat
+        background-position: right center
+        background-size: 415px auto
+
+    .headline
+        max-width: 560px
+        text-align: left
+        margin-bottom: 16px
+
+    .textline
+        max-width: 570px
+        text-align: left
+        margin-bottom: 60px
+
+    .wrapper
+        max-width: 560px
+
+    .rules
+        font-style: normal
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        opacity: .7
+
+    .col
+        max-width: 450px
+
+    form
+        max-width: 830px
+        .inp-wrap
+            width: 100%
+
+    .cost
+        margin: 0 auto 15px 0
+        &__descr
+            font-weight: 400
+            font-size: 20px
+            opacity: .7
+            line-height: 26px
+        &__price
+            font-weight: 600
+            font-size: 24px
+            line-height: 32px
+
+    .btn
+        margin: 15px 30px 15px 0
+
+    &.type_3
+        padding: 0
+        &::before
+            margin: 0
+        
+        .container
+            padding: 0 15px
+            background-image: none
+
+        .start-img
+            max-width: 40%
+
+    &.type_2
+        .container
+            background-image: none
+        .col
+            margin: 0 auto 0 0
+            .wrapper
+                display: flex
+
+footer
+    background-color: $black
+    text-align: center
+    padding: 40px 0
+    margin: auto 0 0
+    .logo
+        display: block
+        max-width: 200px
+        margin: 0 auto 60px
+
+    .social
+        margin: 0 0 60px
+
+    .copyright
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        opacity: .7
+
+@media screen and ( max-width: 1170px )
+    .start
+        &::before
+            height: 124px
+            z-index: 1
+        .container
+            background-size: 40% auto
+            background-position: center right 40px
+        .headline
+            margin-bottom: 8px !important
+        .headline,
+        .textline
+            max-width: 330px
+        .textline
+            margin-bottom: 30px
+
+        form
+            max-width: 330px
+            .wrapper
+                display: block
+            .rules
+                margin: 0
+                padding-top: 15px
+
+        &.type_2
+            .textline
+                max-width: 570px
+            form
+                max-width: 100%
+
+@media screen and ( max-width: 700px )
+    .start
+        &::before
+            margin-bottom: 60px
+            height: 100px
+        .container
+            background-image: none
+
+        .headline,
+        .textline,
+        form
+            max-width: 100%
+            .col
+                order: 7
+                .wrapper
+                    flex-direction: column-reverse
+
+            .inp-count
+                order: 6
+            .btn
+                width: 100%
+                margin: 0
+
+    footer
+        .social,
+        .logo
+            margin-bottom: 40px
