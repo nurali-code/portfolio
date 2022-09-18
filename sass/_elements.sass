@@ -1,13 +1,7 @@
-*
-    padding: 0
-    margin: 0
-    box-sizing: border-box
-    border: none
-    outline: none
-
 $black: #1C2529
 $black_upper: #374246
 $yelow: #FDD05A
+$blur: blur(0px)
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&&display=swap')
 
 body
@@ -127,12 +121,8 @@ select
 
 .heading
     font-weight: 600
-    font-size: 20px
-    line-height: 22px
-
-textarea
-    height: 116px
-    padding-top: 18px
+    font-size: 40px
+    line-height: 120%
 
 ul
     list-style-type: none
@@ -155,24 +145,42 @@ ul
             background-color: #fff
 
 mark
-    background-color: #474CC6
-    box-shadow: 0px 10px 0px -1px #292D8C
+    background-color: rgba(#474CC6, .5)
+    backdrop-filter: $blur
+    box-shadow: 0px 10px 0px -2px #292D8C
     border-radius: 10px
     display: inline-block
-    padding: 0 10px
+    padding: 10px 30px
+    position: relative
+    z-index: 1
     color: #fff
+    &::before
+        content: ''
+        display: block
+        width: calc( 100% - 24px )
+        height: calc( 100% - 24px )
+        border-radius: 10px
+        position: absolute
+        top: 11px
+        left: 12px
+        border: 2px solid rgba(#292D8C, .5)
 
 .green
-    background-color: #00E676
-    box-shadow: 0px 10px 0px -1px #008343
-
-
+    background-color: rgba(#69ffb7, .5)
+    backdrop-filter: $blur
+    box-shadow: 0px 10px 0px -2px #016e39
+    &::before
+        border-color: #005e30
 
 @keyframes fade
     0%
         opacity: 1
     100%
         opacity: 0
+
+@media screen and ( max-width: 1500px )
+    .container
+        max-width: 1100px
 
 @media screen and ( max-width: 1170px )
     .container
