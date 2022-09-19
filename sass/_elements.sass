@@ -1,7 +1,7 @@
 $black: #1C2529
 $black_upper: #374246
 $yelow: #FDD05A
-$blur: blur(20px)
+$blur: blur(0px)
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&&display=swap')
 
 body
@@ -91,11 +91,11 @@ section
         background-color: transparent
         display: inline-block
         font-weight: 400
-        font-size: 16px
-        padding: 15px 25px 14px 60px
+        font-size: 18px
+        padding: 16px 25px 16px 65px
         margin: 0 0px 10px 10px
-        background-size: 30px 30px 
-        background-position: center left 16px
+        background-size: 33px 33px 
+        background-position: center left 19px
         background-repeat: no-repeat
         &.lp 
             background-color: #A360AC
@@ -155,8 +155,8 @@ select
     line-height: 120%
 
 .sr
-    font-size: 14px
-    padding: 11px 26px 10px 50px
+    font-size: 16px
+    padding: 13px 26px 13px 50px
     background-position: center left 16px
     background-size: 23px 23px
     background-repeat: no-repeat
@@ -228,6 +228,11 @@ mark
 @media screen and ( max-width: 1500px )
     .container
         max-width: 1100px
+
+    .btn 
+        &-flt
+            font-size: 14px
+            padding: 14px 25px 14px 60px
 
 @media screen and ( max-width: 1170px )
     .container

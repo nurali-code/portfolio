@@ -110,7 +110,7 @@ main
         height: 100%
         z-index: 1000
         color: #fff
-        background-color: rgba(0, 0, 0, .9)
+        background-color: rgba(0, 0, 0, .95)
         border: 10px solid #8C3AAA
         padding: 40px 40px
         border-radius: 30px
@@ -135,7 +135,7 @@ main
         font-weight: 500
         font-size: 18px
         line-height: 150%
-        margin-bottom: 6px
+        margin-bottom: 10px
 
     &__text
         display: block
@@ -153,11 +153,27 @@ main
             transform: translateY(0)
 
 .filter
-    max-width: 500px
+    padding: 70px 0 0
+    width: 43%
     display: flex
     align-items: center
     flex-wrap: wrap
     justify-content: flex-end
+    position: relative
+    z-index: 1
+    &::before
+        content: ''
+        display: block
+        width: calc( 100% + 100px )
+        height: 400px
+        position: absolute
+        z-index: -1
+        top: 0px
+        right: -100px
+        border-radius: 30px
+        background: rgba(gray, 0.6)
+        backdrop-filter: $blur
+
     &-btn
         background-color: transparent
         color: #000
@@ -179,27 +195,29 @@ main
     .container
         background-image: url('../img/bg-3.svg')
         background-repeat: no-repeat
-        background-position: top 30px right 100px
-        padding: 140px 20px 60px
+        background-position: top 50px right 100px
+        padding: 70px 0px 60px
         position: relative
         z-index: 1
 
+    .heading
+        width: 55%
+        padding: 70px 0 0
+        margin-bottom: 0
+        position: relative
+        z-index: 1
         &::before
             content: ''
             display: block
-            width: 1600px
+            width: calc( 100% + 100px )
             height: 400px
             position: absolute
             z-index: -1
-            top: 60px
-            left: 50%
-            transform: translateX(-50%)
+            top: 0px
+            left: -100px
             border-radius: 30px
             background: rgba(255, 245, 0, 0.6)
             backdrop-filter: $blur
-
-    .heading
-        margin-bottom: 0
 
     .wrap
         display: flex
@@ -223,6 +241,19 @@ main
             padding: 40px 0 0
             font-size: 72px
 
+    .filter
+        padding: 50px 0 0
+        &::before
+            width: calc(100% + 50px)
+            right: -50px
+
+    .projects
+        .heading
+            padding: 50px 0 0
+            &::before
+                width: calc(100% + 50px)
+                left: -50px
+
 @media screen and ( max-width: 1200px )
     main
         h1
@@ -230,6 +261,30 @@ main
 
     .item
         width: 100%
+
+    .filter
+        display: block
+        width: 100%
+        padding: 40px 
+        &::before
+            width: 100%
+            height: 100%
+            left: 0
+
+    .projects
+        .container
+            padding: 30px 20px 0
+        &-wrap
+            display: block
+        .heading
+            width: 100%
+            display: block
+            padding: 40px 40px 80px
+            margin-bottom: 20px
+            &::before
+                width: 100%
+                height: 100%
+                left: 0
 
 @media screen and ( max-width: 700px )
     main
