@@ -52,7 +52,7 @@ main
     .round
         display: inline-block
         font-style: normal
-        // border: 3px solid #FFF500
+        border: 3px solid #FFF500
         border-radius: 300px
         padding: 0px 30px
         color: #FFF500
@@ -87,20 +87,20 @@ main
         margin: 0
 
 .item
-    width: 49.5%
+    width: 49%
     margin: 0 0 20px
-    border-radius: 10px
+    border-radius: 30px
     position: relative
     z-index: 1
     overflow: hidden
     transition: all ease .3s
-    border: 1px solid transparent
+    // border: 1px solid transparent
     &:hover
         opacity: 1
 
     img
         object-fit: cover
-        border-radius: 10px
+        border-radius: 30px
 
     &-body
         position: absolute
@@ -109,44 +109,44 @@ main
         width: 100%
         height: 100%
         z-index: 1000
+        color: #fff
         background-color: rgba(0, 0, 0, .9)
-        padding: 50px 50px
-        border-radius: 10px
+        border: 10px solid #8C3AAA
+        padding: 40px 40px
+        border-radius: 30px
         visibility: hidden
         opacity: 0
         transform: translateY(50px)
         transition: all ease .3s
-        color: #fff
 
     &-actions
         position: absolute
-        left: 50px
+        left: 30px
         bottom: 50px
-        .btn 
-            margin-right: 20px
+        .btn
+            margin-right: 15px
 
     &__heading
         font-weight: 600
-        font-size: 30px
+        font-size: 24px
         margin: 0 0 10px
 
     &__subheading
         font-weight: 500
         font-size: 18px
         line-height: 150%
-        margin-bottom: 8px
+        margin-bottom: 6px
 
     &__text
         display: block
         font-weight: 300
         font-size: 16px
         line-height: 150%
-        margin: 0 0 15px
+        margin: 0 0 20px
 
     .btn
 
     &:hover
-        border-color: #eee
         .item-body
             visibility: visible
             opacity: 1
