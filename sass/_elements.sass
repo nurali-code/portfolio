@@ -1,7 +1,7 @@
 $black: #1C2529
 $black_upper: #374246
 $yelow: #FDD05A
-$blur: blur(0px)
+$blur: blur(20px)
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&&display=swap')
 
 body
@@ -43,9 +43,9 @@ section
     display: inline-block
     text-align: center
     color: $black
-    padding: 15px 20px
-    background-color: $yelow
-    border-radius: 6px
+    padding: 20px 20px 19px
+    background-color: #fff
+    border-radius: 50px
     min-width: 240px
     span
         display: block
@@ -121,8 +121,24 @@ select
 
 .heading
     font-weight: 600
-    font-size: 40px
+    font-size: 96px
     line-height: 120%
+
+.sr
+    padding: 13px 26px 13px 50px
+    background-position: center left 16px
+    background-size: 24px 24px
+    background-repeat: no-repeat
+    display: inline-block
+    border-radius: 30px
+    margin: 0 10px 10px 0
+    &.code
+        background-image: url('../img/code.svg')
+        background: #008A47
+    &.design
+        color: #000
+        background-image: url('../img/design.svg')
+        background: #FFF500
 
 ul
     list-style-type: none
