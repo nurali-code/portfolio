@@ -15,18 +15,21 @@
 main
     background-color: #000
     min-height: 650px
-    background-image: url('../img/bg.svg')
+    // background-image: url('../img/bg.svg')
     background-repeat: no-repeat
     background-position: bottom 20px center
     background-size: 1400px auto
     position: relative
-    z-index: 1
     padding: 0 0 60px
+    overflow: hidden
+    z-index: 1
+
     &::before
         content: ''
         display: block
         width: 100%
         height: 100%
+        z-index: 1
         position: absolute
         top: 0
         left: 0
@@ -57,6 +60,66 @@ main
         padding: 0px 30px
         color: #FFF500
         // transform: rotate(1deg)
+
+.shapes
+    width: 100%
+    height: 100%
+    max-width: 1400px
+    transform: translateX(-50%)
+    top: 0
+    left: 50%
+    z-index: -1000
+    position: absolute
+    .shp
+        border-radius: 50%
+        position: absolute
+        &::before
+            content: ''
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            position: absolute
+            top: 0
+            left: 0
+            animation: fade 3s ease-in-out infinite alternate
+
+    .shape
+        width: 348px
+        height: 348px
+        background: linear-gradient(180deg, #FF0000 0%, #CD9400 100%)
+        top: 200px
+        left: 100px
+        // animation: shape 16s ease-in-out infinite alternate
+        &::before
+            background: linear-gradient(180deg, #CD9400 0%, #FF0000 100%)
+
+        &_2
+            width: 200px
+            height: 200px
+            top: 120px
+            left: 250px
+            animation: shape 8s ease-in-out infinite alternate
+            background: linear-gradient(180deg, #00E676 0%, #CD9400 57.29%)
+            &::before
+                background: linear-gradient(180deg, #CD9400 0%, #00E676 57.29%)
+        &_3
+            width: 348px
+            height: 348px
+            bottom: 180px
+            right: 100px
+            animation: shape 16s ease-in-out infinite alternate
+            background: linear-gradient(180deg, #00E676 0%, #CD9400 57.29%)
+            &::before
+                background: linear-gradient(180deg, #CD9400 0%, #00E676 57.29%)
+        &_4
+            width: 220px
+            height: 220px
+            bottom: 100px
+            right: 260px
+            animation: shape 8s ease-in-out infinite alternate reverse
+            background: linear-gradient(180deg, #FF0000 0%, #CD9400 100%)
+            &::before
+                background: linear-gradient(180deg, #CD9400 0%, #FF0000 100%)
 
 .marquee
     background-color: #FFF500
@@ -89,7 +152,7 @@ main
 .item
     width: 49%
     margin: 0 0 20px
-    border-radius: 30px
+    border-radius: 20px
     position: relative
     z-index: 1
     overflow: hidden
@@ -99,8 +162,11 @@ main
         opacity: 1
 
     img
+        transition: all ease .3s
         object-fit: cover
-        border-radius: 30px
+        height: 100%
+        border: 2px solid #8C3AAA
+        border-radius: 20px
 
     &-body
         position: absolute
@@ -111,12 +177,11 @@ main
         z-index: 1000
         color: #fff
         background-color: rgba(0, 0, 0, .95)
-        border: 10px solid #8C3AAA
         padding: 40px 40px
-        border-radius: 30px
+        border-radius: 20px
         visibility: hidden
         opacity: 0
-        transform: translateY(50px)
+        transform: scale(.94)
         transition: all ease .3s
 
     &-actions
@@ -144,13 +209,17 @@ main
         line-height: 150%
         margin: 0 0 20px
 
-    .btn
+    .cancel
+        display: none
 
     &:hover
+        img
+            transform: scale(.94)
+
         .item-body
             visibility: visible
             opacity: 1
-            transform: translateY(0)
+            transform: scale(1)
 
 .filter
     padding: 70px 0 0
@@ -170,9 +239,22 @@ main
         z-index: -1
         top: 0px
         right: -100px
-        border-radius: 30px
-        background: rgba(gray, 0.6)
+        border-radius: 20px
+        background: rgba(#00E676, 0.6)
         backdrop-filter: $blur
+
+    &::after
+        content: ''
+        display: block
+        width: 400px
+        height: 400px
+        top: 110%
+        left: 50%
+        margin-left: -200px
+        background-color: #000
+        border-radius: 50%
+        position: absolute
+        z-index: -100
 
     &-btn
         background-color: transparent
@@ -193,7 +275,7 @@ main
         align-items: center
 
     .container
-        background-image: url('../img/bg-3.svg')
+        // background-image: url('../img/bg-3.svg')
         background-repeat: no-repeat
         background-position: top 50px right 100px
         padding: 70px 0px 60px
@@ -203,9 +285,9 @@ main
     .heading
         width: 55%
         padding: 70px 0 0
-        margin-bottom: 0
         position: relative
         z-index: 1
+        margin-bottom: 0
         &::before
             content: ''
             display: block
@@ -215,9 +297,22 @@ main
             z-index: -1
             top: 0px
             left: -100px
-            border-radius: 30px
+            border-radius: 20px
             background: rgba(255, 245, 0, 0.6)
             backdrop-filter: $blur
+
+        &::after
+            content: ''
+            display: block
+            width: 400px
+            height: 400px
+            top: 110%
+            left: 60%
+            margin-left: -200px
+            background-color: #000
+            border-radius: 50%
+            position: absolute
+            z-index: -100
 
     .wrap
         display: flex
@@ -255,47 +350,156 @@ main
                 left: -50px
 
 @media screen and ( max-width: 1200px )
+    #cancel
+        display: block
+        text-align: center
+        padding: 10px
+        font-size: 20px
+        color: #fff
+        background-color: transparent
+        position: fixed
+        top: 10px
+        right: 20px
+        z-index: 99999999
+    
     main
+        min-height: 550px
         h1
-            font-size: 74px
+            font-size: 70px
+
+        .upper
+            padding-top: 10px
+
+    .shapes
+        .shape
+            top: 100px
+            &_3,
+            &_4
+                display: none
+                animation: none
 
     .item
         width: 100%
+        overflow: visible
+
+        img
+            border: none
+
+        &-body
+
+        &-active
+            position: relative
+            z-index: 999999999
+            .item
+                &-body
+                    padding: 80px 20px 30px
+                    position: fixed
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    z-index: 9999999
+                    border-radius: 0
+                    opacity: 1
+                    visibility: visible
+                    transform: none
+
+                &__text
+                    margin-bottom: 30px
+
+                &__subheading
+                    padding-top: 30px
+                    border-top: 1px solid #eee
+
+                &-actions
+                    width: 85%
+                    text-align: center
+                    .btn
+                        margin: 0 0 10px
 
     .filter
         display: block
         width: 100%
-        padding: 40px 
+        padding: 40px
         &::before
             width: 100%
             height: 100%
             left: 0
 
+        &::after
+            display: none
+
     .projects
         .container
-            padding: 30px 20px 0
+            padding: 30px 15px 0
+
         &-wrap
             display: block
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                width: 300px
+                height: 300px
+                border-radius: 50%
+                background-color: #000
+                position: absolute
+                z-index: -1
+                right: -150px
+
         .heading
             width: 100%
             display: block
             padding: 40px 40px 80px
-            margin-bottom: 20px
+            margin-bottom: 10px
             &::before
                 width: 100%
                 height: 100%
                 left: 0
 
+            &::after
+                display: none
+
 @media screen and ( max-width: 700px )
     main
-        min-height: 600px
+        min-height: unset
         background-position: bottom left 100px
         h1
+            padding: 25px 0 0
             font-size: 52px
             text-align: left
 
         .upper
-            padding-top: 0px
+            padding-top: 0
+
+        .round
+            font-size: 60px
+            padding: 5px 30px
+            margin-top: 8px
+
+    .marquee
+        li
+            font-size: 18px
+            padding-left: 10px
+
+    .projects
+        &-wrap
+            margin-bottom: 30px
+
+        .container
+            padding: 20px 15px
+
+        .heading
+            font-size: 50px
+            padding: 30px 30px 40px
+            // margin-bottom: 20px
+            &::after
+                display: none
+
+    .filter
+        padding: 40px 20px
+        &::after
+            display: none
 
 @media screen and ( max-width: 360px )
     main
