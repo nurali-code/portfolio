@@ -89,7 +89,7 @@ main
         background: linear-gradient(180deg, #FF0000 0%, #CD9400 100%)
         top: 200px
         left: 100px
-        // animation: shape 16s ease-in-out infinite alternate
+        animation: shape 12s ease-in-out infinite alternate-reverse
         &::before
             background: linear-gradient(180deg, #CD9400 0%, #FF0000 100%)
 
@@ -99,9 +99,9 @@ main
             top: 120px
             left: 250px
             animation: shape 8s ease-in-out infinite alternate
-            background: linear-gradient(180deg, #00E676 0%, #CD9400 57.29%)
+            background: linear-gradient(180deg, #00E676 0%, #CD9400 52%)
             &::before
-                background: linear-gradient(180deg, #CD9400 0%, #00E676 57.29%)
+                background: linear-gradient(180deg, #00E676 0%, #FF0000 70%)
         &_3
             width: 348px
             height: 348px
@@ -221,6 +221,10 @@ main
                 visibility: visible
                 opacity: 1
                 transform: scale(1)
+
+    @media screen and ( min-width: 700px )
+        .btn-flt
+            color: #fff
 
 .filter
     padding: 70px 0 0
@@ -357,7 +361,7 @@ main
             font-size: 70px
 
         .upper
-            padding-top: 10px
+            padding-top: 20px
 
     .shapes
         .shape
@@ -368,43 +372,13 @@ main
                 animation: none
 
     .item
+        max-width: 800px
+        margin: 0 auto 30px
         width: 100%
         overflow: visible
 
         img
             border: none
-
-        &-body
-            width: calc( 100% - 74px )
-            padding: 80px 10px 30px 0
-            position: fixed
-            top: 0
-            left: auto
-            right: 0
-            height: 100%
-            z-index: 9999999
-            border-radius: 0
-
-        &-actions
-            width: 85%
-            text-align: center
-            .btn
-                margin: 0 0 10px
-
-        &__text
-            margin-bottom: 30px
-        &__subheading
-            padding-top: 30px
-            border-top: 1px solid #eee
-
-        &-active
-            position: relative
-            z-index: 999999999
-            .item
-                &-body
-                    opacity: 1
-                    visibility: visible
-                    transform: none
 
     .filter
         display: block
@@ -453,9 +427,47 @@ main
     .item
         margin-bottom: 10px
         img
-            height: unset 
+            height: unset
 
             border-radius: 0
+
+        &-body
+            width: calc( 100% - 35px )
+            background-color: rgba(0,0,0,.7)
+            padding: 80px 10px 30px 40px
+            position: fixed
+            top: 0
+            left: auto
+            right: 0
+            height: 100%
+            z-index: 9999999
+            border-radius: 0
+            backdrop-filter: $blur
+            transition: opacity .4s ease, transform .4s ease, visibility .2s ease
+            transform: translateX(100px)
+
+        &-actions
+            width: 85%
+            text-align: center
+            .btn
+                margin: 0 0 10px
+
+        &__text
+            margin-bottom: 30px
+
+        &__subheading
+            padding-top: 30px
+            border-top: 1px solid #eee
+
+        &-active
+            position: relative
+            z-index: 999999999
+            .item
+                &-body
+                    transition: opacity .1s ease, transform .4s ease, visibility .2s ease
+                    opacity: 1
+                    visibility: visible
+                    transform: translateX(0)
 
     main
         min-height: unset
@@ -504,19 +516,23 @@ main
             margin-bottom: 30px
             &::before
                 display: none
-        
-        .wrap 
+
+        .wrap
             display: block
 
         .container
             padding: 20px 10px 20px 66px
 
         .heading
-            font-size: 50px
+            font-family: 'Press Start 2P', cursive
+            margin: 0 0 25px
+            font-size: 42px
             padding: 0
             color: #fff
+            
             &::before
                 background-color: transparent
+            
             &::after
                 display: none
 

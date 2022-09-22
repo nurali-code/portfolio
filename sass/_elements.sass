@@ -3,6 +3,7 @@ $black_upper: #374246
 $yelow: #FDD05A
 $blur: blur(10px)
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap')
 
 body
     background-color: #fff
@@ -110,7 +111,7 @@ section
             background-size: 60%
             background-position: center center
             background-repeat: no-repeat
-        
+
         &.lp
             background-color: rgba(#FFF500, .5)
             &::before
@@ -269,7 +270,9 @@ mark
     .btn
         &-flt
             font-size: 14px
-            padding: 14px 25px 14px 60px
+            padding: 16px 20px 16px 58px
+            &::before
+                left: 8px
 
 @media screen and ( max-width: 1200px )
     mark
@@ -298,9 +301,10 @@ mark
     .btn
         &-flt
             margin: 0 0 10px
-            padding: 12px 20px 12px 40px
+            padding: 10px 20px 10px 40px
             background-size: 26px 26px
             color: #fff
+            border-color: #fff
             &::before
                 width: 29px
                 height: 29px
