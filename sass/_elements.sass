@@ -95,23 +95,42 @@ section
         font-size: 18px
         padding: 16px 25px 16px 65px
         margin: 0 0px 10px 10px
-        background-size: 33px 33px
-        background-position: center left 19px
-        background-repeat: no-repeat
+        color: #000
+        position: relative
+        &::before
+            content: ''
+            display: inline-block
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 11px
+            background-size: 60%
+            background-position: center center
+            background-repeat: no-repeat
         &.lp
-            background-color: #A360AC
-            background-image: url('../img/web.svg')
+            background-color: rgba(#FFF500, .5)
+            &::before
+                background-color: #FFF500
+                background-image: url('../img/web.svg')
         &.im
-            background-color: #D82D7E
-            background-image: url('../img/cart.svg')
+            background-color: rgba(#D82D7E, .5)
+            &::before
+                background-color: #D82D7E
+                background-image: url('../img/cart.svg')
         &.kw
-            color: #000
-            background-color: #FA8F21
-            background-image: url('../img/real-estate.svg')
+            background-color: rgba(#FA8F21, .5)
+            &::before
+                background-color: #FA8F21
+                background-image: url('../img/real-estate.svg')
+
         &.ok
-            color: #000
-            background-color: #40B3E0
-            background-image: url('../img/key.svg')
+            background-color: rgba(#40B3E0, .5)
+            &::before
+                background-color: #40B3E0
+                background-image: url('../img/key.svg')
 
 strong, b
     font-weight: 700
@@ -178,16 +197,6 @@ ul
         padding-left: 30px
         margin: 0 0 10px
         position: relative
-        &::before
-            content: ''
-            display: inline-block
-            position: absolute
-            top: 13px
-            left: 14px
-            width: 2px
-            height: 2px
-            border-radius: 50%
-            background-color: #fff
 
 mark
     background-color: rgba(#474CC6, .5)
@@ -272,16 +281,21 @@ mark
 @media screen and ( max-width: 700px )
     body
         background-color: #000
-        color: #fff 
+        color: #fff
 
     .btn
         &-flt
-            padding: 14px 20px 14px 55px
+            margin: 0 0 10px
+            padding: 10px 20px 10px 42px
             background-size: 26px 26px
+            color: #fff
+            &::before
+                width: 29px
+                height: 29px
+                left: 6px
 
     .container
-        padding: 0 15px 0 80px
-       
+        padding: 0 10px 0 74px
 
     ol
         &.styled
