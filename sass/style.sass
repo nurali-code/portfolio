@@ -483,10 +483,11 @@ main
         display: none
 
     .marquee
+        padding: 10px 0 10px
         width: 110vh
         position: fixed
         bottom: -60px
-        left: 10px
+        left: 6px
         z-index: 100
         transform-origin: 0% 0%
         transform: rotate(-90deg)
@@ -496,18 +497,19 @@ main
         li
             font-weight: 400
             font-size: 18px
-            padding-left: 10px
+            padding: 0 20px
 
     .projects
         &-wrap
             margin-bottom: 30px
             &::before
                 display: none
+        
         .wrap 
             display: block
 
         .container
-            padding: 20px 10px 20px 74px
+            padding: 20px 10px 20px 66px
 
         .heading
             font-size: 50px
@@ -519,7 +521,7 @@ main
                 display: none
 
     .filter
-        display: flex
+        display: block
         padding: 0
         background-color: transparent
         &::before
