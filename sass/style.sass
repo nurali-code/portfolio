@@ -129,7 +129,6 @@ main
     position: relative
     display: flex
     overflow: hidden
-    gap: 1rem
     &-content
         // text-transform: uppercase
         display: flex
@@ -329,7 +328,7 @@ main
         transform: translateX(0)
 
     to
-        transform: translateX(calc(-100% - 1rem))
+        transform: translateX(calc(-100%))
 
 @media screen and ( max-width: 1500px )
     main
@@ -499,7 +498,7 @@ main
         width: 110vh
         position: fixed
         bottom: -60px
-        left: 6px
+        left: 7px
         z-index: 100
         transform-origin: 0% 0%
         transform: rotate(-90deg)
@@ -509,7 +508,12 @@ main
         li
             font-weight: 400
             font-size: 18px
-            padding: 0 20px
+            padding: 0
+            // padding: 0 15px
+            &::before
+                content: '*'
+                display: inline-block
+                margin: 0 20px
 
     .projects
         &-wrap
