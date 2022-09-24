@@ -710,7 +710,7 @@ mark::before {
     left: 10px;
   }
   .container {
-    padding: 0 10px 0 66px;
+    padding: 0 10px 0 58px;
   }
   ol.styled {
     padding: 16px 16px 16px 42px;
@@ -765,10 +765,15 @@ header .socials img {
 @media screen and (max-width: 700px) {
   header {
     border-bottom: 1px solid #fff;
-    padding: 16px 0;
+    width: -webkit-calc(100% + 20px);
+    width: -moz-calc(100% + 20px);
+    width: calc(100% + 20px);
+    position: relative;
+    left: -10px;
+    padding: 16px 10px;
   }
   header .logo {
-    font-size: 17px;
+    font-size: 15px;
     max-width: 100px;
     font-style: italic;
     font-weight: 200;
@@ -791,8 +796,8 @@ header .socials img {
   header .menu {
     display: inline-block;
     vertical-align: middle;
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
     margin: 0;
     opacity: 1 !important;
     background-color: transparent;
@@ -820,7 +825,7 @@ header .socials img {
   }
   header .menu span {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 0;
     display: block;
     width: 35%;
@@ -2072,11 +2077,11 @@ main .round {
     padding: 0;
     z-index: unset;
   }
-  main .container {
-    z-index: unset;
-  }
   main::before {
     display: none;
+  }
+  main .container {
+    z-index: unset;
   }
   main h1 {
     padding: 25px 0 0;
@@ -2102,7 +2107,7 @@ main .round {
     width: 110vh;
     position: fixed;
     bottom: -60px;
-    left: 7px;
+    left: 4px;
     z-index: 100;
     -webkit-transform-origin: 0% 0%;
        -moz-transform-origin: 0% 0%;
@@ -2120,7 +2125,7 @@ main .round {
   }
   .marquee li {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     padding: 0;
   }
   .marquee li::before {
@@ -2138,7 +2143,7 @@ main .round {
     display: block;
   }
   .projects .container {
-    padding: 20px 10px 20px 66px;
+    padding: 20px 10px 20px 58px;
   }
   .projects .heading {
     font-family: "Press Start 2P", cursive;
