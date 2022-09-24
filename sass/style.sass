@@ -15,7 +15,6 @@
 main
     background-color: #000
     min-height: 650px
-    // background-image: url('../img/bg.svg')
     background-repeat: no-repeat
     background-position: bottom 20px center
     background-size: 1400px auto
@@ -323,7 +322,49 @@ main
         flex-wrap: wrap
         justify-content: space-between
 
-@keyframes scroll
+.info
+    top: 0
+    right: 0
+    opacity: 0
+    z-index: 99
+    position: fixed
+    min-height: 110vh
+    overflow-y: scroll
+    visibility: hidden
+    backdrop-filter: $blur
+    width: calc( 100% - 35px )
+    transform: translateX(100px)
+    padding: 80px 10px 20px 31px
+    background-color: rgba(0,0,0,.7)
+    transition: opacity .4s ease, transform .4s ease, visibility .2s ease
+    img
+        max-width: 100%
+        display: block
+        margin: 0 auto 15px
+        // height: 300px
+        object-fit: cover
+        border-radius: 30px
+        box-shadow: 0 10px 25px -20px rgba(255, 255, 255, .5)
+
+    &__heading
+        width: 90%
+        font-size: 20px
+        font-weight: 600
+        margin: 0 auto 8px
+
+    &__text
+        width: 90%
+        font-size: 16px
+        font-weight: 200
+        line-height: 120%
+        margin: 0 auto 10px
+
+    &.active
+        opacity: 1
+        visibility: visible
+        transform: translateX(0)
+
+@keyframes scrolle
     from
         transform: translateX(0)
 
@@ -414,11 +455,7 @@ main
             display: block
             padding: 40px 40px 80px
             margin-bottom: 10px
-            &::before
-                width: 100%
-                height: 100%
-                left: 0
-
+            &::before,
             &::after
                 display: none
 
@@ -471,6 +508,9 @@ main
     main
         min-height: unset
         padding: 0
+        z-index: unset
+        .container
+            z-index: unset
         &::before
             display: none
 
@@ -494,7 +534,7 @@ main
         display: none
 
     .marquee
-        padding: 10px 0 10px
+        padding: 9px 0 9px
         width: 110vh
         position: fixed
         bottom: -60px
@@ -530,13 +570,13 @@ main
         .heading
             font-family: 'Press Start 2P', cursive
             margin: 0 0 25px
-            font-size: 42px
+            font-size: 38px
             padding: 0
             color: #fff
-            
+
             &::before
                 background-color: transparent
-            
+
             &::after
                 display: none
 

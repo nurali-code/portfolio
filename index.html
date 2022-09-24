@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nurali davlatov</title>
 
-    <link rel="stylesheet" href="./css/style.css?ver-7">
+    <link rel="stylesheet" href="./css/style.css?ver-8">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <div class="container">
             <header>
                 <p class="logo">Nurali Davlatov</p>
-                <button class="btn-menu"><span></span></button>
+                <button id="menuBtn" class="menu"><span></span></button>
                 <nav class="socials">
                     <a href="#" target="_blank"><img src="img/vk.svg" alt="vk"></a>
                     <a href="#" target="_blank"><img src="img/instagram.svg" alt="instagram"></a>
@@ -181,25 +181,53 @@
         </div>
     </div>
 
+    <div class="info" id="info">
+        <img src="img/nurali.jpg" alt="Nurali Davlatov">
+        <p class="info__heading">Обо мне</p>
+        <p class="info__text">
+            Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Над лучше себя раз ему
+            прямо? Ipsum несколько они назад.
+        </p>
+    </div>
+
     <button id="cancel">&#x2715</button>
 
     <script>
         let
             prtItem = document.querySelectorAll('.item'),
             itemAtive = document.querySelector('.item-active'),
-            prtCancel = document.getElementById('cancel');
+            prtCancel = document.getElementById('cancel'),
+            infoSection = document.getElementById('info'),
+            state = false,
+            menuBtn = document.getElementById('menuBtn');
 
         for (let index = 0; index < prtItem.length; index++) {
             prtItem[index].addEventListener('click', () => {
                 prtItem[index].classList.add('item-active');
+                document.body.style.overflow = 'hidden';
                 prtCancel.style.display = "block";
             });
         }
         prtCancel.addEventListener("click", function () {
             itemAtive = document.querySelector('.item-active');
+            document.body.style.overflow = "visible";
             prtCancel.style.display = "none";
-            console.log(itemAtive);
             itemAtive.classList.remove('item-active');
+        });
+        menuBtn.addEventListener("click", function () {
+            if (state === false) {
+                document.body.style.overflow = 'hidden';
+                menuBtn.classList.add('menu-active');
+                infoSection.classList.add('active');
+                menuBtn.style.zIndex = "9999";
+                state = true;
+            } else {
+                menuBtn.classList.remove('menu-active');
+                document.body.style.overflow = 'visible';
+                infoSection.classList.remove('active');
+                menuBtn.style.zIndex = "unset";
+                state = false;
+            }
         })
 
     </script>
