@@ -325,26 +325,26 @@ main
 .info
     top: 0
     right: 0
-    opacity: 0
-    z-index: 99
+    z-index: 999
     position: fixed
     min-height: 110vh
     overflow-y: scroll
-    visibility: hidden
     backdrop-filter: $blur
-    width: calc( 100% - 35px )
-    transform: translateX(100px)
-    padding: 80px 10px 20px 31px
+    width: 100%
+    padding: 0px 10px 20px 10px
     background-color: rgba(0,0,0,.7)
     transition: opacity .4s ease, transform .4s ease, visibility .2s ease
+    opacity: 0
+    visibility: hidden
+    transform: translateX(100px)
     img
-        max-width: 100%
+        max-width: 90%
         display: block
         margin: 0 auto 15px
-        // height: 300px
         object-fit: cover
-        border-radius: 30px
+        border-radius: 0px 0 30px 30px
         box-shadow: 0 10px 25px -20px rgba(255, 255, 255, .5)
+        // height: 300px
 
     &__heading
         width: 90%

@@ -1788,23 +1788,14 @@ main .round {
 .info {
   top: 0;
   right: 0;
-  opacity: 0;
-  z-index: 99;
+  z-index: 999;
   position: fixed;
   min-height: 110vh;
   overflow-y: scroll;
-  visibility: hidden;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  width: -webkit-calc(100% - 35px);
-  width: -moz-calc(100% - 35px);
-  width: calc(100% - 35px);
-  -webkit-transform: translateX(100px);
-     -moz-transform: translateX(100px);
-      -ms-transform: translateX(100px);
-       -o-transform: translateX(100px);
-          transform: translateX(100px);
-  padding: 80px 10px 20px 31px;
+  width: 100%;
+  padding: 0px 10px 20px 10px;
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-transition: opacity 0.4s ease, visibility 0.2s ease, -webkit-transform 0.4s ease;
   transition: opacity 0.4s ease, visibility 0.2s ease, -webkit-transform 0.4s ease;
@@ -1812,16 +1803,23 @@ main .round {
   -moz-transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.2s ease, -moz-transform 0.4s ease;
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.2s ease;
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.2s ease, -webkit-transform 0.4s ease, -moz-transform 0.4s ease, -o-transform 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(100px);
+     -moz-transform: translateX(100px);
+      -ms-transform: translateX(100px);
+       -o-transform: translateX(100px);
+          transform: translateX(100px);
 }
 .info img {
-  max-width: 100%;
+  max-width: 90%;
   display: block;
   margin: 0 auto 15px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
+  -webkit-border-radius: 0px 0 30px 30px;
+     -moz-border-radius: 0px 0 30px 30px;
+          border-radius: 0px 0 30px 30px;
   -webkit-box-shadow: 0 10px 25px -20px rgba(255, 255, 255, 0.5);
      -moz-box-shadow: 0 10px 25px -20px rgba(255, 255, 255, 0.5);
           box-shadow: 0 10px 25px -20px rgba(255, 255, 255, 0.5);
