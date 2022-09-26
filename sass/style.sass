@@ -513,6 +513,9 @@ main
         min-height: unset
         padding: 0
         z-index: unset
+        background: transparent
+        z-index: 1
+        position: relative
         &::before
             display: none
 
@@ -557,23 +560,37 @@ main
             // padding: 0 15px
 
     .projects
+        overflow: visible
+        z-index: 1
         &-wrap
-            margin-bottom: 30px
+            margin-bottom: 0
+            padding: 30px 10px 20px 10px
             &::before
-                display: none
+                background-color: rgba(255, 255, 255, .2)
+                width: 100%
+                height: 200%
+                bottom: 2px
+                left: 0
+                z-index: -1111111
+                border-radius: 50px
 
         .wrap
             display: block
 
         .container
-            padding: 20px 10px 20px 58px
+            padding: 0px 4px 20px 52px
 
         .heading
             font-family: 'Press Start 2P', cursive
-            margin: 0 0 25px
-            font-size: 38px
+            margin: 0 0 10px
+            font-size: 48px
+            text-transform: uppercase
+            // line-height: 150%
+            // background-image: url('../img/bg-font.svg')
+            // background-repeat: no-repeat
+            // background-size: contain
+            // color: transparent
             padding: 0
-            color: #fff
 
             &::before
                 background-color: transparent

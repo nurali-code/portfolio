@@ -302,25 +302,22 @@ mark
 
     .btn
         &-flt
-            display: block
+            display: inline-block
             font-size: 0px
             font-weight: 400
             margin: 0 0 10px
+            border-color: #fff
             color: #fff
             overflow: hidden
-            padding: 23px 26px
-            max-width: 58px
+            padding: 22px 22px
             color: transparent
-            min-height: 47px
             animation: open .8s ease-out forwards
-            animation-delay: 1s
+            background-color: transparent !important
+            // animation-delay: 1s
             &::before
-                width: 32px
-                height: 32px
-                left: 10px
-                // width: 29px
-                // height: 29px
-                // left: 6px
+                width: 29px
+                height: 29px
+                left: 6px
 
             &:nth-of-type(1)
                 animation-delay: 2s
@@ -334,7 +331,7 @@ mark
                 animation-delay: 4s
 
     .container
-        padding: 0 10px 0 58px
+        padding: 0 4px 0 52px
 
     ol
         &.styled
@@ -352,13 +349,13 @@ mark
     0%
         max-width: 58px
         color: transparent
+    
     90%
         color: transparent
 
     100%
         display: inline-block
-        font-size: 15px
+        font-size: 13px
         max-width: 100%
         color: #fff
-        padding: 13px 20px 13px 50px
-        border-color: #fff
+        padding: 10px 10px 10px 40px
