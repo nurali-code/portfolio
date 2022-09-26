@@ -21,9 +21,24 @@ header
             max-width: 30px
 
     @media screen and ( max-width: 700px )
-        border-bottom: 1px solid #fff
-        width: 100%
-        padding: 16px 10px
+        border-bottom: 1px solid rgba(255, 255, 255, .5)
+        width: calc( 100% - 20px )
+        padding: 14px 0px
+        margin-left: 10px
+        position: relative
+
+        &::before
+            content: ''
+            width: 100%
+            width: calc( 100% + 20px )
+            position: absolute
+            background-color: rgba(255, 255, 255, .1)
+            height: 101%
+            bottom: -1px
+            left: -10px
+            right: auto 
+            z-index: -1111111
+        
         .logo
             font-size: 16px
             max-width: 80px
@@ -94,10 +109,13 @@ header
                     top: -7px
 
             &-active
+                background-color: rgba(0, 0, 0, .3)
+                border-radius: 10px
                 &::before
                     opacity: 0
+
                 span
-                    width: 80%
+                    width: 50%
                     top: 50%
                     height: 2px
                     right: 50%
