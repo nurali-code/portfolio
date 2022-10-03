@@ -156,31 +156,28 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/5.jpg" alt="item">
+                    <img src="img/9.jpg" alt="item">
                     <div class="item-body">
-                        <p class="item__heading">Феникс</p>
+                        <p class="item__heading">Kite</p>
                         <p class="item__text">
-                            Попробуй <br>
-                            эмоции на вкус!
+                            KITESURFING TRAINING IN HURGHADA
                         </p>
                         <p class="item__subheading">Проделанная работа</p>
                         <div class="wrapper">
                             <p class="btn-flt cd">Вёрстка</p>
-                            <p class="btn-flt dg">Дизайн</p>
                         </div>
                         <div class="item-actions">
-                            <a href="./projects/fenix/index.html" class="btn">Открыть вёрстку</a>
+                            <a href="./projects/Kite/index.html" class="btn">Открыть вёрстку</a>
                             <a href="#" class="btn-link">Открыть дизайн</a>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/4.jpg" alt="item">
+                    <img src="img/8.jpg" alt="item">
                     <div class="item-body">
-                        <p class="item__heading">Кровля под ключ</p>
+                        <p class="item__heading">Любимая Кухня</p>
                         <p class="item__text">
-                            Комплектуем и монтируем кровли
-                            от идеи и до последнего гвоздя
+                            Запись на встречу с дизайнером
                         </p>
                         <p class="item__subheading">Проделанная работа</p>
                         <div class="wrapper">
@@ -188,7 +185,24 @@
                             <p class="btn-flt dg">Дизайн</p>
                         </div>
                         <div class="item-actions">
-                            <a href="./projects/Кровля/index.html" class="btn">Открыть вёрстку</a>
+                            <a href="./projects//favorite-cuisine/index.html" class="btn">Открыть вёрстку</a>
+                            <!-- <a href="#" class="btn-link">Открыть дизайн</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/10.jpg" alt="item">
+                    <div class="item-body">
+                        <p class="item__heading">MAUNA</p>
+                        <p class="item__text">
+                            CТОЛЬКО ВРЕМЕНИ ЧТОБЫ БЫТЬ ЛУЧШЕ ВПЕРЕДИ
+                        </p>
+                        <p class="item__subheading">Проделанная работа</p>
+                        <div class="wrapper">
+                            <p class="btn-flt cd">Вёрстка</p>
+                        </div>
+                        <div class="item-actions">
+                            <a href="./projects/mauna/index.html" class="btn">Открыть вёрстку</a>
                             <!-- <a href="#" class="btn-link">Открыть дизайн</a> -->
                         </div>
                     </div>
@@ -224,35 +238,38 @@
             infoSection = document.getElementById('info'),
             state = false,
             menuBtn = document.getElementById('menuBtn');
+        if (window.innerWidth == 1200) {
 
-        for (let index = 0; index < prtItem.length; index++) {
-            prtItem[index].addEventListener('click', () => {
-                prtItem[index].classList.add('item-active');
-                document.body.style.overflow = 'hidden';
-                prtCancel.style.display = "block";
-            });
-        }
-        prtCancel.addEventListener("click", function () {
-            itemAtive = document.querySelector('.item-active');
-            document.body.style.overflow = "visible";
-            prtCancel.style.display = "none";
-            itemAtive.classList.remove('item-active');
-        });
-        menuBtn.addEventListener("click", function () {
-            if (state === false) {
-                document.body.style.overflow = 'hidden';
-                menuBtn.classList.add('menu-active');
-                infoSection.classList.add('active');
-                menuBtn.style.zIndex = "9999";
-                state = true;
-            } else {
-                menuBtn.classList.remove('menu-active');
-                document.body.style.overflow = 'visible';
-                infoSection.classList.remove('active');
-                menuBtn.style.zIndex = "unset";
-                state = false;
+            for (let index = 0; index < prtItem.length; index++) {
+                prtItem[index].addEventListener('click', () => {
+                    prtItem[index].classList.add('item-active');
+                    document.body.style.overflow = 'hidden';
+                    prtCancel.style.display = "block";
+                });
             }
-        })
+            prtCancel.addEventListener("click", function () {
+                itemAtive = document.querySelector('.item-active');
+                document.body.style.overflow = "visible";
+                prtCancel.style.display = "none";
+                itemAtive.classList.remove('item-active');
+            });
+            menuBtn.addEventListener("click", function () {
+                if (state === false) {
+                    document.body.style.overflow = 'hidden';
+                    menuBtn.classList.add('menu-active');
+                    infoSection.classList.add('active');
+                    menuBtn.style.zIndex = "9999";
+                    state = true;
+                } else {
+                    menuBtn.classList.remove('menu-active');
+                    document.body.style.overflow = 'visible';
+                    infoSection.classList.remove('active');
+                    menuBtn.style.zIndex = "unset";
+                    state = false;
+                }
+            })
+
+        }
 
     </script>
 
