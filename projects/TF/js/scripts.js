@@ -208,7 +208,7 @@ $(document).ready(function () {
                 })
                 prevValue = timeString
             }
-        } countdown('2022-08-31 00:00:00', document.getElementById('countdown'))
+        } countdown('2028-08-31 00:00:00', document.getElementById('countdown'))
     }
 
     /*---------------------------------------------------end*/
