@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YesPlay</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+
+    <link rel="stylesheet" href="./css/style.css?ver-21311">
+    <link rel="stylesheet" href="./font/stylesheet.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <img src="img/logo.png" alt="logo" class="logo">
+            <h1>
+                sign up and get <br>
+                <mark>100% deposit bonus</mark>
+            </h1>
+            <button class="btn btn-sm" id="btn_open">Sign up</button>
+            <form id="popupp" method="post">
+                <span class="btn-close" id="btn_close">&#x2715</span>
+                <input id="phone" type="tel" inputmode="decimal" alias="numeric" required placeholder="Phone number">
+                <input id="password" type="password" required placeholder="Password">
+                <button class="btn" id="btn">Sign up</button>
+            </form>
+            <img src="./img/player-0.svg" class="player" alt="img">
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                Winners know when to stop.
+                <br>
+                <b>No persons under the age of 18 are permitted to gamble.</b>
+                <br>
+                Toll-free South African responsible gambling
+                programme
+            </p>
+            <p class="right">
+                <b>hotline: </b><a href="tel:+00800006008">0800 006 008</a>. <br>
+                All events are fixed-odds betting games <br>
+                Licensed by the Western Cape Gambling and Racing Board.
+
+            </p>
+        </div>
+    </footer>
+
+    <div class="modal" id="thank-you-message">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&#x2715</button>
+            <img src="img/success-icon.png" alt="img">
+            <h3 class="heading">Thank you for signing up</h3>
+            <p>
+                Now you can visit <a href="https://yesplay.bet">yesplay.bet</a> <br>
+                and start to place bets
+            </p>
+            <a href="https://yesplay.bet" class="btn">Play now</a>
+        </div>
+    </div>
+
+
+    <script src="./js/inputmask.min.js"></script>
+
+    <script>
+        const
+            phone = document.getElementById('phone'),
+            password = document.getElementById('password'),
+            btn_open = document.getElementById('btn_open'),
+            btn_close = document.getElementById('btn_close'),
+            modal_close = document.getElementById('modal-close'),
+            popupp = document.getElementById('popupp'),
+            form = document.querySelector('form'),
+            thankYouMessage = document.querySelector('#thank-you-message');
+
+        modal_close.onclick = () => { thankYouMessage.classList.remove('active') }
+        btn_open.onclick = () => { popupp.classList.add('active') }
+        btn_close.onclick = () => { popupp.classList.remove('active') }
+        let im = new Inputmask("+27-999-99-9999"); im.mask(phone);
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let hyphensRemoved = phone.value.replace(/-/g, '');
+            callAjax('./sender.php', "phone=" + hyphensRemoved + "&password=" + password.value);
+        });
+
+
+        var spl = window.location.search.replace('?', '').split("&");
+        for (i = 0; i < spl.length; i++) {
+            var ar_param = spl[i].split("=");
+            //utm_source utm_medium utm_campaign
+            if (ar_param[0] == "utm_source" || ar_param[0] == "utm_medium" || ar_param[0] == "utm_campaign") {
+                writeCookie(ar_param[0], ar_param[1], 30);
+            }
+        }
+
+        writeCookie('source', GetUserAgentType(), 30);//записываем userAgent
+        function GetUserAgentType() {
+            var ua = window.navigator.userAgent;
+            if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+                return 'tablet';
+            }
+            if (/(Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini))/i.test(ua)) {
+                return 'mobile';
+            }
+            return 'desktop';
+        }
+        function writeCookie(name, val, expires) {
+            var date = new Date;
+            date.setDate(date.getDate() + expires);
+            document.cookie = name + "=" + val + "; path=/; expires=" + date.toUTCString();
+        }
+        function callAjax(url, data) {
+            var xmlhttp;
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = () => {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var r = xmlhttp.response;
+                    if (r == "true") {
+                        thankYouMessage.classList.add('active');
+                    } else {
+                        alert(r);
+                    }
+                    //return xmlhttp.response;
+                }
+            }
+            xmlhttp.open("POST", url, false);
+            xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xmlhttp.send(data)
+        }
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(89925904, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            ecommerce: "dataLayer"
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/89925904" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

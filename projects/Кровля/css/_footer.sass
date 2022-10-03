@@ -1,0 +1,40 @@
+.footer
+    color: #000
+    padding: 30px 0
+    &__tel
+        display: inline-block
+        vertical-align: middle
+        font-weight: 400
+        font-size: 26px
+        color: #000
+        margin-left: 20px
+
+    &-phone
+        text-align: right
+        align-items: center
+        p
+            max-width: 40%
+            display: inline-block 
+
+        a 
+            display: inline-block
+
+    @media screen and ( max-width: 992px )
+        padding: 25px 0
+        .logo
+            width: 100%
+            max-width: 100%
+            margin: 0 auto 20px
+            text-align: center
+
+        &-phone
+            display: block !important
+            margin: 0 auto 
+            text-align: center
+            p 
+                display: block
+                max-width: 400px
+                margin: 0 auto 10px
+
+        &__tel
+            margin: 0

@@ -1,0 +1,170 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap')
+
+body
+    min-height: 100vh
+    color: #fff
+    background-color: #FFCC00
+    background-size: cover
+    background-position: center center
+    background-image: url('../img/bg.svg')
+    background-repeat: no-repeat
+    font-family: 'Open Sans', sans-serif
+
+    // &::-webkit-scrollbar
+    //     width: 14px
+
+    // &::-webkit-scrollbar-track
+    //     background: linear-gradient(157.06deg, #FFDB5B 0%, #E6AC0D 100%)
+    //     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset
+    //     box-shadow: 0 0 2px rgba(112, 112, 112, 0.2) inset
+
+    // &::-webkit-scrollbar-thumb
+    //     background: linear-gradient(157.06deg, #7CE0E1 0%, #279293 100%)
+    //     border-radius: 8px
+    //     &:hover
+    //         background: linear-gradient(157.06deg, #7CE0E1 0%, #279293 100%)
+
+.container
+    width: 100%
+    max-width: 1280px
+    padding: 0 15px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+img
+    max-width: 100%
+
+h2
+    font-family: 'Comic Sans MS', sans-serif
+    font-weight: bold
+    font-size: 40px
+    text-align: center
+    color: #0681A5
+    text-transform: uppercase
+    line-height: 120%
+    margin: 0 0 74px
+    a
+        padding: 8px 0 0
+        float: right
+        font-weight: 500
+        font-size: 12px
+        line-height: 15px
+        text-decoration-line: underline
+        color: #282828
+
+.subheading
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 100%
+    text-align: center
+    color: #0681A5
+
+ul
+    list-style-type: none
+
+a,
+button
+    text-decoration: none
+    color: #1B1B1B
+    transition: all ease .3s
+    &:active
+        transform: scale(.9)
+
+.socials
+    a
+        display: inline-block
+        margin: 0 5px
+        vertical-align: middle
+
+.btn
+    display: inline-block
+    padding: 22px 60px 21px
+    text-transform: uppercase
+    background: #fff
+    overflow: hidden
+    border-radius: 8px
+    font-style: normal
+    font-weight: 900
+    font-size: 25px
+    line-height: 22px
+    color: #0F2335
+    position: relative
+    z-index: 1
+    transition: all .3s ease
+    box-shadow: 0 8px 0px 1px #0F2335
+
+    &:hover,
+    &:active
+        color: #000
+        opacity: 1
+
+    &:active
+        opacity: 1
+        transform: scale(.95)
+
+    &[disabled]
+        color: rgba(0, 0, 0, .4)
+        cursor: unset
+        background-color: #eee
+        animation: none
+
+    &.loading
+        opacity: .8
+        color: transparent
+        &::before
+            content: ''
+            display: block
+            width: 20px
+            height: 20px
+            max-height: 90%
+            background-image: url('../img/ajax-loader.gif')
+            background-size: contain
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::after
+            display: none
+
+.wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+input,
+textarea
+    resize: none
+    display: block
+    width: 100%
+    height: 52px
+    background: #FFFFFF
+    border-radius: 14px
+    font-size: 16px
+    line-height: 18px
+    padding: 0 20px
+    color: #000
+    margin-bottom: 20px
+    &::placeholder
+        color: #BDBDBD
+textarea
+    height: 116px
+    padding-top: 18px
+
+@media screen and ( max-width: 1280px )
+    .container
+        padding: 0 15px
+
+    h2
+        font-size: 20px
+
+    .subheading
+        font-size: 18px

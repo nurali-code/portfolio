@@ -1,0 +1,500 @@
+.modal
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 999999999
+    background-color: rgba(#000, 0.6)
+    padding: 0px
+    box-sizing: border-box
+    &-close
+        display: inline-block
+        position: absolute
+        width: 30px
+        height: 30px
+        top: 10px
+        right: 10px
+        transform: none
+        background-color: transparent
+        background-image: url('../img/icon-close.svg')
+        background-repeat: no-repeat
+        background-size: 50%
+        background-position: center center
+        &:hover
+            opacity: 0.4
+
+    &-content
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background: #FFFFFF
+        width: 1200px
+        max-width: 90%
+        border-radius: 10px
+        padding: 40px 15px 30px
+        overflow-y: scroll
+        max-height: 100vh
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+
+        .heading
+            text-align: center
+            font-weight: normal
+            font-size: 24px
+            line-height: 28px
+            margin-bottom: 20px
+            color: #000
+
+        .subheading
+            font-weight: 500
+            font-size: 18px
+            line-height: 21px
+            margin-bottom: 30px
+            color: #000
+
+        .text
+            text-align: center
+            font-weight: normal
+            font-size: 18px
+            line-height: 21px
+            color: #000000
+
+        p
+            font-weight: normal
+            font-size: 16px
+            margin-bottom: 20px
+            color: #666
+            b
+                color: #574848
+
+        .city
+            &-item
+                font-weight: normal
+                font-size: 16px
+                line-height: 22px
+                text-decoration: underline
+                text-decoration-color: #E5E5E1
+                margin-bottom: 6px
+
+    &-wrap
+        .wrapper
+            align-items: start
+            max-width: 70%
+            flex-wrap: wrap
+            justify-content: space-around
+
+        .language
+            &-item
+                width: 24%
+                position: relative
+                opacity: 1
+                text-align: left
+                img
+                    position: absolute
+                    top: 12px
+                    left: 0
+                    max-width: 21px
+                &.active
+                    .language-label
+                        background-color: #D1E7DD
+
+            &-label
+                min-width: 122px
+                padding: 9px 10px 9px 10px
+                margin-left: 30px
+                display: inline-block
+                text-align: left
+                &:hover
+                    opacity: 1
+                    background-color: #D1E7DD
+
+    &-col
+        p
+            font-weight: normal
+            font-size: 16px
+            line-height: 160%
+            color: #000
+            a
+                text-decoration-line: underline
+                color: #75B798
+
+    &-header
+        background-color: #146C43
+        display: flex
+        justify-content: space-between
+        padding: 11px 54px 11px 30px
+        align-items: center
+        .heading
+            text-align: left
+            font-weight: normal
+            font-size: 24px
+            line-height: 28px
+            color: #FFFFFF
+            margin: 0
+
+        form
+            width: 230px
+            display: flex
+            justify-content: space-between
+
+            input
+                background: #FFFFFF
+                border: 1px solid #DEE2E6
+                box-sizing: border-box
+                border-radius: 4px
+                width: 154px
+                height: 38px
+                margin: 0
+                font-weight: normal
+                font-size: 12px
+                line-height: 14px
+                color: #000
+                padding: 0 25px
+                &::placeholder
+                    color: #ABB5BE
+            button
+                border: 1px solid #FFFFFF
+                box-sizing: border-box
+                border-radius: 4px
+                font-weight: normal
+                font-size: 12px
+                line-height: 14px
+                color: #fff
+                width: 70px
+                height: 37px
+
+    .tab
+        &-btns
+            padding: 0 30px
+            border: 1px solid #E5E5E5
+            .dropdown
+                display: inline-block
+                &-btn
+                    display: none
+                &-content
+                    display: inline-block
+
+        &-btn
+            font-size: 14px
+            line-height: 16px
+            padding: 30px 0
+            margin-right: 30px
+            border-bottom: 2px solid transparent
+            position: relative
+            bottom: -1px
+            &.active
+                border-color: #FD9843 !important
+            &:hover
+                border-color: #8f8f8f
+
+        &-content
+            display: none
+            padding: 30px
+            border-top: 1px solid #E5E5E5
+            max-height: 300px
+            overflow-y: scroll
+            &::-webkit-scrollbar
+                width: 5px
+                position: absolute !important
+                top: 0
+                right: 0
+            &::-webkit-scrollbar-track
+                background: transparent
+            &::-webkit-scrollbar-thumb
+                background: #D8D8D8
+                border-radius: 100px
+                cursor: pointer
+            &::-webkit-scrollbar-thumb:hover
+                background: #555
+
+            &.active
+                display: block
+            p
+                font-size: 14px
+                line-height: 157%
+
+            .wrapper
+                padding: 0
+                flex-wrap: wrap
+                justify-content: start
+
+            .carriers-item
+                display: flex
+                align-items: center
+                width: 24%
+                font-size: 12px
+                line-height: 14px
+                color: #000000
+                margin: 0 0 30px
+                text-align: left
+                img
+                    width: 38px
+                    height: 38px
+                    border: 1px solid #E5E5E5
+                    object-fit: cover
+                    vertical-align: middle
+                    margin-right: 10px
+
+    .sort
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 30px
+        button
+            padding: 0 6px
+            margin: 0 6px 4px 0
+            font-size: 14px
+            line-height: 157%
+            color: #949494
+            text-transform: uppercase
+            &.active
+                background: #D1E7DD
+
+    .automate
+        width: 100%
+        position: relative
+        z-index: 1
+        padding: 18px 0 18px 98px
+        text-align: left
+        font-size: 14px
+        line-height: 22px
+        text-decoration-line: underline
+        color: #75B798
+
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 30px
+            width: 47px
+            height: 47px
+            background-color: #fff
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12)
+            border-radius: 4px
+            background-image: url('../img/settings.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 50%
+
+    &.is-open
+        display: block
+
+    &#modal
+        &-language
+            .modal
+                &-content
+                    width: 1360px
+                    max-width: 100%
+                    padding: 45px 60px
+                    border-radius: 0
+                    background-color: #F7F7F7
+
+        &-form
+            .modal
+                &-content
+                    width: 480px
+
+                    .heading
+                        text-align: center
+                        max-width: 200px
+                        margin: 0 auto 20px
+
+                    p
+                        font-weight: normal
+                        font-size: 18px
+                        line-height: 160%
+                        margin-bottom: 20px
+
+                    input
+                        width: 100%
+
+                    .btn
+                        width: 100%
+                        margin-bottom: 15px
+
+        &-filter
+            .modal
+                &-close
+
+                &-content
+
+        &-carriers
+            // display: block
+            .modal
+                &-close
+                    width: 24px
+                    height: 24px
+                    right: 13px
+                    top: 18px
+                    filter: invert(1) brightness(11)
+                &-content
+                    max-width: 800px
+                    min-height: 530px
+                    padding: 0
+                    border-radius: 5px
+
+    @media screen and ( max-width: 1200px )
+        &-content
+            .text
+                max-width: 600px
+                margin: 0 auto 40px
+        &-wrap
+            .wrapper
+                width: 100%
+                max-width: 100%
+                justify-content: flex-start
+
+            .language
+                &-item
+                    width: 33.333%
+
+        &-col
+            margin-top: 40px
+
+    @media screen and ( max-width: 900px )
+        &#modal
+            &-carriers
+                .modal
+                    &-content
+                        border-radius: 0
+                        max-width: 100%
+                        height: 100%
+                        min-height: unset
+                        max-height: 100vh
+
+        &-header
+            padding: 14px 48px 14px 15px
+            .heading
+                font-size: 15px
+                line-height: 19px
+
+            form
+                position: relative
+                z-index: 1
+                width: 132px
+                input
+                    width: 100%
+                    height: 33px
+                    padding: 0 13px
+                    font-size: 10px
+
+                button
+                    width: 38px
+                    height: 100%
+                    position: absolute
+                    z-index: 100
+                    border: none
+                    top: 0
+                    right: 0
+                    color: transparent
+                    background-image: url('../img/search-icon.svg')
+                    background-repeat: no-repeat
+                    background-position: center center
+                    background-size: 35%
+
+        .tab
+            &-btns
+                position: relative
+                z-index: 1000
+                padding: 0
+                .dropdown
+                    width: 48%
+                    float: right
+                    &-btn
+                        display: inline-block
+                        padding: 25px 0
+                        &::after
+                            right: 30%
+
+                    &-content
+                        display: none
+                        padding: 8px 0
+                        width: 190px
+                        background: #F8F9FA
+                        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1)
+                        border-radius: 0px 0px 5px 5px
+                        position: absolute
+                        top: 100%
+                        right: 0
+                        .tab-btn
+                            width: 100%
+                            text-align: left
+                            padding: 8px 18px
+                            font-weight: normal
+                            font-size: 10px
+                            line-height: 12px
+                            border: none
+                            &.active
+                                text-decoration-line: underline
+                                color: #75B798
+
+            &-btn
+                margin: 0
+                padding: 25px 0
+                width: 48%
+
+            &-content
+                padding: 25px 15px
+                max-height: calc( 100vh - 208px )
+                .carriers-item
+                    width: 50%
+
+        .automate
+            padding: 25px 15px 25px 67px
+            font-size: 12px
+            line-height: 14px
+            &::before
+                width: 35px
+                height: 35px
+                left: 15px
+
+        .sort
+            button
+                width: 8%
+                font-size: 12px
+                line-height: 157%
+                margin: 0 4px 8px 0
+
+    @media screen and ( max-width: 700px )
+        &-content
+            .text
+                max-width: 280px
+                font-size: 12px
+                line-height: 157%
+
+        &-wrap
+            .language
+                &-label
+                    min-width: unset
+                    font-size: 10px
+                    line-height: 12px
+                    margin-left: 20px
+                    padding: 6px 7px 6px 2px
+                    min-width: 60%
+                &-item
+                    margin-bottom: 3px
+                    img
+                        max-width: 18px
+                        top: 5px
+
+        &#modal
+            &-language
+                .modal
+                    &-content
+                        padding: 50px 15px 28px
+
+    @media screen and ( max-width: 370px )
+        &-wrap
+            .language
+                &-label
+                    margin-left: 30px
+                &-item
+                    width: 49%

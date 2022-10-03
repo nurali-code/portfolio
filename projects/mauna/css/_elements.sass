@@ -1,0 +1,420 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+body
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    min-height: 100vh
+    color: #000
+    background-color: #fff
+    font-family: 'Optima Cyr', sans-serif
+
+    &::-webkit-scrollbar
+        width: 10px
+        &-track
+            background: #fff
+        &-thumb
+            border-radius: 10px
+            transition: all ease .3s
+            background: rgba(0, 0, 0, .2)
+            &:hover
+                background: rgba(0, 0, 0, .5)
+
+.container
+    width: 100%
+    max-width: 1390px
+    padding: 0
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+section
+    padding: 160px 0
+
+img
+    max-width: 100%
+
+h1, h2, h3, h4, h5
+    font-family: 'Garamond', serif
+    font-weight: normal
+
+h1
+    text-transform: uppercase
+    font-size: 56px
+    line-height: 130%
+
+h2
+    text-transform: uppercase
+    font-size: 40px
+    line-height: 120%
+
+p
+    font-weight: normal
+    font-size: 20px
+    line-height: 150%
+
+.link
+    text-transform: uppercase
+    font-size: 16px
+    line-height: 150%
+    color: #585858
+    border-bottom: .5px solid #A8A8A8
+    position: relative
+    padding-left: 24px
+    &::before
+        content: ''
+        display: inline-block
+        width: 8px
+        height: 8px
+        position: absolute
+        top: 50%
+        margin-top: -5px
+        left: 0
+        background: #585858
+        border-radius: 50%
+
+button
+    color: #393939
+    background-color: transparent
+
+a
+    color: #000
+    text-decoration: none
+    transition: all ease .3s
+    &:active
+        transform: scale(.95)
+    &:hover
+        opacity: .7
+
+.btn
+    display: inline-block
+    position: relative
+    z-index: 1
+    color: #fff
+    min-width: 88px
+    padding: 0 20px
+    background-color: #2F3B16
+    height: 48px
+    line-height: 48px
+    text-align: center
+    &:hover
+        opacity: .8
+        &::before
+            opacity: 1
+
+    &:active
+        transform: scale(.99)
+        &::before
+            top: 0
+
+    &[disabled]
+        background-color: #C4C4C4
+        cursor: not-allowed
+
+    &.loading
+        cursor: not-allowed
+        color: transparent
+        opacity: .8
+        &::after
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            z-index: -1
+            top: 0
+            left: 0
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 32px 32px
+            background-image: url('../img/progress.gif')
+
+    &-2
+        display: inline-block
+        height: 48px
+        line-height: 48px
+        text-align: center
+        font-size: 12px
+        line-height: 48px
+        color: #A8A8A8
+        text-transform: uppercase
+        border: 1px solid #A8A8A8
+
+    &-search,
+    &-cart,
+    &-menu
+        display: inline-block
+        width: 32px
+        height: 32px
+        background-color: transparent
+        background-position: center center
+        background-size: contain
+        &:hover
+            background-color: rgba(0, 0, 0, .01)
+    &-search
+        background-image: url('../img/search.svg')
+    &-cart
+        background-image: url('../img/bag.svg')
+    &-menu
+        background-image: url('../img/btn-menu.svg')
+
+    &-back
+        display: inline-block
+        text-transform: uppercase
+        padding-left: 32px
+        font-size: 16px
+        line-height: 16px
+        background-image: url('../img/arrow-left.svg')
+        background-repeat: no-repeat
+        background-position: center left
+
+.wrapper
+    display: flex
+    justify-content: start
+    align-items: stretch
+    flex-wrap: wrap
+
+input,
+textarea
+    resize: none
+    display: block
+    width: 100%
+    background-color: transparent
+    border-radius: 0
+    height: 48px
+    border: 1px solid #C4C4C4
+    padding: 0 20px 0
+    font-weight: normal
+    font-size: 14px
+    line-height: 14px
+    color: #3c3e41
+    &::placeholder
+        color: #A8A8A8
+
+textarea
+    padding-top: 10px
+    min-height: 150px
+
+.sort
+    background-image: url('../img/arrow-down.svg')
+    padding-right: 30px
+    background-repeat: no-repeat
+    background-position: top -4px right
+    background-size: 24px 24px
+    position: relative
+    z-index: 1000
+    button
+        font-size: 16px
+        line-height: 16px
+        text-transform: uppercase
+        color: #393939
+    &-btn
+        text-align: left
+        display: inline-block
+        text-transform: uppercase
+        .mobile
+            display: none
+        .ps
+            display: inline
+    &-content
+        display: none
+        padding: 10px
+        position: absolute
+        top: -20px
+        right: 0
+        background-color: #fff
+        box-shadow: 0 4px 20px 0px rgba(0, 0, 0, .1)
+        vertical-align: top
+        button
+            text-transform: capitalize
+            padding: 8px 8px
+            display: block
+            color: #393939
+
+.dropdown
+    display: block
+    margin: 0 0 16px
+    width: 100%
+    border-bottom: 0.5px solid #A8A8A8
+    padding-bottom: 14px
+    &-btn
+        text-transform: uppercase
+        font-size: 16px
+        line-height: 130%
+        width: 100%
+        text-align: left
+        display: block
+        background-image: url('../img/arrow-down.svg')
+        padding: 10px 30px 10px 0
+        background-repeat: no-repeat
+        background-position: center right
+        background-size: 24px 24px
+        position: relative
+
+    &-content
+        display: none
+
+.amount
+    display: flex
+    align-items: center
+    button
+        cursor: pointer
+
+.inp
+    &-radio
+        display: inline-block
+        input
+            display: none
+            &:checked ~ label
+                &.label-color::before
+                    opacity: 1
+
+                &.label-size
+                    opacity: 1
+
+        label
+            display: inline-block
+            cursor: pointer
+
+        .label
+            &-color
+                margin: 0 20px 0 0
+                border-radius: 50%
+                width: 32px
+                height: 32px
+                border: 0.5px solid #585858
+                position: relative
+                z-index: 1
+                &::before
+                    content: ''
+                    opacity: 0
+                    display: block
+                    width: 130%
+                    height: 130%
+                    border-radius: 50%
+                    position: absolute
+                    z-index: 1
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    border: 0.5px solid #585858
+
+                &.color
+                    &_1
+                        background: #F9F9F9
+                    &_2
+                        background: #FD543B
+                    &_3
+                        background: #78FFFF
+
+            &-size
+                opacity: .4
+                width: 80px
+                height: 40px
+                margin-right: 16px
+                font-size: 16px
+                line-height: 40px
+                text-align: center
+                color: #585858
+                border: 1px solid #585858
+
+    &-circle
+        width: 100%
+        margin-bottom: 10px
+        label
+            cursor: pointer
+            display: block
+            font-size: 14px
+            line-height: 130%
+            color: #393939
+            padding: 4px 0 4px 40px
+            position: relative
+            z-index: 1
+            &::before,
+            &::after
+                content: ''
+                display: inline-block
+                width: 20px
+                height: 20px
+                border: 1px solid #A8A8A8
+                border-radius: 50%
+                position: absolute
+                top: 50%
+                margin-top: -10px
+                left: 0
+                transition: all ease .3s
+
+            &::after
+                border-color: #FD543B
+                transform: scale(.3)
+                opacity: 0
+                background-color: #FD543B
+
+        input
+            display: none
+            &:checked ~ label
+                &::after
+                    transform: scale(.6)
+                    opacity: 1
+                &::before
+                    border-color: #FD543B
+
+@media screen and ( max-width: 1600px )
+    .container
+        padding: 0 15px
+        max-width: 1140px
+
+    h1
+        font-size: 46px
+
+    h2
+        font-size: 34px
+
+    p
+        font-size: 18px
+
+    section
+        padding: 100px 0
+
+@media screen and ( max-width: 1200px )
+    .btn
+        &-cart,
+        &-menu,
+        &-search
+            width: 40px
+            height: 40px
+
+    .wrapper
+        justify-content: space-between
+
+    .inp
+        &-radio
+            .label
+                &-size
+                    width: 70px
+                    margin: 0 8px 10px 0
+
+@media screen and ( max-width: 700px )
+    p
+        font-size: 16px
+
+    h1
+        font-size: 36px
+
+    h2
+        font-size: 28px
+
+    section
+        padding: 80px 0
+
+    .container
+        max-width: 400px
+
+    .dropdown
+        &-btn
+            font-size: 14px

@@ -1,0 +1,44 @@
+header
+    padding: 45px 0
+    .logo
+        display: block
+        margin: 0 auto
+
+    .nav
+        position: absolute
+        top: 55px
+        right: 0
+        &__link
+            margin-left: 60px
+
+    @media screen and ( max-width: 1500px  )
+        padding: 25px 0 35px
+        .logo
+            max-width: 130px
+
+        .nav
+            top: 40px
+
+    @media screen and ( max-width: 1200px  )
+        .logo
+            max-width: 120px
+
+        .nav
+            width: 100%
+            position: static
+            text-align: center
+            margin-bottom: 20px
+            &__link
+                margin: 0 30px
+
+    @media screen and ( max-width: 700px  )
+        padding: 40px 0 100px
+
+        .nav
+            margin-bottom: 50px
+            &__link
+                margin: 0
+                &:nth-of-type(2)
+                    margin: 0 25px
+
+            

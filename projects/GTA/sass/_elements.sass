@@ -1,0 +1,260 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$prime: #D1B941
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap')
+
+@font-face
+    font-family: 'Pricedown Rus'
+    src: url('pricedownrus.eot')
+    src: local('pricedownrus'), local('pricedownrus')
+    src: url('pricedownrus.ttf') format('truetype')
+    font-weight: bold
+    font-style: normal
+
+body
+    background-color: #000
+    color: #fff
+    padding-top: 70px
+    font-family: 'Pricedown Rus', sans-serif
+
+.container
+    width: 100%
+    max-width: 1170px
+    padding: 0 15px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+img
+    max-width: 100%
+
+.subheading
+    font-weight: 400
+    font-size: 36px
+    line-height: 34px
+    text-transform: uppercase
+    margin: 0 0 20px
+
+.headline
+    font-weight: 400
+    font-size: 64px
+    line-height: 61px
+    text-transform: uppercase
+    margin: 0 0 20px
+
+a,
+button
+    text-decoration: none
+    color: #fff
+    transition: all ease .3s
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+.btn
+    display: inline-block
+    font-weight: 400
+    font-size: 24px
+    line-height: 23px
+    text-transform: uppercase
+    background-color: transparent
+    padding: 8px 30px
+    border: 1px solid #FFFFFF
+    border-radius: 10px
+    img
+        vertical-align: middle
+        margin-right: 12px
+        max-width: 33px
+        max-height: 33px
+        transition: filter .3s ease
+    &:hover
+        opacity: 1
+        color: #000
+        border-color: #D1B941
+        background-color: #D1B941
+        img
+            filter: brightness(0)
+
+p
+    font-family: 'Montserrat', sans-serif
+
+.wrap, .wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+.wrapper
+    flex-wrap: wrap
+    align-items: flex-start
+
+section
+    padding: 50px 0
+
+ul
+    li
+        list-style-type: none
+
+input,
+select,
+label
+    padding: 10px 0
+    margin-bottom: 20px
+    background-color: transparent
+    color: #000
+    border-bottom: 1px solid #000
+    font-family: 'Montserrat', sans-serif
+    &::placeholder
+        color: #000
+
+.slick
+    &-arrow
+        width: 25px
+        height: 25px
+        background-color: transparent
+        color: transparent
+        position: absolute
+        top: 45%
+        z-index: 10000
+        left: -20px
+        transform: translateY(-50%) scaleX(-1) !important
+        border: none
+        background-image: url('../img/arrow-right.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 24px 24px
+
+        &::before
+            display: none
+
+    &-next
+        transform: translateY(-50%) !important
+        left: auto
+        right: -20px
+
+    &-dots
+        text-align: center
+        padding: 20px 0 0
+        li
+            display: inline-block
+            list-style: none
+            padding: 0 15px
+            button
+                margin: 0
+                width: 15px
+                height: 15px
+                border-radius: 50%
+                background-color: transparent
+                border: 1px solid #FFFFFF
+                color: transparent
+
+            &.slick-active
+                button
+                    background-color: #fff
+                    color: #fff
+
+.policy
+    font-weight: 500
+    font-size: 8px
+    line-height: 10px
+    padding: 2px 0 0 20px
+    border: none
+    position: relative
+
+    &::before
+        content: ''
+        display: block
+        width: 12px
+        height: 12px
+        border-radius: 2px
+        border: 1px solid #000
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 60%
+        position: absolute
+        left: 0
+        top: 0
+
+    &-wrap
+        input
+            position: absolute
+            left: 0
+            top: 0
+            opacity: 0
+            visibility: hidden
+            &:checked ~ label::before
+                background-image: url('../img/check.svg')
+
+.logo
+    img
+        vertical-align: middle
+        display: inline-block
+        margin-right: 6px
+    &__text
+        display: inline-block
+        vertical-align: middle
+        font-weight: 400
+        font-size: 48px
+        line-height: 45px
+        text-transform: uppercase
+
+@media screen and ( max-width: 800px )
+    .btn
+        &-menu
+            display: inline-block
+            width: 34px
+            height: 30px
+            background-color: transparent
+            span
+                display: block
+                width: 100%
+                height: 2px
+                background-color: $prime
+                border-radius: 2px
+                position: relative
+                transition: all ease .3s
+                &::before,
+                &::after
+                    content: ''
+                    display: block
+                    transition: all ease .3s
+                    width: 100%
+                    height: 2px
+                    background-color: $prime
+                    position: absolute
+                    left: 0
+                    top: -9px
+                &::after
+                    top: 9px
+
+            &.active
+                span
+                    background-color: transparent
+                    &::before
+                        width: 100%
+                        top: 50%
+                        // left: 50%
+                        height: 2px
+                        transform: rotate(45deg) translateY(-50%)
+                        background-color: #fff
+                    &::after
+                        background-color: #fff
+                        top: 50%
+                        // left: 50%
+                        transform: translateY(-50%) rotate(-45deg)
+
+@media screen and ( max-width: 700px )
+
+    .headline
+        font-size: 36px
+        line-height: 36px
+        margin-bottom: 15px
+
+    section
+        padding: 40px 0

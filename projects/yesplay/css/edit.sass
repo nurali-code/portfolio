@@ -1,0 +1,56 @@
+.modal
+    &#modal_partners
+        // visibility: visible
+        // opacity: 1
+        display: block
+        .modal
+            &-content
+                // display: flex
+                justify-content: space-between
+                align-items: center
+                flex-direction: row
+                flex-wrap: wrap
+                padding: 30px
+                animation: none
+                .inp-wrap
+                    display: inline-block
+                    width: 45%
+                input
+                    display: none
+                    &:checked ~ label
+                        background-color: #F86523
+                        color: #fff
+                label
+                    cursor: pointer
+                    border-radius: 10px
+                    padding: 20px 10px
+                    box-shadow: 0 2px 1px 3px #0F2335
+
+                    width: 100%
+                    display: block
+                    font-size: 18px
+                    font-weight: bold
+                    text-transform: uppercase
+
+.ball
+    width: 90px
+    height: 90px
+    background-image: url('../img/ball.svg')
+    background-repeat: no-repeat
+    background-color: transparent
+    background-size: contain
+    background-position: center center
+    position: absolute
+    bottom: 25px
+    left: 55%
+    // transform: translateX(-50%)
+    color: #fff
+    font-size: 30px
+    padding: 0 5px 5px 0
+    text-align: center
+    font-weight: bold
+    @media screen and (max-width: 1200px)
+        left: 58%
+        bottom: 30px
+    @media screen and (max-width: 700px)
+        left: 62%

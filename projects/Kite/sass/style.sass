@@ -1,0 +1,959 @@
+$dark: #1E1E1E
+$dark-blue: #07687E
+*
+    margin: 0
+    padding: 0
+    border: 0
+    box-sizing: border-box
+    outline: none
+@mixin placeholder()
+  input::-webkit-input-placeholder
+    @content
+  input:-moz-placeholder
+    @content
+  input::-moz-placeholder
+    @content
+  input:-ms-input-placeholder
+    @content
+@include placeholder()
+    font-weight: 600
+    font-size: 16px
+    line-height: 130%
+    color: #000000
+    font-family: "Montserrat", sans-serif
+textarea::-webkit-input-placeholder
+    font-weight: 600
+    font-size: 16px
+    line-height: 130%
+    color: #000000
+    font-family: "Montserrat", sans-serif
+textarea:-moz-placeholder
+    font-weight: 600
+    font-size: 16px
+    line-height: 130%
+    color: #000000
+    font-family: "Montserrat", sans-serif
+textarea::-moz-placeholder
+    font-weight: 600
+    font-size: 16px
+    line-height: 130%
+    color: #000000
+    font-family: "Montserrat", sans-serif
+textarea:-ms-input-placeholder
+    font-weight: 600
+    font-size: 16px
+    line-height: 130%
+    color: #000000
+    font-family: "Montserrat", sans-serif 
+.modal
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 9000
+    background-color: rgba(#000, 0.7)
+    overflow-y: scroll
+    padding: 0 15px
+    box-sizing: border-box
+    .modal-content
+        margin: 0px 0
+        background-color: #fff
+        width: 95%
+        max-width: 449px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        padding: 40px 20px
+        box-sizing: border-box
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        padding: 42px 20px
+        .modalClose
+            width: 28px
+            height: 28px
+            display: block
+            position: absolute
+            background-color: transparent
+            top: 6px
+            right: 5px
+            border: none
+            padding: 0
+        .modalClose::before,
+        .modalClose::after
+            content: ''
+            display: block
+            width: 20px
+            border-radius: 4px
+            height: 3px
+            background-color: #000000
+            position: absolute
+            left: 0
+            top: 50%
+            transform: rotateZ(45deg)
+        .modalClose::before
+            transform: rotateZ(-45deg)
+        h2
+            font-weight: bold
+            font-size: 30px
+            text-align: center
+            margin-bottom: 36px
+            line-height: 37px
+        label 
+            position: relative
+        label::before
+            content: ''
+            display: inline-block
+            width: 47px 
+            height: 50px
+            background-color: transparent
+            background-image: url("../img/inp-name.svg")
+            background-size: auto
+            background-position: center 
+            background-repeat: no-repeat
+            position: absolute
+            left: 0
+        label[for="email"]::before
+            background-image: url("../img/inp-mail.svg")
+        label[for="phone"]::before
+            background-image: url("../img/inp-phone.svg")
+        textarea
+            min-width: 100%
+            max-width: 100%
+            min-height: 152px
+            background: #F3F3F3
+            border-radius: 15px 
+            padding: 14px 32px
+            margin-bottom: 30px
+            font-size: 16px
+        .form__inp
+            width: 100%
+            background: #F3F3F3
+            height: 50px
+            line-height: 50px
+            font-size: 16px
+            padding-left: 47px
+            border-radius: 15px 
+            margin-bottom: 25px
+        .modal-content-form__btn
+            padding-top: 0
+            cursor: pointer
+            width: 168px
+            height: 56px
+            font-size: 20px
+#modal_2
+    .modal-content
+        max-width: 340px
+        background: #586C77
+        color: #fff
+        position: relative
+        padding-top: 75px
+        padding-bottom: 20px
+        a 
+            color: #ffffff
+            font-style: normal
+        nav 
+            text-align: center
+            margin-bottom: 55px
+            ul 
+                li 
+                    margin-bottom: 5px
+            a 
+                font-weight: 600
+                font-size: 22px
+                line-height: 27px
+        .lang
+            width: 100%
+            display: flex
+            li 
+                margin-right: 20px
+                a 
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px
+        .modalClose
+            width: 28px
+            height: 28px
+            top: 25px
+            right: auto 
+            left: 50%
+            transform: translateX(-50%)
+        .modalClose::before,
+        .modalClose::after
+            content: ''
+            display: block
+            width: 25px
+            height: 2px
+            background: #fff
+            border-radius: 4px
+
+#modal_3
+    .modal-content
+        max-width: 600px
+        background-color: transparent
+        box-shadow: none
+        .modalClose::before,
+        .modalClose::after
+            background: #fff
+        .video
+            width: 520px
+            height: 300px
+            margin: 0 auto
+            iframe
+                width: 100%
+                height: 100%
+
+.modal.is-open
+	display: block
+.container
+    max-width: 1200px
+    padding: 0 15px 
+    margin: 0 auto
+    width: 100%
+    position: relative
+button 
+    cursor: pointer
+ul 
+    list-style-type: none
+body 
+    font-family: "Montserrat", sans-serif
+    background-color: #fff
+a 
+    text-decoration: none
+h1 
+    font-weight: 800
+    font-size: 86px
+    line-height: 110%
+    color: #ffffff
+    max-width: 638px
+    text-transform: uppercase
+h2
+    font-style: normal
+    font-weight: 800
+    font-size: 60px
+    line-height: 110%
+    color: $dark
+.wrap
+    display: flex 
+    justify-content: space-between
+.btn
+    width: 270px
+    text-align: center
+    transition: all 0.27s
+    padding-top: 26px
+    display: block
+    height: 80px
+    border: 2px solid #FFFFFF
+    border-radius: 20px
+    color: #ffffff
+    background-color: transparent
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+.btn:hover
+    background-color: $dark-blue
+    border-color: transparent
+.btn.dark-blue
+    background-color: $dark-blue
+    border-color: transparent
+.btn.dark-blue:hover
+    background-color: transparent
+    border-color: $dark-blue
+    color: $dark-blue
+.social-links
+    display: flex
+    align-items: center
+    li 
+        margin-right: 35px
+    li:nth-child(3)
+        margin-right: 70px
+    a 
+        display: block
+        width: 26px
+        height: 26px
+        background-image: url("../img/facebook.png")
+        background-repeat: no-repeat
+        background-position: center
+    .instagram
+        background-image: url("../img/instagram.png")
+    .whatsapp
+        background-image: url("../img/whatsapp.png")
+
+.menuBtn
+    width: 30px
+    height: 20px
+    background-color: transparent
+    position: relative
+    display: none
+    transition: all ease 0.28s
+    span 
+        display: block
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        background-color: #fff
+        height: 2px
+        transition: all ease 0.28s
+        width: 100%
+    span::before, span::after
+        content: ''
+        display: block
+        width: 100%
+        position: absolute
+        top: -9px
+        left: 0
+        background-color: #ffffff
+        height: 2px
+        transition: all ease 0.28s
+
+    span::after
+        top: 9px
+.menuBtn.active
+    span
+        background-color: transparent
+    span::before
+        transform: rotate(-45deg)
+        top: 0
+    span::after
+        transform: rotate(45deg)
+        top: 0  
+
+.training-section .container::before, .other-events .container::before
+    content: ''
+    display: block
+    width: 254px
+    height: 279px
+    background-image: url("../img/wave-title.svg")
+    background-position: center
+    background-repeat: no-repeat
+    position: absolute
+    top: 30px
+    left: -260px
+.other-events .container::before
+    left: auto 
+    right: -260px
+
+.hero-section
+    height: 100vh
+    background-image: url("../img/bg-main.jpg")
+    background-position: center bottom
+    background-size: cover
+    background-repeat: no-repeat
+    display: flex
+    flex-direction: column
+    position: relative
+    overflow: hidden
+    .arrow-down
+        display: block
+        position: absolute
+        bottom: 50px
+        right: 65px
+        text-align: center
+        color: #ffffff
+        font-size: 20px
+        font-weight: normal
+        span
+            width: 50px
+            height: 50px
+            display: inline-block
+            background-color: #07687E
+            line-height: 52px
+            border-radius: 50%  
+            margin-left: 14px
+    .person-parallax
+        position: absolute
+        bottom: 100px
+        left: 0
+        width: 90%
+        z-index: 1
+    header
+        background-color: rgba(#000, 0.5)
+        height: 130px
+        position: relative
+        z-index: 100
+        .logo
+            display: flex
+            align-items: center
+            img 
+                margin-right: 13px
+            &-title
+                font-style: normal
+                font-weight: 800
+                font-size: 16px
+                line-height: 20px
+                letter-spacing: 0.1em
+                text-transform: uppercase
+        a
+            color: #ffffff
+        .container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 100%
+        nav 
+            flex-grow: 2
+            ul 
+                max-width: 590px
+                display: flex
+                justify-content: space-between
+                margin: 0 auto
+                padding: 0 20px
+                a 
+                    font-style: normal
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 20px
+                    transition: all ease .3s
+                a:hover 
+                    color: rgb(81,200, 221)
+                .active
+                    a 
+                        font-weight: 800
+        .social-lang
+            display: flex
+            justify-content: space-between
+            align-items: center
+        .lang
+            color: #ffffff
+            background-color: transparent
+            font-size: 16px
+            option 
+                color: #000000
+    .container
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        height: 89%
+    &-title 
+        position: relative
+        z-index: 100
+        &__header
+            margin-bottom: 20px
+        &__descr
+            font-weight: normal
+            color: #fff
+            font-size: 30px
+            line-height: 37px
+            margin-bottom: 100px
+
+.training-section
+    overflow: hidden
+    padding: 60px 0px 40px
+    &__header
+        margin-bottom: 32px
+    &-wrap 
+        margin-bottom: 30px
+    &-item 
+        max-width: 270px
+        &__header
+            color: $dark
+            font-size: 30px
+            line-height: 130%
+            font-weight: 600
+            margin-bottom: 14px
+        &__img 
+            width: 100%
+            overflow: hidden
+            border-radius: 7px
+            margin-bottom: 34px
+            img 
+                width: 100%
+                max-width: 100%
+        li::before
+            content: ''
+            width: 16px
+            height: 16px
+            margin-right: 7px
+            display: inline-block
+            background-image: url("../img/checked.svg")
+            background-repeat: no-repeat
+            background-position: center
+            background-size: 100%
+            position: absolute
+            top: 0
+            left: -23px
+        li 
+            margin-left: 23px
+            position: relative
+            font-weight: normal
+            font-size: 20px
+            line-height: 130%
+            margin-bottom: 20px
+    &__btn
+        margin: 0 auto
+
+.rental-section
+    padding: 70px 0 200px 0
+    background-image: url("../img/rental-bg.png")
+    background-size: cover
+    background-repeat: no-repeat
+    &__header
+        margin-bottom: 40px
+    &__descr
+        font-weight: 500
+        font-size: 20px
+        line-height: 130%
+        color: $dark
+        margin-bottom: 65px
+    &-wrap 
+        flex-wrap: wrap
+        max-width: 970px    
+        margin: 0 auto
+    &-item 
+        max-width: 301px
+        height: 209px
+        position: relative
+        z-index: 1
+        margin-bottom: 31px
+        transition: all ease 0.3s
+        &__img
+            max-width: 100% 
+            width: 100%
+            position: relative
+            z-index: 1
+        &-title 
+            transition: all ease 0.3s
+            position: absolute
+            bottom: 0
+            width: 100%
+            height: 100%
+            z-index: 1000
+            color: #ffffff
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            background-color: rgba(#000, 0.27)
+            margin-top: -10px
+        &__header
+            font-style: normal
+            font-weight: 800
+            font-size: 30px
+            line-height: 130%
+            margin-bottom: 15px
+        &__price
+            font-style: normal
+            font-weight: 800
+            font-size: 20px
+            line-height: 130%
+            margin-bottom: 15px
+        &__req
+            font-weight: bold
+            font-size: 20px
+            line-height: 130%
+    &-item:hover
+        transform: scale(1.1)
+        .rental-section-item-title
+            background-color: rgba(#000, 0)
+
+.other-events
+    padding: 80px 0 40px
+    overflow: hidden
+    &__header
+        margin-bottom: 70px
+    &-wrap
+        margin-bottom: 140px
+    &-item 
+        max-width: 371px
+        &__img
+            width: 100%
+            margin-bottom: 30px
+            img 
+                max-width: 100%
+                width: 100%
+        &__header
+            font-weight: 800
+            font-size: 35px
+            line-height: 110%
+            text-align: center
+            margin-bottom: 20px
+        &__descr
+            font-weight: normal
+            font-size: 20px
+            line-height: 130%
+    &-wind-rate
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__header
+            font-weight: 600
+            font-size: 30px
+            line-height: 130%
+
+.about
+    padding: 200px 0px 100px
+    &__header
+        margin-bottom: 30px
+    &-wrap 
+        align-items: flex-start
+    &-title
+        max-width: 670px
+        &__header
+            margin-bottom: 20px
+            font-weight: 600
+            font-size: 30px
+            line-height: 130%
+        &__descr
+            font-weight: normal
+            font-size: 20px
+            line-height: 130%
+            letter-spacing: 0.03em
+    &-video
+        position: relative
+        img 
+            max-width: 100% 
+        button
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: transparent
+            cursor: pointer
+            background-image: url("../img/play-icon.svg")
+            width: 90px
+            height: 90px
+            background-position: center
+            background-repeat: no-repeat
+
+.footer-bg
+    position: relative
+    overflow: hidden
+    img 
+        width: auto
+        height: 90% 
+        position: absolute
+        bottom: -600px
+        left: 50%
+        transform: translateX(-50%)
+
+
+.feedback
+    padding: 0 0 40px 0
+    overflow: hidden
+    &__header
+        text-align: center
+        position: relative
+        margin-bottom: 90px
+    &__header::before, &__header::after
+        content: ''
+        display: block
+        width: 52px
+        height: 52px
+        background-image: url("../img/feedback semicolon.svg")
+        background-repeat: no-repeat
+        background-position: center
+        margin: 0 auto
+        position: absolute
+        top: 80px
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 1
+    &__header::after
+         top: 90px
+         width: 133px
+         height: 133px
+         background-size: 100%  
+         opacity: 0.2
+    &-wrapper 
+        max-width: 780px
+        margin: 0 auto 
+        position: relative
+        z-index: 1000
+    &-item 
+        width: 100%
+        max-width: 770px
+        margin: 0 20px 10px
+        padding: 19px 70px
+        background-color: #F2F2F2
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25)
+        &__header
+            font-weight: 600
+            font-size: 20px
+            line-height: 130%
+            margin-bottom: 12px
+        &__descr
+            font-weight: normal
+            font-size: 14px
+            line-height: 130%
+
+.contacts
+    padding: 100px 0 75px
+    &__header
+        text-align: center
+        color: #ffffff
+        font-size: 48px
+        margin-bottom: 54px
+    &-map
+        width: 63%
+        max-width: 770px
+        height: 448px
+        background-color: #eee
+    &-item
+        max-width: 290px
+        &__header
+            font-weight: 600
+            font-size: 18px
+            line-height: 130% 
+            color: #DCDCDC
+            display: block
+            margin-bottom: 5px
+        address, .phone-number
+            margin-bottom: 30px
+
+        address a, .phone-number
+            font-weight: 600
+            font-style: normal
+            font-size: 18px
+            line-height: 130%
+            color: #ffffff
+            display: block
+        .social-links
+            margin-bottom: 20px
+        &__descr
+            font-weight: bold
+            font-size: 20px
+            line-height: 24px
+            text-transform: capitalize
+            color: #82D2CC
+            margin-bottom: 78px
+        &__link.dark-blue:hover
+            color: #ffffff
+
+@media only screen and (max-width: 1400px)
+    h1 
+        font-size: 68px
+        line-height: 110%
+    .btn
+        width: 180px
+        height: 53px
+        font-size: 16px
+        padding-top: 16px
+    .hero-section
+        header
+            .container
+        &-title
+            &__descr
+                font-size: 24px
+                margin-bottom: 40px
+    .training-section .container::before, .other-events .container::before
+        display: none
+@media only screen and (max-width: 1000px)
+    h1 
+        text-align: center
+        max-width: 100% 
+    .hero-section
+        .arrow-down
+            display: none
+        header
+            nav 
+                display: none
+            .social-links li:nth-child(3) 
+                margin-right: 40px
+            .social-lang
+                flex-grow: 2
+                justify-content: flex-end
+                margin-right: 40px
+            .menuBtn
+                display: block
+        &-title 
+            &__descr
+                text-align: center
+            &__btn 
+                margin:  auto
+    .feedback
+        &-wrapper 
+            max-width: 460px
+        &-item 
+            max-width: 450px
+            padding: 19px 40px
+    .contacts
+        &-map 
+            order: 2
+            width: 100%
+        &-item 
+            order: 1
+            margin-bottom: 30px
+@media only screen and (max-width: 1170px)
+    .wrap 
+        justify-content: center
+        max-width: 740px
+        flex-wrap: wrap
+        margin: 0 auto
+    .training-section
+        &-item 
+            margin: 0 20px  
+            max-width: 320px
+            width: 100%
+    .rental-section
+        padding-bottom: 50px
+        &-wrap 
+        &-item 
+            margin:
+                left: 20px 
+                right: 20px
+    .other-events
+        &-item 
+            margin-bottom: 30px
+        &-wind-rate
+            &__link
+                min-width: 180px
+                margin-top: 20px  
+    .about
+        padding: 40px 0
+        &-title 
+            margin-bottom: 40px
+    .footer-bg
+        img 
+            height: 90% 
+            bottom: 0
+    .contacts
+        &-wrap 
+            flex-direction: row
+            max-width: 700px 
+            justify-content: space-between
+        &-map 
+            width: 100%
+@media only screen and (max-width: 710px)
+    .contacts
+        padding-top: 0
+        &-map 
+            display: none
+        &-item 
+            margin: 0 auto
+            &__descr
+                margin-bottom: 40px
+    .footer-bg
+        img 
+            height: 80% 
+            bottom: 0
+
+@media only screen and (max-width: 540px)
+    h2 
+        font-size: 30px
+    h1 
+        font-size: 40px
+    .hero-section
+        header
+            .logo 
+                height: 43px
+                img 
+                    max-height: 100%
+                &-title
+                    font-size: 12px
+                    line-height: 15px
+                    letter-spacing: 0.1em
+            .social-lang
+                display: none
+        &-title 
+            &__descr
+                color: $dark
+                font-size: 15px
+                max-width: 188px
+                line-height: 18px
+                margin:
+                    left: auto 
+                    right: auto
+    .training-section
+        padding-bottom: 0
+    .rental-section
+        padding-top: 50px
+        background-image: none
+        &__descr
+            display: none
+    .other-events
+        padding: 0
+        &-item 
+            &__img 
+                margin-bottom: 24px
+            &__header
+                font-size: 24px
+            &__descr 
+                font-size: 14px
+        &-wind-rate
+            flex-wrap: wrap
+            max-width: 700px
+            margin: 0 auto
+            &__header
+                font-size: 14px
+                line-height: 130%
+            &__link
+                min-width: 180px
+                margin-top: 20px
+    .about
+        &-video
+            display: none
+        &-title 
+            &__header
+                font-weight: 600
+                font-size: 13px
+                line-height: 130%
+                margin-bottom: 10px
+            &__descr
+                font-size: 12px
+                line-height: 130%
+    .feedback
+        padding: 0
+        margin-bottom: 80px
+        &__header::before
+            top: 40px
+        &__header::after
+            top: 60px
+        &-wrapper 
+            max-width: 274px
+        &-item 
+            max-width: 264px
+            padding: 19px 28px
+    .contacts
+        &__header
+            font-size: 22px
+        &-item
+            max-width: 235px
+            margin: 0 auto
+            &__header
+                font-size: 15px
+            address
+                margin-bottom: 22px
+            .phone-number
+                font-size: 22px
+            address a, .phone-number
+                font-size: 15px
+            .social-links
+                margin-bottom: 18px
+            &__descr
+                margin-bottom: 32px
+
+@media only screen and (max-width: 480px)
+    .training-section
+        &-item
+            margin:
+                bottom: 10px
+                left: 0
+                right: 0
+            &__header
+                font-size: 20px
+            li::before
+                width: 10px
+                height: 11px
+                margin-left: 5px
+            li 
+                font-size: 13px
+    .rental-section
+        &__descr
+            display: none
+        &-wrap 
+        &-item 
+            margin:
+                left: 0 
+                right: 0
+
+
+
+            
+            
+
+
+            
+
+            

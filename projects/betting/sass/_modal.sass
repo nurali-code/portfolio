@@ -1,0 +1,93 @@
+.modal
+    visibility: hidden
+    opacity: 0
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 900009
+    background-color: rgba(#000, 0.6)
+    padding: 0
+    box-sizing: border-box
+    transition: .3s ease all
+    &-content
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 95%
+        max-width: 500px
+        display: block
+        background: #fff
+        max-height: 100vh
+        border-radius: 20px
+        padding: 46px 45px 70px
+        color: #000
+        text-align: center
+
+        img 
+            max-width: 130px
+            margin-bottom: 25px
+
+        .heading
+            max-width: 550px
+            margin: 0 auto 5px
+            text-align: center
+            font-size: 32px
+
+        p 
+            font-size: 18px
+            margin: 0 auto 30px
+
+        form
+            max-width: 390px
+            margin: 0 auto
+
+
+        .btn
+            max-width: 200px
+            display: block
+            margin: 0 auto
+
+    &.active
+        visibility: visible
+        opacity: 1
+
+    &-close
+        display: block
+        cursor: pointer
+        color: #fff
+        font-size: 24px
+        border: 3px solid #fff
+        position: absolute
+        top: -50px
+        right: -50px
+        z-index: 99999999
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background-color: transparent
+
+    &.is-open
+        display: block
+
+    @media screen and ( max-width: 1540px )
+        &-content
+            transform-origin: 0% 10%
+            transform: scale(.8) translate(-50%, -50%)
+
+    @media screen and ( max-width: 500px )
+        &-close
+            right: 0
+            width: 40px
+            height: 40px
+            border-width: 2px
+            font-size: 18px
+
+        &-content
+            padding: 40px 20px 60px
+            transform: scale(1) translate(-50%, -50%)
+            .heading
+                font-size: 30px
+                max-width: 260px

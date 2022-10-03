@@ -1,0 +1,192 @@
+body
+    background-color: #1F1D1C
+    color: #fff
+    font-family: 'Mont', sans-serif
+
+button
+    background-color: transparent
+    transition: all ease .2s
+    &:active
+        transform: scale(.98)
+
+main
+    min-height: 30vh
+    padding-bottom: 60px
+
+h1
+    font-weight: 700
+    font-size: 33px
+    line-height: 115%
+    margin: 0 0 30px
+    color: #FFFFFF
+
+.container
+    padding: 0 20px
+    width: 100%
+    max-width: 1000px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+a
+    text-decoration: none
+    color: #1f1f1f
+    transition: all ease .2s
+    &:hover
+        opacity: .6
+
+img
+    max-width: 100%
+
+.slick
+    &-arrow
+        z-index: 1000
+        border-radius: 50%
+        width: 22px
+        height: 22px
+        position: absolute
+        top: 45%
+        color: transparent
+        transform: translateY(-50%)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+        background-color: #FFFFFF
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09)
+
+    &-prev
+        background-image: url('../img/icons/slider-arrow-left.svg')
+        left: -7px
+
+    &-next
+        background-image: url('../img/icons/slider-arrow-right.svg')
+        right: -7px
+
+    &-dots
+        padding: 14px 0
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        li
+            border-radius: 50%
+            margin: 0 5px
+            overflow: hidden
+            width: 8px
+            height: 8px
+            color: transparent
+            border: 1px solid #FFC023
+            transition: all ease .3s
+            &.slick-active
+                transform: scale(1.5)
+                background-color: #FFC023
+
+.dropdown
+    position: relative
+    z-index: 1
+    max-width: 400px
+    margin: 0 auto 20px
+    min-height: 60px
+
+    &.active
+        z-index: 100
+
+    &-item
+        text-align: left
+        margin-bottom: 15px
+        transition: all ease .2s
+        cursor: pointer
+        position: relative
+        z-index: 1000
+        &:active
+            transform: scale(.98)
+
+        &:last-of-type
+            margin-bottom: 0
+        input
+            display: none
+            &:checked ~ label
+
+        label
+            cursor: pointer
+            font-weight: 300
+            font-size: 14px
+            line-height: 18px
+            color: #A5A5A5
+
+    &-content
+        z-index: 1000
+        display: none
+        position: relative
+        z-index: 1000
+        padding: 20px
+        background-color: #404040
+        border-radius: 10px
+
+    &__heading
+        display: block
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 3px
+        color: #FFFFFF
+
+    &-btn
+        position: absolute
+        left: 0
+        top: 0
+        display: block
+        height: 60px
+        width: 100%
+        background: linear-gradient(98.39deg, #373737 12.87%, #2E2D2D 126.29%)
+        border: 1px solid #B10014
+        box-sizing: border-box
+        border-radius: 10px
+        font-style: normal
+        font-weight: 600
+        font-size: 16px
+        line-height: 60px
+        padding: 0 20px
+        cursor: pointer
+        text-align: left
+        appearance: none
+        background-image: url('../img/arrow-left.svg')
+        background-repeat: no-repeat
+        background-position: right 20px center
+
+    &.active
+        z-index: 1000
+        .dropdown-btn
+            &::after
+                transform: rotateZ(180deg)
+
+select
+    display: block
+    height: 60px
+    width: 100%
+    max-width: 400px
+    background: linear-gradient(98.39deg, #373737 12.87%, #2E2D2D 126.29%)
+    border: 1px solid #B10014
+    box-sizing: border-box
+    border-radius: 10px
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 20px
+    padding: 0 20px
+    margin: 0 auto 20px
+    appearance: none
+    background-image: url('../img/arrow-left.svg')
+    background-repeat: no-repeat
+    background-position: right 20px center
+    option
+        background: #404040
+        border-radius: 10px
+
+@media screen and ( min-width: 990px )
+    .wrapper
+        margin: 0 auto
+        max-width: 860px
+        display: flex
+        align-items: flex-start
+        justify-content: space-between

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap')
+
+$prime: #35464D
+
+body
+    color: #000
+    font-family: 'Montserrat', sans-serif
+
+    // &::-webkit-scrollbar
+    //     width: 14px
+
+    // &::-webkit-scrollbar-track
+    //     background: linear-gradient(157.06deg, #FFDB5B 0%, #E6AC0D 100%)
+    //     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset
+    //     box-shadow: 0 0 2px rgba(112, 112, 112, 0.2) inset
+
+    // &::-webkit-scrollbar-thumb
+    //     background: linear-gradient(157.06deg, #7CE0E1 0%, #279293 100%)
+    //     border-radius: 8px
+    //     &:hover
+    //         background: linear-gradient(157.06deg, #7CE0E1 0%, #279293 100%)
+
+img
+    max-width: 100%
+
+.btn
+    // font-weight: 700
+    // padding: 15px 32px
+    // font-size: 16px
+    // line-height: 19px
+    border-radius: 40px
+    outline: none
+    box-shadow: none !important
+    transition: all ease .3s
+    &:active
+        transform: scale(.95)
+
+    svg
+        margin-top: -1px
+        max-width: 24px
+        max-height: 24px
+        margin-right: 5px
+
+        path
+            transition: all ease .3s
+
+    &-outline
+        &-danger
+            svg
+                path
+                    fill: red
+            &:hover
+                svg
+                    path
+                        fill: #fff
+
+p
+    margin: 0
+
+section
+    padding: 70px 0
+
+.section
+    &__subheading
+        text-align: center
+        font-weight: 700
+        font-size: 26px
+        line-height: 125%
+        margin: 0 0 30px
+
+    &__heading
+        font-weight: 700
+        font-size: 46px
+        line-height: 120%
+        text-align: center
+
+    &__descr
+        text-align: center
+        font-weight: 400
+        font-size: 28px
+        line-height: 37px
+        margin-bottom: 60px
+
+.bg
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 1
+    position: relative
+    color: #fff
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        opacity: .6
+        z-index: -1
+        background-color: #35464D
+
+.input
+    &-group
+        border: 1px solid rgba(0, 0, 0, .3)
+        background-color: #fff
+        padding: 10px
+        border-radius: 30px
+        &-text
+            border: none
+            background-color: transparent
+            img
+                max-width: 25px
+
+.logo
+    font-size: 40px
+    font-weight: 900
+    color: #fff
+    img
+        max-width: 200px
+        max-height: 100px
+
+ul
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+        position: relative
+        z-index: 1
+        padding-left: 30px
+        margin-bottom: 5px
+        &::before
+            content: ''
+            display: inline-block
+            width: 8px
+            height: 8px
+            border-radius: 50%
+            background-color: green
+            position: absolute
+            top: 50%
+            margin-top: -4px
+            left: 6px
+            z-index: -1
+
+.form-control
+    box-shadow: none !important
+    border: none !important
+    background-color: transparent !important
+
+@media screen and ( max-width: 1140px )
+    section
+        padding: 80px 0
+
+    .section
+        &__heading
+            font-size: 38px
+            line-height: 120%
+
+        &__descr
+            font-size: 24px
+            line-height: 140%
+
+@media screen and ( max-width: 992px )
+    section
+        padding: 60px 0
+
+    .section
+
+        &__heading
+            font-size: 32px
+            line-height: 120%
+
+        &__descr
+            font-size: 24px
+            line-height: 125%
+
+@media screen and ( max-width: 768px )
+    .logo
+        font-size: 32px
+
+    .section
+        &__heading
+            font-size: 28px
+            line-height: 120%
+
+        &__subheading
+            font-size: 20px
+
+        &__descr
+            font-size: 18px
+            line-height: 125%
+
+    section
+        padding: 40px 0

@@ -1,0 +1,102 @@
+footer
+    .contacts
+        &-content
+            margin-right: 8%
+
+        &-map
+            width: 562px
+            max-width: 49%
+
+            iframe
+                max-width: 100% !important
+                border-radius: 50%
+                border: 10px solid #fff
+
+        &-phone,
+        &-email,
+        &-location
+            background-repeat: no-repeat
+            background-position: top 4px left
+            background-size: 24px 24px
+            padding-left: 50px
+            font-weight: 400
+            font-size: 40px
+            line-height: 38px
+            margin-bottom: 50px
+            a
+                display: block
+        &-location
+            background-image: url('../img/location.svg')
+        &-email
+            background-image: url('../img/email.svg')
+        &-phone
+            background-image: url('../img/phone.svg')
+
+        &-socials
+            max-width: 135px
+
+    .bottom
+        margin-top: 50px
+        padding: 20px 0
+        border-top: 1px solid $prime
+        .logo,
+        p
+            display: inline-block
+            vertical-align: middle
+        p
+            margin-left: 20px
+
+    .logo
+
+    @media screen and ( max-width: 1170px )
+        .container
+            max-width: 593px
+
+        .wrap
+            display: block
+
+        .contacts
+            &-content
+                margin: 0
+            &-map
+                width: 100%
+                max-width: 100%
+                margin: 0 auto
+                margin-bottom: 30px
+
+            &-socials
+                max-width: 100%
+
+                a
+                    padding: 10px
+
+    @media screen and ( max-width: 700px )
+        .contacts
+            &-content
+                margin: 0
+            &-map
+                width: 100%
+                max-width: 100%
+                margin: 0 auto
+                margin-bottom: 30px
+                iframe
+                    width: 300px
+                    height: 300px
+                    border-width: 5px
+
+            &-phone,
+            &-email,
+            &-location
+                font-size: 28px
+                line-height: 38px
+                margin-bottom: 30px
+
+            &-socials
+                max-width: 100%
+
+                a
+                    padding: 10px
+
+
+        .logo
+            margin-bottom: 10px

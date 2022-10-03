@@ -1,0 +1,63 @@
+.modal
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 9999999999
+    background-color: rgba(#000, 0.6)
+    padding: 0
+    box-sizing: border-box
+    &-content
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 95%
+        max-width: 420px
+        display: block
+        background: #fff
+        max-height: 100vh
+        padding: 46px 40px 70px
+        color: #000
+
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+
+        .heading
+            max-width: 450px
+            margin: 0 auto 30px
+            text-align: center
+            font-size: 32px
+
+        form
+            max-width: 360px
+            margin: 0 auto
+
+        .btn
+            margin-top: 40px
+            width: 100%
+            min-width: unset
+
+    &-close
+        font-size: 24px
+        color: #A1A1A1
+        padding: 20px 30px
+        background-color: transparent
+        position: absolute
+        top: 0
+        right: 0
+
+    &.is-open
+        display: block
+
+    @media screen and ( max-width: 500px )
+        &-close
+            right: 0
+            padding: 20px 20px
+            font-size: 18px
+        
+        &-content
+            padding: 40px 20px

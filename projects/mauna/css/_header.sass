@@ -1,0 +1,64 @@
+.header-col,
+.header,
+.header .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+.header
+    padding: 48px 0
+    position: relative
+    .container
+        position: static
+    .logo
+        display: inline-block
+        position: absolute
+        top: 48px
+        left: 50%
+        transform: translateX(-50%)
+        img
+            max-width: 100%
+            max-height: 100%
+
+    &__link
+        color: #000
+        font-weight: normal
+        font-size: 14px
+        line-height: 14px
+        margin-right: 48px
+
+    .btn
+        &-menu
+            margin-right: 110px
+
+        &-cart
+            margin-left: 32px
+
+        &-search
+            margin-left: 60px
+
+    @media screen and ( max-width: 900px )
+        .logo
+            img
+                max-height: 64px
+
+        &__link
+            margin-right: 30px
+        .btn
+            &-menu
+                margin-right: 40px
+
+            &-search
+                margin-left: 0
+
+            &-cart
+                margin-left: 8px
+
+    @media screen and ( max-width: 700px )
+        padding: 24px 0
+        .container
+            max-width: 100%
+        &__link
+            display: none
+
+        .logo
+            top: 16px

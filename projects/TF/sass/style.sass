@@ -1,0 +1,934 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+@import 'footer'
+@import 'modal'
+@import 'slick'
+@import 'bottom'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+.hero
+    .container
+        padding: 30px 0
+
+    .wrapper
+        max-width: 580px
+        margin-bottom: 80px
+
+    .textline
+        width: 50%
+        max-width: 440px
+        margin: 0 0 90px
+
+    h1
+        width: 50%
+        font-weight: 400
+        font-size: 75px
+        line-height: 91px
+        text-transform: uppercase
+        margin: 0 0 30px
+
+    &-slider
+        min-width: 50%
+        height: 100%
+        width: 50%
+        border-left: 1px solid #2F2F2F
+        overflow: hidden
+        padding: 30px 0
+        position: absolute
+        top: 0
+        right: 0
+
+    &-item
+        height: 100%
+        margin: 0 0 0 30px
+        position: relative
+        img
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 100
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+        &__text
+            position: absolute
+            bottom: 40px
+            left: -40px
+
+    &-nav
+        width: 50%
+        margin: 0 auto 0 0
+        &__item
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            text-align: right
+            color: #2F2F2F
+
+.about
+    padding: 0 0 150px
+    &-wrap
+        max-width: 830px
+        margin: 0 auto
+
+    &__textline
+        font-weight: 400
+        font-size: 22px
+        line-height: 130%
+        text-transform: uppercase
+        margin: 0 0 30px
+
+    &-col
+        width: 48%
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        margin: 0 0 50px
+
+    &-item
+        text-align: left
+        &__heading
+            font-weight: 400
+            font-size: 65px
+            line-height: 79px
+            text-transform: uppercase
+
+        &__text
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+
+.socials
+    margin-bottom: 150px
+    &__heading
+        font-weight: 400
+        font-size: 180px
+        line-height: 120%
+        text-transform: uppercase
+
+.speakers
+    padding: 150px 0 90px
+    background: linear-gradient(256.74deg, #172957 0%, #1A3F91 100%)
+    color: #fff
+    .headline
+        border-color: #fff
+        &__link
+            color: #fff
+            border-color: #fff
+
+    &-item
+        width: 23%
+        margin: 0 0 60px
+        img
+            margin: 0 0 20px
+
+        &__heading
+            font-weight: 400
+            font-size: 22px
+            line-height: 130%
+            text-transform: uppercase
+
+        &__text
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+
+.tab
+    &-wrap,
+    &-content
+        max-width: 1040px
+        margin: 0 0 0 auto
+
+    &-content
+        display: none
+        padding-top: 20px
+        &.active
+            display: block
+
+    &-btn
+        width: 32%
+        padding: 26px 0 25px
+        font-weight: 500
+        font-size: 22px
+        line-height: 130%
+        text-align: center
+        text-transform: uppercase
+        background-color: #F5F5F5
+        &.active
+            background-color: #172957
+            color: #fff
+
+.agenda
+    &-item,
+    &-info
+        display: flex
+        justify-content: space-between
+
+    &-item
+        padding: 30px
+        width: 100%
+        background-color: #fff
+        position: relative
+        z-index: 1
+        transition: all ease .3s
+        &:hover
+            z-index: 10000
+            box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.15)
+
+        &:nth-of-type(odd)
+            background-color: #F5F5F5
+
+    &__heading
+        font-weight: 700
+        font-size: 14px
+        line-height: 130%
+        width: 100%
+        margin-bottom: 27px
+
+    &__lasting
+        display: inline-block
+        vertical-align: middle
+        text-align: center
+        width: 155px
+        padding: 9px 0 8px
+        color: #fff
+        background-color: #172957
+        margin: 0 10px 0 0
+
+    &-time
+        font-weight: 400
+        font-size: 14px
+
+    &-info
+        flex-wrap: wrap
+        width: 76%
+
+    &-sponsor
+        margin: 0 auto
+
+    &-sponsor,
+    &-speaker
+        max-width: 45%
+        &__heading
+            font-weight: 400
+            font-size: 14px
+            line-height: 130%
+            max-width: 180px
+            display: inline-block
+            vertical-align: middle
+            margin-right: 15px
+
+        img
+            max-width: 150px
+            display: inline-block
+            vertical-align: middle
+
+    &-speaker
+        width: 254px
+        img
+            width: 54px
+            height: 54px
+            display: inline-block
+            vertical-align: middle
+
+.sponsors
+    &-wrap
+        max-width: 700px
+        margin: 0 0 0 auto
+
+    .headline
+        max-width: 500px
+        padding: 0
+        border: none
+        position: absolute
+        left: 0
+        top: 0
+
+    &-item
+        display: block
+        width: 100%
+        padding: 60px 60px 80px
+        max-width: 687px
+        margin: 0 0 30px
+        color: #fff
+        background: linear-gradient(256.74deg, #172957 0%, #1A3F91 100%)
+        img
+            margin: 0 0 30px
+
+        &__heading
+            font-weight: 700
+            font-size: 22px
+            line-height: 27px
+            text-transform: uppercase
+            margin: 0 0 30px
+
+        &__text
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+
+.floorplan
+    &-img
+        width: 65%
+
+    &-col
+        width: 35%
+
+    &-item
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        img
+            width: 38px
+            margin-right: 22px
+
+        &__text
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+
+.item
+    width: 24%
+    margin: 0 0 30px
+    background-color: #fff
+    display: flex
+    justify-content: center
+    padding: 25px
+    align-items: center
+    border: 1px solid #636363
+    position: relative
+    min-height: 235px
+    overflow: hidden
+    p
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        padding: 46px 20px
+        text-align: left
+        background: linear-gradient(256.74deg, #172957 0%, #1A3F91 100%)
+        font-weight: 400
+        font-size: 14px
+        line-height: 130%
+        color: #fff
+        opacity: 0
+        transform: translateY(10px)
+        transition: all ease .3s
+
+    img
+        max-width: 90%
+        max-height: 90%
+
+    &:hover
+        opacity: 1
+        p
+            transform: translateY(0)
+            opacity: 1
+
+a.item::before
+    content: ""
+    display: inline-block
+    width: 11px
+    height: 11px
+    background-image: url(../img/ArrowUpRight.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    -webkit-background-size: contain
+    -moz-background-size: contain
+    -o-background-size: contain
+    background-size: contain
+    position: absolute
+    top: 20px
+    right: 20px
+    z-index: 1000
+
+.venue
+    &-title
+        max-width: 40%
+        font-weight: 400
+        font-size: 22px
+        line-height: 130%
+
+    &-slider
+        width: 60%
+
+    &-slide
+        margin: 0 12px
+        width: 326px
+        width: 490px
+        height: 590px
+        position: relative
+        img
+            width: 326px
+            height: 326px
+            transition: all ease .3s
+            top: 0
+            left: 0
+            object-fit: cover
+            position: absolute
+
+    .slick
+        &-arrow
+            bottom: 0
+        &-next
+            right: 0
+        &-prev
+            right: 76px
+
+        &-slide,
+        &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+            img
+                width: 326px
+                height: 326px
+
+        &-current,
+        &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
+            img
+                width: 100%
+                height: 100%
+
+.accommodation
+    .headline
+        margin-bottom: 72px
+
+    &-item
+        width: 26%
+        img
+            width: 100%
+            height: 365px
+            object-fit: cover
+            margin: 0 0 25px
+
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            margin: 0 0 25px
+
+        a
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            text-transform: uppercase
+            text-decoration: underline
+            &:hover
+                color: $prime
+
+        &:nth-of-type(1)
+            width: 44%
+            img
+                width: 100%
+                height: 616px
+
+.app
+    .headline
+        margin-bottom: 130px
+        span
+            display: block
+
+    &-wrap
+        justify-content: space-around
+
+    &-img
+        max-width: 470px
+
+    &-item
+        text-align: center
+        &__icon
+            display: block
+            margin: 0 auto 78px
+
+        img
+            max-width: 195px
+
+.main
+    padding: 0 0 90px
+    &__headline
+        font-weight: 400
+        margin: 0 0 150px
+        font-size: 198px
+        line-height: 120%
+        text-transform: uppercase
+        border-bottom: 1px solid $black
+
+@media screen and ( max-width: 1500px )
+    .main
+        padding-bottom: 60px
+        &__headline
+            font-size: 160px
+            margin-bottom: 100px
+
+    .hero
+
+        h1
+            font-size: 65px
+            line-height: 120%
+
+        .textline
+            width: 100%
+            max-width: 100%
+            max-width: 400px
+
+        .wrapper
+            max-width: 540px
+
+    .socials
+        margin-bottom: 130px
+        &__heading
+            font-size: 150px
+
+    .about
+        padding-bottom: 130px
+
+    .sponsors
+        &-wrap
+            max-width: 550px
+        &-item
+
+    .item
+        min-height: 200px
+
+    .venue
+        &-slider
+
+        &-slide
+            width: 430px
+            height: 500px
+
+        .slick
+            &-slide,
+            &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+                img
+                    width: 260px
+                    height: 260px
+
+            &-current,
+            &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
+                img
+                    width: 100%
+                    height: 100%
+
+    .accommodation
+        &-item
+            &:nth-of-type(1)
+                img
+                    height: 528px
+
+            p
+                margin-bottom: 10px
+
+            a
+                font-size: 18px
+
+            img
+                height: 312px
+                margin-bottom: 10px
+
+@media screen and ( max-width: 1200px )
+    .main
+        padding-bottom: 70px
+        &__headline
+            padding: 10px 0
+            font-size: 90px
+            margin-bottom: 70px
+
+    .hero
+        .container
+            max-width: 800px
+            padding: 30px 20px 70px
+
+        h1
+            font-size: 55px
+            width: 100%
+            max-width: 100%
+            text-align: center
+
+        .textline
+            text-align: center
+            max-width: 70%
+            margin: 0 auto
+            margin-bottom: 40px
+
+        &-slider
+            padding: 0
+            border: none
+            position: static
+            width: 100%
+            height: 500px
+            max-width: 600px
+            margin: 0 auto 40px
+
+        .wrapper
+            max-width: 100%
+            margin: 0
+            display: block
+            text-align: center
+            .btn
+                display: block
+                margin: 0 auto 20px
+                width: 300px
+
+        &-nav
+            display: none
+
+    .socials
+        &__heading
+            font-weight: 400
+            font-size: 87px
+            line-height: 100%
+        img
+            max-width: 140px
+
+    .about
+        padding-bottom: 100px
+
+        .container
+
+        &-item
+            width: 48%
+
+    .sponsors
+        .headline
+            max-width: 100%
+            padding-right: 150px
+            position: relative
+            top: 0
+            right: 0
+            overflow: hidden
+            img
+                position: absolute
+                right: 0
+                top: 0
+                width: 100px
+                height: 100px
+                max-height: unset
+                min-height: unset
+                transform: rotate(90deg) translateY(calc( -50% + 15px ))
+
+        &-wrap
+            margin: 0 auto
+
+        &-item
+            width: 100%
+
+    .item
+        width: 48%
+
+    .speakers
+        padding: 100px 0
+        &-wrap
+            max-width: 500px
+            margin: 0 auto
+
+        &-item
+            width: 48%
+
+    .tab
+        &-btn
+            font-size: 18px
+
+    .agenda
+        .headline
+            padding-right: 0
+
+        &-item
+            flex-wrap: wrap
+
+        &-info
+            width: 100%
+
+        &__heading
+            margin-bottom: 30px
+
+        &-time
+            width: 100%
+            margin-bottom: 20px
+
+        &-speaker,
+        &-sponsor
+            width: 100%
+            max-width: 100%
+
+    .venue
+        &-title
+            width: 100%
+            max-width: 100%
+            margin: 0 0 30px
+
+        &-slider
+            width: calc( 100% + 25px )
+            position: relative
+            left: -10px
+            max-width: unset
+            margin: 0 auto
+
+        &-slide
+            width: 340px
+            margin: 0 20px 0 0
+            height: 400px
+
+        .slick
+            &-slide,
+            &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+                img
+                    width: 100%
+                    height: 100%
+
+    .accommodation
+        .wrap-start
+            width: 100%
+            max-width: 650px
+            margin: 0 auto
+        &-item
+            width: 48%
+            &:nth-of-type(1)
+                width: 100%
+                margin: 0 0 30px
+
+    .app
+        padding-bottom: 100px
+        .headline
+            margin-bottom: 60px
+            span
+                display: inline
+
+        &-img
+            width: 100%
+            margin: 0 auto 20px
+
+        &-item
+            width: 48%
+
+@media screen and ( max-width: 700px )
+    .main
+        padding-bottom: 60px
+        &__headline
+            font-size: 48px
+            line-height: 58px
+
+    .hero
+        .container
+            padding-top: 20px
+        h1
+            font-size: 30px
+            text-align: left
+            margin-bottom: 10px
+
+        .textline
+            text-align: left
+            max-width: 100%
+            margin-bottom: 30px
+
+        &-slider
+            height: 300px
+            margin-bottom: 30px
+            width: calc( 100% + 40px )
+            position: relative
+            left: -20px
+        &-item
+            margin: 0 20px
+
+        .wrapper
+
+            .btn
+                width: 335px
+                max-width: 100%
+
+    .about
+        padding-bottom: 0
+
+        &-row
+            display: block
+            margin-bottom: 30px
+
+        &__textline
+            font-size: 14px
+            line-height: 130%
+            margin: 0 0 10px
+
+        &-col
+            font-size: 13px
+            line-height: 130%
+            width: 100%
+            margin-bottom: 10px
+
+        &-item
+            width: 50%
+            margin-bottom: 30px
+            &__heading
+                font-size: 30px
+                line-height: 36px
+                margin-bottom: 4px
+
+            &__text
+                font-size: 13px
+                line-height: 130%
+
+    .socials
+        padding: 0 15px
+        margin-bottom: 70px
+        .container
+            padding: 0
+            border:
+                top: 1px solid $black
+                bottom: 1px solid $black
+
+        &__heading
+            font-size: 40px
+            line-height: 48px
+
+        img
+            max-width: 90px
+
+    .speakers
+        padding: 70px 0 50px
+        .headline
+            margin-bottom: 30px
+
+        &-item
+            margin-bottom: 20px
+
+            img
+                margin-bottom: 10px
+
+            &__heading
+                font-size: 14px
+                line-height: 130%
+                margin-bottom: 6px
+
+            &__text
+                font-size: 13px
+                line-height: 130%
+
+    .tab
+        &-btn
+            font-size: 10px
+            line-height: 130%
+            padding: 12px 0 11px
+
+        &-wrap
+            width: calc( 100% + 30px )
+            position: relative
+            z-index: 1
+            left: -15px
+
+    .sponsors
+        .headline
+            padding-right: 60px
+            img
+                max-width: 70px
+                top: -15px
+                right: 15px
+
+        &-item
+            padding: 30px 30px 40px
+            margin-bottom: 20px
+            &:last-of-type
+                margin-bottom: 0
+
+            img
+                max-width: 80%
+                margin-bottom: 20px
+
+            &__heading
+                font-size: 14px
+                line-height: 17px
+                margin-bottom: 20px
+
+            &__text
+                font-size: 13px
+                line-height: 16px
+
+    .agenda
+        &-item
+            // padding: 10px
+
+        &-time
+            margin-bottom: 20px
+
+        &-speaker
+            margin-bottom: 20px
+
+        &-speaker,
+        &-sponsor
+            img
+                margin: 15px 0 0
+                max-width: 55%
+
+    .floorplan
+        &-img
+            display: block
+            width: 100%
+
+        .wrap
+            display: block
+
+        &-item
+            margin-bottom: 10px
+            width: 49%
+            img
+                width: 30px
+                margin-right: 10px
+
+            &__text
+                font-weight: 700
+                font-size: 13px
+                line-height: 16px
+
+        &-col
+            align-items: start
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 20px
+
+    .item
+        width: 100%
+        height: 180px
+        max-width: 400px
+        margin: 0 auto 20px
+
+    .accommodation
+        .headline
+            padding-right: 0
+            margin-bottom: 20px
+        &-item
+            img
+                height: 158px
+            p
+                font-size: 13px
+                line-height: 130%
+            a
+                font-size: 14px
+                line-height: 17px
+            &:nth-of-type(1)
+                img
+                    height: 335px
+
+    .app
+        .headline
+            padding-right: 0
+
+        &-item
+            width: 100%
+            margin-bottom: 40px
+            &__icon
+                margin-bottom: 30px
+
+    .venue
+        &-title
+            font-size: 14px
+            margin-bottom: 24px
+        &-slide
+            width: 178px
+            height: 220px
+            margin: 0 20px 0 0

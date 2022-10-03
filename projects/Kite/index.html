@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kite</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="modal" id="modal_1">
+        <div class="modal-content">
+            <h2 class="modal-content__header">
+                Contact us
+            </h2>
+            <!-- /.cal-to-action__header -->
+            <button class="modalClose"></button>
+            <form id="contform" class="modal-content-form form-cont" name="form">
+                <label for="name">
+                    <input class="form__inp" type="text" required name="name" id="name" placeholder="Name">
+                </label>
+                <label for="email">
+                    <input class="form__inp" type="email" required name="email" id="email" placeholder="Email">
+                </label>
+                <label for="phone">
+                    <input class="form__inp phone-mask" type="tel" required name="phone" id="phone" placeholder="Phone">
+                </label>
+                <textarea name="messange" id="messange" cols="30" placeholder="Additional information" ></textarea>
+                <button class="modal-content-form__btn btn dark-blue">Send</button>
+            </form>
+            <!-- /.cal-to-action-form -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+    <div class="modal" id="modal_2">
+        <div class="modal-content">
+            <!-- /.cal-to-action__header -->
+            <button class="modalClose"></button>
+            <nav>
+                <ul>
+                    <li><a class="nav-link go_to" href="#main">Main</a></li>
+                    <li><a class="nav-link go_to" href="#training">Training</a></li>
+                    <li><a class="nav-link go_to" href="#rental">Rental</a></li>
+                    <li><a class="nav-link go_to" href="#other-events">Other Events</a></li>
+                    <li><a class="nav-link go_to" href="#about">Abolut</a></li>
+                    <li><a class="nav-link go_to" href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+            <ul class="lang">
+                <li><a href="#">En</a></li>
+                <li><a href="#">De</a></li>
+                <li><a href="#">Ru</a></li>
+            </ul>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+    <div class="modal" id="modal_3">
+        <div class="modal-content">
+            <button class="modalClose"></button>
+            <div class="video">
+                    <iframe src="https://www.youtube.com/embed/LFDaKUHgK7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+    <div class="hero-section" id="main">
+        <header>
+            <div class="container">
+                <a href="#" class="logo">
+                    <img src="img/logo.svg" alt="Kite Royal Academy">
+                    <span class="logo-title">
+                            Kite <br>
+                            Royal <br>
+                            Academy
+                    </span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a class="go_to" href="#main">Main</a></li>
+                        <li><a class="go_to" href="#training">Training</a></li>
+                        <li><a class="go_to" href="#rental">Rental</a></li>
+                        <li><a class="go_to" href="#other-events">Other Events</a></li>
+                        <li><a class="go_to" href="#about">Abolut</a></li>
+                        <li><a class="go_to" href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="social-lang">
+                    <ul class="social-links">
+                        <li><a class="facebook" target="_blanc" href="https://www.facebook.com/kiteroyalacademy/"></a></li>
+                        <li><a class="instagram" target="_blanc"  href="#"></a></li>
+                        <li><a class="whatsapp" target="_blanc"  href="https://wa.me/201000256217"></a></li>
+                    </ul>
+                    <select name="lang" id="lang" class="lang">
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+                <button class="menuBtn"><span></span></button>
+            </div>
+        </header>
+        <img src="img/person-parallax.png" class="person-parallax" alt="person-parallax">
+        <div class="container">
+        <div class="hero-section-title">
+                <h1 class="hero-section-title__header">
+                    Kitesurfing training in Hurghada
+                </h1>
+                <p class="hero-section-title__descr">
+                    The best choice you made in your life
+                </p>
+                <a href="#" class="hero-section-title__btn btn modal-open">Order a training</a>
+        </div>
+        <!-- /.hero-section-title -->
+        </div>
+        <a href="#training" class="arrow-down go_to">
+            to training
+            <span>
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.10891 10.7612L0.369434 3.02142C-0.123145 2.52908 -0.123145 1.73084 0.369434 1.23873C0.861574 0.746594 1.65978 0.746594 2.15188 1.23873L9.00013 8.0872L15.8481 1.23893C16.3405 0.746793 17.1386 0.746793 17.6307 1.23893C18.1231 1.73108 18.1231 2.52928 17.6307 3.02162L9.89115 10.7614C9.64496 11.0074 9.32265 11.1303 9.00017 11.1303C8.67753 11.1303 8.35498 11.0072 8.10891 10.7612Z" fill="white"/>
+                    </svg>
+            </span>
+        </a>
+    </div>
+    <!-- /.hero-section -->
+    <div class="training-section" id="training">
+        <div class="container">
+            <h2 class="training-section__header">
+                Training
+            </h2>
+            <div class="training-section-wrap wrap">
+                <div class="training-section-item">
+                    <h3 class="training-section-item__header">
+                        Session 1
+                    </h3>
+                    <div class="training-section-item__img">
+                        <img src="img/session-1.png" alt="session image">
+                    </div>
+                    <ul class="training-section-item__list">
+                        <li>Theory(Intro to the wind and power)</li>
+                        <li>Training kite</li>
+                        <li>Set up the kite</li>
+                        <li>Safety systems</li>
+                        <li>First piloting</li>
+                    </ul>
+                </div>
+                <!-- /.training-section-item -->
+                <div class="training-section-item">
+                    <h3 class="training-section-item__header">
+                        Session 2
+                    </h3>
+                    <div class="training-section-item__img">
+                        <img src="img/session-2.png" alt="session image">
+                    </div>
+                    <ul class="training-section-item__list">
+                        <li>Flying kite with one hand</li>
+                        <li>Lunching and landing</li>
+                        <li>Walking with the kite</li>
+                        <li>Body dragging in the water</li>
+                        <li>Flying kite in power zone</li>
+                        <li>Relunch the kite from the water</li>
+                    </ul>
+                </div>
+                <!-- /.training-section-item -->
+                <div class="training-section-item">
+                    <h3 class="training-section-item__header">
+                        Session 3
+                    </h3>
+                    <div class="training-section-item__img">
+                        <img src="img/session-3.png" alt="session image">
+                    </div>
+                    <ul class="training-section-item__list">
+                        <li>Upwind body drag (one handed)</li>
+                        <li>Body dragging with the board.</li>
+                        <li>Self-rescure and pack down</li>
+                        <li>Water start theory</li>
+                        <li>Stady pull with the kite</li>
+                        <li>Water start with both directions</li>
+                    </ul>
+                </div>
+                <!-- /.training-section-item -->
+                <div class="training-section-item">
+                    <h3 class="training-section-item__header">
+                        Session 4
+                    </h3>
+                    <div class="training-section-item__img">
+                        <img src="img/session-4.png" alt="session image">
+                    </div>
+                    <ul class="training-section-item__list">
+                        <li>Water start</li>
+                        <li>Riding in both directions</li>
+                        <li>Gaining speed on the board</li>
+                        <li>Right of way rules</li>
+                        <li>Upwind riding</li>
+                    </ul>
+                </div>
+                <!-- /.training-section-item -->
+            </div>
+            <!-- /.training-section-wrap -->
+            <a href="#" class="btn dark-blue training-section__btn modal-open">Order a training</a>
+        </div>
+    </div>
+    <!-- /.training-section -->
+    <div class="rental-section" id="rental">
+        <div class="container">
+            <h2 class="rental-section__header">
+                Rental
+            </h2>
+            <p class="rental-section__descr main_descr">
+                    You can rent a complete set of equipment and separately: Kite / bar, board, trapeze, hydro footwear, diving suit, helmet. <br>
+                     You can store your equipment at the station
+            </p>
+            <div class="rental-section-wrap wrap">
+                <div class="rental-section-item">
+                    <img src="img/rental-img-1.png" class="rental-section-item__img" alt="rental day">
+                    <div class="rental-section-item-title">
+                        <h3 class="rental-section-item__header">
+                            1 day
+                        </h3>
+                        <span class="rental-section-item__price">
+                            65&euro;
+                        </span>
+                        <span class="rental-section-item__req">Full equipment</span>
+                    </div>
+                    <!-- /.rental-section-item-title -->
+                </div>
+                <!-- /.rental-section-item -->
+                <div class="rental-section-item">
+                    <img src="img/rental-img-2.png" class="rental-section-item__img" alt="rental day">
+                    <div class="rental-section-item-title">
+                        <h3 class="rental-section-item__header">
+                            2 days
+                        </h3>
+                        <span class="rental-section-item__price">
+                            185&euro;
+                        </span>
+                        <span class="rental-section-item__req">Full equipment</span>
+                    </div>
+                    <!-- /.rental-section-item-title -->
+                </div>
+                <!-- /.rental-section-item -->
+                <div class="rental-section-item">
+                    <img src="img/rental-img-3.png" class="rental-section-item__img" alt="rental day">
+                    <div class="rental-section-item-title">
+                        <h3 class="rental-section-item__header">
+                            1 week
+                        </h3>
+                        <span class="rental-section-item__price">
+                            270&euro;
+                        </span>
+                        <span class="rental-section-item__req">Full equipment</span>
+                    </div>
+                    <!-- /.rental-section-item-title -->
+                </div>
+                <!-- /.rental-section-item -->
+                <div class="rental-section-item">
+                    <img src="img/rental-img-4.png" class="rental-section-item__img" alt="rental day">
+                    <div class="rental-section-item-title">
+                        <h3 class="rental-section-item__header">
+                            10 days
+                        </h3>
+                        <span class="rental-section-item__price">
+                            360&euro;
+                        </span>
+                        <span class="rental-section-item__req">Full equipment</span>
+                    </div>
+                    <!-- /.rental-section-item-title -->
+                </div>
+                <!-- /.rental-section-item -->
+                <div class="rental-section-item">
+                    <img src="img/rental-img-5.png" class="rental-section-item__img" alt="rental day">
+                    <div class="rental-section-item-title">
+                        <h3 class="rental-section-item__header">
+                            2 weeks
+                        </h3>
+                        <span class="rental-section-item__price">
+                            440&euro;
+                        </span>
+                        <span class="rental-section-item__req">Full equipment</span>
+                    </div>
+                    <!-- /.rental-section-item-title -->
+                </div>
+                <!-- /.rental-section-item -->
+                <div class="rental-section-item">
+                    <img src="img/rental-img-6.png" class="rental-section-item__img" alt="rental day">
+                    <div class="rental-section-item-title">
+                        <h3 class="rental-section-item__header">
+                            1 month
+                        </h3>
+                        <span class="rental-section-item__price">
+                            760&euro;
+                        </span>
+                        <span class="rental-section-item__req">Full equipment</span>
+                    </div>
+                    <!-- /.rental-section-item-title -->
+                </div>
+                <!-- /.rental-section-item -->
+            </div>
+            <!-- /.rental-section-wrap wrap -->
+        </div>
+    </div>
+    <!-- /.rental-section -->
+    <div class="other-events" id="other-events">
+        <div class="container">
+            <h2 class="other-events__header">
+                Other Events
+            </h2>
+            <div class="other-events-wrap wrap">
+                <div class="other-events-item">
+                    <div class="other-events-item__img">
+                        <img src="img/kayak.png" alt="other events">
+                    </div>
+                    <h3 class="other-events-item__header">
+                        Kayak
+                    </h3>
+                    <p class="other-events-item__descr">
+                        A kayak is a small, narrow watercraft which is typically propelled by means of a double-bladed paddle.
+                    </p>
+                </div>
+                <!-- /.other-events-item -->
+                <div class="other-events-item">
+                    <div class="other-events-item__img">
+                        <img src="img/sup.png" alt="other events">
+                    </div>
+                    <h3 class="other-events-item__header">
+                        SUP
+                    </h3>
+                    <p class="other-events-item__descr">
+                        Stand up paddle boarding (SUP) is an offshoot of surfing.
+                    </p>
+                </div>
+                <!-- /.other-events-item -->
+                <div class="other-events-item">
+                    <div class="other-events-item__img">
+                        <img src="img/windsurfing.png" alt="other events">
+                    </div>
+                    <h3 class="other-events-item__header">
+                        Windsurfing
+                    </h3>
+                    <p class="other-events-item__descr">
+                        Windsurfing is a surface water sport that combines elements of surfing and sailing
+                    </p>
+                </div>
+                <!-- /.other-events-item -->
+            </div>
+            <!-- /.other-events-wrap -->
+            <div class="other-events-wind-rate">
+                <h3 class="other-events-wind-rate__header">
+                    You can check the rate of wind on our site
+                </h3>
+                <a href="#" target="_blanc" class="other-events-wind-rate__link btn dark-blue">
+                    Go to the site
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.other-events -->
+    <div class="about" id="about">
+        <div class="container">
+            <h2 class="about__header">
+                About
+            </h2>
+            <div class="about-wrap wrap">
+                <div class="about-title">
+                    <h3 class="about-title__header">
+                        Kitesurfing training in Hurghada (Egypt)
+                    </h3>
+                    <p class="about-title__descr">
+                        We are the Kite Royal Academy Kitesk School, we offer kiteboarding training and equipment rental on the spot of the beautiful beach of the new Titanic Royal hotel. We have perfect conditions for training and freeride - the sandbanks of the Red Sea and constant winds. There is all necessary equipment, as well as storage. At your disposal will be the newest kites Cabrina Moto 2019. Experienced instructors will help you to easily master this amazing sport in the shortest possible time. At the end of training, we issue an IKO certificate.
+                    </p>
+                </div>
+                <!-- /.about-title -->
+                <div class="about-video">
+                    <button id="play-btn" class="play-btn">
+                    </button>
+                    <img src="img/video-poster.jpg" alt="video-poster">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#about.about -->
+    <div class="footer-bg">
+        <img src="img/wave1-bg.png" class="footer-bg__img"  alt="contacts">
+        <div class="feedback" id="feedback">
+            <h2 class="feedback__header">
+                Feedback
+            </h2>
+            <div class="feedback-wrapper">
+                <div class="feedback-item">
+                    <h4 class="feedback-item__header">
+                        Anastasia Vernik
+                    </h4>
+                    <p class="feedback-item__descr">
+                        The summer in Egypt was amazing, I have learned how to kitesurfing and the awsome instructor helped me stand on the water and make bodydrag, I’m very gladful that I spent my summer in Egypt
+                    </p>
+                </div>
+                <!-- /.feedback-item -->
+                <div class="feedback-item">
+                    <h4 class="feedback-item__header">
+                        Anastasia Vernik
+                    </h4>
+                    <p class="feedback-item__descr">
+                        The summer in Egypt was amazing, I have learned how to kitesurfing and the awsome instructor helped me stand on the water and make bodydrag, I’m very gladful that I spent my summer in Egypt
+                    </p>
+                </div>
+                <!-- /.feedback-item -->
+                <div class="feedback-item">
+                    <h4 class="feedback-item__header">
+                        Anastasia Vernik
+                    </h4>
+                    <p class="feedback-item__descr">
+                        The summer in Egypt was amazing, I have learned how to kitesurfing and the awsome instructor helped me stand on the water and make bodydrag, I’m very gladful that I spent my summer in Egypt
+                    </p>
+                </div>
+                <!-- /.feedback-item -->
+                <div class="feedback-item">
+                    <h4 class="feedback-item__header">
+                        Anastasia Vernik
+                    </h4>
+                    <p class="feedback-item__descr">
+                        The summer in Egypt was amazing, I have learned how to kitesurfing and the awsome instructor helped me stand on the water and make bodydrag, I’m very gladful that I spent my summer in Egypt
+                    </p>
+                </div>
+                <!-- /.feedback-item -->
+                <div class="feedback-item">
+                    <h4 class="feedback-item__header">
+                        Anastasia Vernik
+                    </h4>
+                    <p class="feedback-item__descr">
+                        The summer in Egypt was amazing, I have learned how to kitesurfing and the awsome instructor helped me stand on the water and make bodydrag, I’m very gladful that I spent my summer in Egypt
+                    </p>
+                </div>
+                <!-- /.feedback-item -->
+                <div class="feedback-item">
+                    <h4 class="feedback-item__header">
+                        Anastasia Vernik
+                    </h4>
+                    <p class="feedback-item__descr">
+                        The summer in Egypt was amazing, I have learned how to kitesurfing and the awsome instructor helped me stand on the water and make bodydrag, I’m very gladful that I spent my summer in Egypt
+                    </p>
+                </div>
+                <!-- /.feedback-item -->
+            </div>
+            <!-- /.feedback-wrapper -->
+        </div>
+        <!-- /.feedback -->
+        <footer class="contacts" id="contacts">
+            <div class="container">
+                <h2 class="contacts__header">
+                    Contacts
+                </h2>
+                <div class="contacts-wrap wrap">
+                    <div class="contacts-map">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A69ea459dffdac7c3f6ce366842b3d2815dbff7bcce8091c61774b8fba42d5409&amp;width=100%25&amp;height=448&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                    <div class="contacts-item">
+                        <span class="contacts-item__header">
+                            Address
+                        </span>
+                        <address>
+                            <a href="https://yandex.ru/maps/?um=constructor%3A69ea459dffdac7c3f6ce366842b3d2815dbff7bcce8091c61774b8fba42d5409&source=constructorLink">Village Road, Red Sea Governorate 84511, Egypt</a>
+                        </address>
+                        <span class="contacts-item__header">
+                            Phone
+                        </span>
+                        <a href="tel:+201000256217" class="phone-number">+20 100 025 6217
+                        </a>
+                        <span class="contacts-item__header">
+                            Follow us
+                        </span>
+                        <ul class="social-links">
+                            <li><a class="facebook" target="_blanc" href="https://www.facebook.com/kiteroyalacademy/"></a></li>
+                            <li><a class="instagram" target="_blanc"  href="#"></a></li>
+                            <li><a class="whatsapp" target="_blanc"  href="https://wa.me/201000256217"></a></li>
+                        </ul>
+                        <p class="contacts-item__descr">
+                            Titanic Royal Hotel
+                        </p>
+                        <a href="#" class="contacts-item__link btn dark-blue modal-open">Order a training</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- /.footer-bg -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="main.js?-v324558"></script>
+</body>
+</html>

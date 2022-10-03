@@ -1,0 +1,1141 @@
+@import 'normolize'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+@import 'elements'
+@import 'header'
+@import 'footer'
+@import 'modal'
+@import 'bottom'
+
+.hero
+    position: relative
+    z-index: 1
+    min-height: 724px
+    height: 100vh
+    max-height: 1100px
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        background-color: #545454
+        position: absolute
+        width: 68%
+        height: 100%
+        z-index: -1
+
+    .container
+        position: static
+
+    &__img
+        position: absolute
+        top: 50%
+        width: 47%
+        max-height: 65%
+        object-fit: cover
+        right: 0
+        transform: translateY(-50%)
+
+    h1
+        max-width: 730px
+        color: #fff
+        margin: 0 0 40px
+
+    &__text
+        font-weight: 400
+        font-size: 32px
+        line-height: 41px
+        color: #FFFFFF
+        margin-bottom: 60px
+
+    &-content
+        height: calc( 100vh - 220px )
+        max-height: 780px
+        justify-content: center
+        flex-direction: column
+        align-items: flex-start
+
+    &.type_2
+        background-image: url('../img/bg-line.svg')
+        background-repeat: no-repeat
+        background-position: bottom 25px right
+        &::before
+            background-color: #FCF5ED
+
+        .header
+            .nav
+                &__link
+                    color: #000
+
+        .hero
+            &__text
+                color: #000
+
+        h1
+            color: #000
+
+.premium
+    &__slogan
+        font-weight: 400
+        font-size: 24px
+        line-height: 31px
+        text-transform: uppercase
+        color: #808080
+        max-width: 700px
+        margin: 0 auto
+        position: relative
+        z-index: 1000
+        bottom: -50px
+
+    .headline
+        max-width: 700px
+        margin: 0 auto
+        position: relative
+        z-index: 1000
+        bottom: -50px
+
+    &-slider
+        position: relative
+        overflow: hidden
+
+    .swiper
+        &-pagination
+            position: absolute
+            bottom: 197px
+            left: 57%
+            width: 65px
+            text-align: center
+            color: #FFFFFF
+            &-current
+                display: block
+                font-weight: 400
+                font-size: 96px
+                line-height: 124px
+                text-transform: uppercase
+                margin-bottom: 29px
+
+            &-total
+                font-weight: 400
+                font-size: 16px
+                line-height: 160%
+
+        &-slide
+            background-color: #fff
+            position: relative
+            z-index: 1
+            overflow: hidden
+            height: 817px
+
+            &::before
+                content: ''
+                display: block
+                width: 280px
+                height: 80%
+                background-color: $bg
+                position: absolute
+                z-index: -1
+                left: 50%
+                bottom: 0px
+
+            img
+                transition: all ease-in-out 1s
+                width: 750px
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                transform-origin: 0 0
+                object-fit: cover
+
+        &-next,
+        &-prev
+            display: block
+            cursor: pointer
+            background-color: transparent
+            width: 432px
+            height: 432px
+            transform: translateX(-20%)
+            border: 1px solid #787878
+            background-image: url('../img/arrow-wide.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 70px auto
+            position: absolute
+            z-index: 1000
+            border-radius: 50%
+            left: 50%
+            bottom: 98px
+        &-prev
+            display: none
+
+    &__text
+        position: absolute
+        right: 0
+        top: 50%
+        width: 334px
+        font-weight: 400
+        font-size: 16px
+        line-height: 160%
+
+.objects
+    width: 49%
+    position: relative
+
+    &-slider
+        position: relative
+        overflow: hidden
+        width: 100%
+        margin-bottom: 20px
+
+    .btn
+        &-next,
+        &-prev
+            z-index: 1000
+            position: absolute
+            top: auto
+            right: 40px
+            bottom: 40px
+        &-prev
+            right: 115px
+
+    &-item
+        height: 640px
+        position: relative
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__heading
+        font-weight: 700
+        font-size: 16px
+        line-height: 160%
+        text-transform: uppercase
+        margin-bottom: 10px
+
+    &__text
+        font-weight: 400
+        font-size: 16px
+        line-height: 160%
+
+    &__status
+        position: absolute
+        top: 40px
+        left: 40px
+        color: #fff
+        z-index: 1000
+        background-color: #232323
+        padding: 4px 20px
+
+.ctr
+    h2
+        font-weight: 600
+        font-size: 109px
+        line-height: 120%
+        text-transform: uppercase
+        color: #fff
+        text-shadow: 1px 1px #000, -1px -1px #000
+        padding-right: 164px
+        background-image: url('../img/arrow.svg')
+        background-repeat: no-repeat
+        background-position: center right
+        margin: 0
+
+.company
+    margin: 75px 0 0
+    background-color: $bg
+    color: #fff
+    padding-bottom: 150px
+    .headline
+        text-align: right
+        margin: 0
+        position: relative
+        top: 100px
+
+    &-img
+        width: 50%
+        max-width: 750px
+        position: relative
+        img
+            width: 100%
+            max-height: 820px
+            object-fit: cover
+
+    &-shape
+        position: absolute
+        top: -210px
+        right: -210px
+        max-width: 420px
+        object-fit: contain
+
+    &__text
+        font-weight: 400
+        font-size: 16px
+        line-height: 160%
+        max-width: 504px
+        margin: 0 auto 0 50px
+
+    &.type_2
+        background-color: #FCF5ED
+        color: #000
+        background-image: url('../img/bg-line_2.svg')
+        background-repeat: no-repeat
+        background-position: bottom 150px right
+
+.banks
+    background-image: url('../img/bg-line_2.svg')
+    background-repeat: no-repeat
+    background-position: center left
+
+    &-slider
+        overflow: hidden
+        img
+            margin: 0 0 30px auto
+            width: 100%
+            height: 500px
+            object-fit: cover
+            display: block
+
+    &-wrap
+        max-width: 1000px
+        margin: 0 0 0 auto
+
+    &__heading
+        font-weight: 500
+        font-size: 40px
+        line-height: 59px
+        text-transform: uppercase
+        position: relative
+        max-width: 1000px
+        margin: 0 0 40px auto
+    &__num
+        position: absolute
+        top: 0
+        left: -500px
+
+    &__text
+        font-weight: 200
+        font-size: 18px
+        line-height: 160%
+        max-width: 500px
+        margin: 0
+
+    .btn
+        &-next,
+        &-prev
+            z-index: 1000
+            position: absolute
+            top: auto
+            right: 0
+            bottom: 82px
+        &-prev
+            right: 82px
+
+    .swiper
+        &-slide
+            opacity: 0 !important
+            transition: all ease .3s
+            &-active
+                opacity: 1 !important
+
+.photogalery
+    &__text
+        padding-top: 50px
+        font-style: normal
+        font-weight: 200
+        font-size: 18px
+        line-height: 160%
+        width: 480px
+        max-width: 32%
+
+    .btn
+        &-prev
+            margin-right: 10px
+
+    &-slider
+        overflow: hidden
+
+    .swiper
+        &-slide
+            background-color: #fff
+            position: relative
+            display: flex
+            justify-content: space-between
+            flex-direction: row-reverse
+            img
+                width: 1000px
+                max-width: 67%
+                height: 810px
+                max-height: 810px
+                object-fit: cover
+
+        &-controls
+            z-index: 1000
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 500px
+
+            background-color: #FCF5ED
+            padding: 34px 40px 40px
+
+        &-pagination
+            position: static
+            margin-bottom: 318px
+            text-align: right
+            padding-top: 6px
+            &-current
+                font-weight: 500
+                font-size: 40px
+                line-height: 100%
+                text-transform: uppercase
+                position: absolute
+                top: 0
+                left: 0
+
+            &-total
+                font-weight: 400
+                font-size: 16px
+                line-height: 160%
+
+.tour
+    background-color: #545454
+    padding: 150px 0
+    margin: 75px 0
+    color: #fff
+    .container
+        min-height: 800px
+    .headline
+        margin-bottom: 30px
+
+    &__img
+        width: 63%
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+
+    &__text
+        max-width: 400px
+        font-weight: 200
+        font-size: 18px
+        line-height: 160%
+        margin-bottom: 40px
+
+    &__descr
+        max-width: 400px
+        font-weight: 200
+        font-size: 32px
+        line-height: 38px
+        margin-bottom: 80px
+
+.tab
+    &-controls
+        display: flex
+        margin-bottom: 40px
+
+    &-btn
+        font-weight: 700
+        font-size: 16px
+        line-height: 160%
+        text-transform: uppercase
+        border: 1px solid #BBBBBB
+        border-right: none
+        background-color: transparent
+        padding: 40px
+        min-width: 250px
+        width: 250px
+        height: 250px
+        text-align: left
+        display: inline-flex
+        &:last-of-type
+            border: 1px solid #BBBBBB
+
+        &.active
+            background-color: #F47E19
+            color: #fff
+            border-color: #F47E19
+
+    &-content
+        display: none
+        overflow: hidden
+        &.active
+            display: block
+
+.layouts
+    &-img
+        width: 1000px
+        max-width: 67%
+        height: 598px
+        display: flex
+        justify-content: center
+        align-items: center
+        left: 710px
+        top: 5138px
+        background: #FFFFFF
+        border: 1px solid #BBBBBB
+        img
+            max-width: 90%
+            max-height: 90%
+
+    .swiper
+        &-slide
+            width: 100%
+            flex-direction: row-reverse
+            display: flex
+            justify-content: space-between
+
+        &-controls
+            width: 35%
+            max-width: 500px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            z-index: 1000
+            position: absolute
+            bottom: 0
+            left: 0
+            padding: 46px 40px
+
+        &-pagination
+            position: static
+            width: unset
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+            &-current
+                font-size: 64px
+                line-height: 75px
+                text-transform: uppercase
+
+            &-total
+
+    .btn
+        &-prev,
+        &-next
+            transform: scale(.8)
+
+        &-prev
+            margin: 0 0 0 auto
+            transform: scale(-0.8) !important
+
+    &-btn
+        position: absolute
+        bottom: 60px
+        right: 40px
+        padding: 17px 10px 16px
+        font-size: 14px
+        min-width: 260px
+
+    &-text
+        background-color: #FCF5ED
+        padding: 60px 40px 0
+        width: 500px
+
+    &-item
+        margin-bottom: 27px
+        font-size: 16px
+        line-height: 19px
+
+.galery
+    .wrap
+        justify-content: space-between
+
+    a
+        display: block
+        width: 352px
+        height: 352px
+        background-color: #E6E6E6
+        margin-bottom: 30px
+        position: relative
+        img
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            object-fit: cover
+
+@media screen and ( max-width: 1500px )
+    .hero
+        h1
+            max-width: 45%
+            margin-bottom: 30px
+
+        &__text
+            font-size: 26px
+            margin-bottom: 50px
+
+        &__img
+            width: 53%
+            max-height: 65%
+
+    .galery
+        a
+            width: 280px
+            height: 280px
+
+    .layouts
+        &-img
+            height: 480px
+
+        .swiper
+            &-controls
+                padding: 20px 30px
+
+        &-text
+            padding: 40px 30px
+
+        &-btn
+            right: 30px
+            bottom: 30px
+
+    .banks
+        &__num
+            left: -400px
+        &__heading
+            max-width: 800px
+        &-slider
+            img
+                height: 400px
+        &-wrap
+            max-width: 800px
+
+    .tour
+        padding: 120px 0
+        .container
+            min-height: 600px
+        &__descr
+            font-size: 28px
+            margin-bottom: 60px
+
+        &__text
+            font-size: 16px
+
+    .photogalery
+        .swiper
+            &-slide
+                img
+                    height: 640px
+                    min-height: 640px
+
+            &-controls
+                max-width: 33%
+
+            &-pagination
+                margin-bottom: 150px
+
+    .premium
+        &__slogan,
+        .headline
+            bottom: -30px
+
+        .swiper
+            &-slide
+                height: 550px
+                &::before
+                    width: 200px
+                    left: 45%
+                img
+                    width: 560px
+
+            &-next
+                width: 350px
+                height: 350px
+                left: 45%
+
+            &-pagination
+                left: 51%
+                &-current
+                    margin-bottom: 0
+
+    .ctr
+        h2
+            font-size: 85px
+
+    .company
+        margin-top: 65px
+        &-shape
+            max-width: 300px
+            right: -150px
+            top: -150px
+
+    .objects
+        &-item
+            height: 540px
+
+@media screen and ( max-width: 1200px )
+    .hero
+        height: unset
+        max-height: unset
+        min-height: unset
+        padding-bottom: 30px
+        &::before
+            width: 100%
+            height: 65%
+
+        &-content
+            padding: 30px 0 0
+            display: block
+            height: unset
+            max-height: unset
+            min-height: unset
+
+        .headline
+            margin: 0 auto 20px
+            max-width: 100%
+            text-align: center
+
+        &__text
+            text-align: center
+            margin-bottom: 40px
+
+        .btn
+            display: block
+            width: 100%
+            max-width: 400px
+            margin: 0 auto
+
+        &__img
+            width: 100%
+            max-width: 600px
+            margin: 0 auto 40px
+            display: block
+            position: static
+            transform: none
+            max-height: unset
+
+        &.type_2
+            background-image: none
+
+            .header
+                .btn-menu
+                    span,
+                    span::before,
+                    span::after
+                        background-color: #000
+
+                    &.active
+                        span::after
+                            background-color: transparent
+                &.active
+                    background-color: #FCF5ED
+
+                .nav
+                    border-color: rgba(0, 0, 0, .2)
+
+    .premium
+        padding-bottom: 0
+
+        &__slogan,
+        .headline
+            bottom: 0
+
+        .headline
+            margin-bottom: 20px
+
+        &__text
+            position: static
+            width: 100%
+            font-size: 16px
+            line-height: 160%
+            padding: 30px 20px
+
+        &-slider
+            width: calc( 100% + 40px )
+            left: -20px
+            max-width: 700px
+            margin: 0 auto
+
+        .swiper
+            &-slide
+                height: unset
+
+                &::before
+                    display: none
+
+                img
+                    position: static
+                    width: 100%
+                    height: unset
+                    height: 400px
+
+            &-controls
+                padding: 20px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                position: absolute
+                z-index: 1000
+                top: 310px
+                right: 0
+                width: 220px
+                height: 90px
+                background-color: $bg
+
+            &-pagination
+                position: static
+                margin-right: 20px
+                &-current,
+                &-total
+                    display: inline
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 18px
+
+            &-next,
+            &-prev
+                position: static
+                display: inline-block
+                width: 40px
+                border-radius: 50%
+                border: none
+                height: 40px
+                bottom: 25px
+                background-color: $prime
+                background-image: url('../img/arrow-white.svg')
+                background-size: 15px auto
+
+            &-prev
+                display: block
+                transform: scale(-1)
+
+    .objects
+        width: 100%
+        max-width: 500px
+        margin: 0 auto 30px
+        .container
+
+        &-slider
+
+        &-item
+            width: 100%
+            height: unset
+            img
+                position: static
+                max-height: 500px
+
+        .btn
+            &-next,
+            &-prev
+                display: none
+
+    .ctr
+        .container
+            max-width: 730px
+
+        h2
+            font-size: 60px
+            max-width: 380px
+
+    .company
+        padding: 60px 0 80px
+        .container
+            max-width: 700px
+        .headline
+            position: static
+            text-align: left
+            margin-bottom: 20px
+        &__text
+            margin: 0 0 20px
+            max-width: 100%
+
+        .wrapper
+            flex-direction: column-reverse
+
+        &-shape
+            max-width: 150px
+            top: 0
+            right: auto
+            left: 50%
+            transform: translateX(-50%)
+
+        &-img
+            max-width: 500px
+            padding-top: 75px
+            width: 100%
+
+        &.type_2
+            background-image: none
+
+    .tab
+        &-controls
+            overflow-x: scroll
+            width: calc( 100% + 40px )
+            position: relative
+            left: -20px
+            padding-left: 20px
+
+    .layouts
+        .swiper
+            &-slide
+                display: block
+            &-controls
+                width: 100%
+                max-width: 100%
+
+        &-img
+            width: 100%
+            max-width: 100%
+
+        &-text
+            width: 100%
+            max-width: 100%
+            padding-bottom: 150px
+
+        &-item
+            width: 40%
+            display: inline-block
+            vertical-align: top
+
+        &-btn
+            position: static
+            display: block
+            margin: 50px auto 0
+
+    .photogalery
+        padding: 30px 0 0
+
+        &-slider
+            position: relative
+            width: calc( 100% + 40px )
+            left: -20px
+            max-width: 700px
+            margin: 0 auto
+
+        &__text
+            width: 100%
+            max-width: 100%
+            padding: 30px 20px
+
+        .swiper
+            &-slide
+                display: block
+                height: unset
+                img
+                    max-width: 100%
+                    position: static
+                    width: 100%
+                    height: unset
+                    height: 400px
+                    min-height: unset
+
+            &-controls
+                padding: 20px 20px 20px 40px
+                display: flex
+                max-width: 100%
+                align-items: center
+                justify-content: space-between
+                position: absolute
+                z-index: 1000
+                top: 310px
+                left: auto
+                right: 0
+                width: 220px
+                height: 90px
+                background-color: #FCF5ED
+
+            &-pagination
+                position: static
+                margin: 0
+                width: unset
+                margin-right: 20px
+                display: inline-block
+                &-current,
+                &-total
+                    float: none
+                    position: static
+                    display: inline
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 18px
+
+        .btn
+            &-next,
+            &-prev
+                position: static
+                display: inline-block
+                width: 40px
+                border-radius: 50%
+                border: none
+                height: 40px
+                bottom: 25px
+                background-color: #F47E19
+                background-image: url('../img/arrow-white.svg')
+                background-size: 15px auto
+                transform: scale(-1) !important
+
+            &-prev
+                margin: 0 10px 0 auto
+                display: block
+                transform: scale(1) !important
+
+    .tour
+        padding: 80px 0
+        margin: 60px 0
+        .container
+            max-width: 600px
+        &__img
+            position: static
+            margin: 0 auto 30px
+            transform: none
+            width: 100%
+
+        &__descr
+            margin-bottom: 30px
+            font-size: 20px
+            line-height: 23px
+
+        &__text
+            max-width: 100%
+            font-size: 18px
+            line-height: 160%
+
+        .btn
+            width: 100%
+
+    .galery
+        .wrap
+            margin: 0 auto
+            justify-content: space-evenly
+
+    .banks
+        background-image: none
+        .swiper
+            &-wrapper
+                display: block
+            &-slide
+                opacity: 1 !important
+
+        &__num
+            left: 0
+
+        &__heading
+            max-width: 100%
+            font-weight: 500
+            font-size: 20px
+            line-height: 30px
+            padding-left: 39px
+            margin-bottom: 0
+            &::after
+                content: '+'
+                display: inline-block
+                color: #fff
+                text-align: center
+                font-size: 24px
+                border-radius: 50%
+                width: 30px
+                height: 30px
+                position: absolute
+                top: 0
+                right: 0
+                background-color: #F47E19
+                transition: all ease .3s
+
+            &.active
+                &::after
+                    font-size: 20px
+                    line-height: 24px
+                    content: '─'
+                    background-color: #000
+
+        &__text
+            font-weight: 200
+            font-size: 18px
+            line-height: 160%
+            max-width: 100%
+
+        &-wrap
+            padding-top: 25px
+            display: none
+            max-width: 100%
+            &.active
+                display: block
+
+        &-slider
+            max-width: 600px
+            margin: 0 auto
+            img
+                max-width: 100%
+                width: 100%
+                height: unset
+
+        .swiper
+            &-slide
+                margin-bottom: 30px
+                padding-bottom: 30px
+                border-bottom: 1px solid #464646
+
+            &-controls
+                display: none
+
+@media screen and ( max-width: 700px )
+    
+    .hero
+        .headline
+            text-align: left
+
+        &__text
+            font-size: 20px
+            text-align: left
+
+    .ctr
+        .wrapper
+            display: block
+
+        h2
+            text-align: center
+            max-width: 100%
+            padding: 0
+            background-image: none
+            &::after
+                content: ''
+                display: block
+                width: 67px
+                height: 67px
+                margin: 20px auto 40px
+                transform-origin: 50% 50%
+                transform: rotate(90deg)
+                background-image: url(../img/arrow.svg)
+                background-repeat: no-repeat
+                background-position: center right
+                background-size: contain
+
+        .btn
+            width: 100%
+            margin: 0 auto
+            display: block
+
+    .objects
+        &__status
+            top: 15px
+            left: 15px
+
+        &-item
+            img
+                height: 300px
+
+        .swiper
+            &-slide
+
+    .layouts
+        &-img
+            height: 330px
+
+    .galery
+        a
+            width: 48%
+            height: 158px
+            margin-bottom: 20px
+        .wrap
+            justify-content: space-between

@@ -1,0 +1,1583 @@
+@import 'normolize'
+@import 'elements'
+@import 'modal'
+@import 'header'
+@import 'footer'
+
+.hero
+    background-image: url('../img/main-bg.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    color: #fff
+    header
+        filter: invert(1) brightness(10)
+
+    .container
+        min-height: 760px
+        max-height: 1080px
+        height: 100vh
+
+    &-title
+        width: 100%
+        text-align: center
+        text-transform: uppercase
+        padding: 0 15px
+        position: absolute
+        left: 0
+        margin: 0
+        bottom: 20%
+
+    h1
+        max-width: 850px
+        margin: 0 auto
+
+.about
+    .container
+        max-width: 1160px
+
+    h2
+        text-align: center
+        max-width: 900px
+        margin: 0 auto 80px
+
+    .wrapper
+        display: flex
+        justify-content: space-between
+
+    &-title
+        width: 48%
+        position: relative
+        z-index: 1
+
+    img
+        width: 48%
+        object-fit: cover
+
+    p
+        color: #585858
+
+    .link
+        position: absolute
+        bottom: 0
+        right: 0
+
+.clothes
+    background: #2F3B16
+    padding: 104px 0
+    color: #fff
+
+    &-slider
+        max-width: 48%
+        width: 638px
+        margin: 0 0 0 auto
+
+    &-item
+        height: 656px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    h2
+        max-width: 49%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 15px
+
+    .link
+        width: 100%
+        margin-bottom: 32px
+        display: block
+        color: #fff
+        border-color: #fff
+        &::before
+            background-color: #fff
+
+    p
+        position: absolute
+        bottom: 0
+        left: 15px
+        max-width: 48%
+        width: 557px
+
+.inst_section
+    text-align: center
+    h2
+        margin-bottom: 24px
+    a
+        display: inline-block
+        width: 528px
+        height: 544px
+        position: relative
+        z-index: 1
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        span
+            font-size: 24px
+            line-height: 150%
+            color: #FFFFFF
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 1
+
+.catalog
+    padding: 100px 0
+    .container
+        max-width: 1350px
+        display: flex
+        justify-content: space-between
+
+    &-filter
+        padding-right: 20px
+        width: 312px
+        max-width: 23%
+        .btn-filter
+            display: none
+
+        select
+            cursor: pointer
+            width: 100%
+            display: block
+            appearance: none
+            padding: 8px 0 8px 40px
+            margin-bottom: 0
+            background-image: url('../img/arrow-down.svg')
+            background-repeat: no-repeat
+            background-position: center left
+            background-size: 24px 24px
+            transition: background-color .3s ease
+            &:hover,
+            &:focus
+                background-color: #eee
+            option
+                background-color: #fff
+
+    &-content
+        width: 77%
+
+    &__subheading
+        font-weight: normal
+        font-size: 20px
+        line-height: 20px
+        text-transform: uppercase
+        margin-bottom: 48px
+
+    &-nav
+        &__item
+            display: block
+            font-weight: normal
+            font-size: 14px
+            line-height: 14px
+            color: #585858
+            padding: 5px 0
+            margin-bottom: 14px
+            transition: all ease .3s
+            &.active
+                font-size: 16px
+                line-height: 16px
+                color: #393939
+                position: relative
+                padding-left: 24px
+                &::before
+                    content: ''
+                    display: inline-block
+                    width: 8px
+                    height: 8px
+                    position: absolute
+                    top: 50%
+                    margin-top: -5px
+                    left: 0
+                    background: #585858
+                    border-radius: 50%
+
+    &-sort
+        border-bottom: 0.5px solid #A8A8A8
+        margin-bottom: 48px
+        padding: 8px 0
+        font-size: 16px
+        line-height: 16px
+        text-transform: uppercase
+        color: #393939
+        display: flex
+
+        &__item
+            display: inline-block
+            vertical-align: middle
+            font-size: 16px
+            line-height: 16px
+            text-transform: uppercase
+            margin-right: 24px
+            color: rgba(57, 57, 57, 0.5)
+            &.active
+                color: #393939
+
+        &__by
+            margin: 0 0 0 auto
+
+        .btn-filter
+            display: none
+
+    &-item
+        max-width: 30%
+        position: relative
+        z-index: 1
+        width: 312px
+        margin: 0 47px 48px 0
+        &:nth-of-type(3n+3)
+            margin-right: 0
+
+        &__img
+            width: 100%
+            height: 400px
+            transition: all ease .3s
+            position: relative
+            z-index: -1
+            margin: 0 0 24px
+            background-color: rgba(#eee,.5)
+            img
+                width: 100%
+                height: 100%
+                transition: all ease .3s
+                object-fit: cover
+
+        &__heading
+            max-width: 70%
+            float: left
+            font-size: 20px
+            line-height: 130%
+
+        &__price
+            max-width: 30%
+            float: right
+            text-align: right
+            font-size: 16px
+            line-height: 130%
+            .current
+                display: block
+                font-size: 18px
+                color: #FD543B
+            .old
+                display: block
+                text-decoration-line: line-through
+                color: #A8A8A8
+
+        &__discount
+            position: absolute
+            top: 0
+            width: 52px
+            height: 32px
+            line-height: 32px
+            text-align: center
+            z-index: 100
+            left: 0
+            color: #fff
+            font-size: 14px
+            background: #FD543B
+
+        &:hover
+            img
+            .catalog-item__img
+                transform: scale(.95)
+
+.card
+    padding: 0 0 168px
+    .btn
+        height: 64px
+        line-height: 64px
+        display: block
+        width: 100%
+        &-back
+            margin-bottom: 80px
+    .container
+        max-width: 1390px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .row
+            width: 100%
+
+    &-slider
+        width: 56%
+        max-width: 792px
+        display: flex
+
+    .on
+        &-pc
+            display: block
+        &-mob
+            display: none
+
+    &-preview
+        width: 120px
+        height: 100%
+        margin-right: 20px
+        .item
+            width: 120px
+            height: 152px
+            margin: 0 0 16px 0 !important
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+        .slick
+            &-slide
+                transition: opacity .3s ease
+                opacity: .5
+            &-current
+                opacity: 1
+
+    &-slide
+        overflow: hidden
+        .item
+            width: 620px
+            height: 740px
+            position: relative
+            margin: 0 !important
+            z-index: 1
+            img
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+    &-title
+        width: 40%
+        .row
+            margin-bottom: 48px
+            &:last-of-type
+                margin-bottom: 80px
+
+    &__heading
+        font-size: 32px
+        line-height: 130%
+        margin: 0 0 16px
+
+    &__price
+        font-size: 20px
+        line-height: 130%
+        color: #393939
+        margin: 0 0 48px
+
+    &__subheading
+        font-size: 16px
+        line-height: 130%
+        color: #585858
+        margin: 0 0 16px
+
+    &-descr
+        padding: 48px 0 0
+        margin: 0
+        max-width: 800px
+        width: 100%
+
+.recomendtion
+    background-color: #2F3B16
+    color: #fff
+    h2
+        margin-bottom: 80px
+
+    &-slider
+        display: flex
+
+.item
+    position: relative
+    z-index: 1
+    width: 312px
+    margin: 0 48px 0 0
+
+    &-img
+        width: 100%
+        height: 400px
+        transition: all ease .3s
+        position: relative
+        z-index: -1
+        margin: 0 0 24px
+        background-color: rgba(#eee,.5)
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            transition: all ease .3s
+            object-fit: cover
+
+    &__heading
+        max-width: 70%
+        float: left
+        font-size: 20px
+        line-height: 130%
+        color: #fff
+
+    &__price
+        max-width: 30%
+        float: right
+        text-align: right
+        font-size: 16px
+        line-height: 130%
+        color: #fff
+        .current
+            display: block
+            font-size: 18px
+            color: #FD543B
+        .old
+            display: block
+            text-decoration-line: line-through
+            color: #A8A8A8
+
+    &__discount
+        position: absolute
+        top: 0
+        width: 52px
+        height: 32px
+        line-height: 32px
+        text-align: center
+        z-index: 100
+        left: 0
+        color: #fff
+        font-size: 14px
+        background: #FD543B
+
+    &:hover
+        .item-img
+            transform: scale(.95)
+
+.contacts
+    padding: 104px 0
+    .container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+    h1
+        width: 57%
+        max-width: 672px
+        position: absolute
+        top: 0
+        right: 0
+
+    &-img
+        width: 38%
+        max-width: 550px
+
+    &-title
+        width: 57%
+        max-width: 670px
+        padding-top: 120px
+        position: relative
+        z-index: 1
+        p
+            border-bottom: 1px solid #A8A8A8
+            padding-bottom: 8px
+            margin-bottom: 48px
+            font-size: 16px
+            line-height: 16px
+            text-transform: uppercase
+            a
+                font-size: 16px
+                line-height: 16px
+            .descr
+                font-size: 12px
+                line-height: 12px
+                color: #585858
+                float: right
+
+        .link
+            position: absolute
+            bottom: 0
+            left: 0
+
+.about_us
+    padding: 104px 0 300px
+    .row
+        width: 100%
+    .container
+        justify-content: space-between
+
+    h1
+        text-transform: uppercase
+        max-width: 550px
+        margin: 0 auto 168px
+
+    &-img
+        width: 48%
+        max-width: 670px
+        .descr
+            font-size: 12px
+            line-height: 150%
+            margin-bottom: 24px
+
+        &.second
+            max-width: 430px
+            display: flex
+            flex-direction: column-reverse
+            position: absolute
+            bottom: -140px
+            right: 0
+            z-index: 111
+            .descr
+                font-size: 20px
+                line-height: 150%
+
+    &-title
+        width: 48%
+        max-width: 670px
+
+    p
+        font-size: 20px
+        line-height: 150%
+        margin-bottom: 24px
+
+.descr_section
+    background-color: #2F3B16
+    padding: 104px 0
+    .container
+        justify-content: space-between
+    p
+        position: relative
+        color: #fff
+        max-width: 48%
+
+    img
+        max-width: 48%
+        min-height: 600px
+        object-fit: cover
+
+    .link
+        position: absolute
+        bottom: 0
+        left: 0
+        filter: grayscale(1) brightness(10)
+
+.team
+    h2
+        width: 100%
+        margin-bottom: 48px
+    .container
+        justify-content: space-between
+        max-width: 912px
+
+    &-item
+        width: 48%
+        img
+            width: 100%
+            height: 456px
+            object-fit: cover
+            margin-bottom: 24px
+        .descr
+            font-size: 12px
+            line-height: 12px
+            color: #393939
+
+.delivery
+    padding: 100px 0 140px
+    h1
+        text-align: center
+        width: 100%
+        margin: 0 0 128px
+
+    .container
+        justify-content: space-between
+        max-width: 1150px
+
+    p
+        max-width: 48%
+        margin: 0 0 24px
+        font-size: 20px
+        line-height: 150%
+        color: #585858
+
+    &-info
+        background-color: #2F3B16
+        padding: 100px 0
+        color: #fff
+        .container
+            align-items: end
+            justify-content: space-between
+
+        h2
+            font-size: 32px
+            line-height: 150%
+            margin-bottom: 48px
+
+        .title
+            max-width: 48%
+
+        img
+            width: 48%
+            max-width: 448px
+
+        ul
+            padding: 0 0 0 30px
+            li
+                font-size: 16px
+                line-height: 150%
+
+    &-descr
+        .container
+            max-width: 672px
+        h2
+            text-align: center
+            margin-bottom: 48px
+
+        p
+            font-size: 20px
+            line-height: 150%
+            margin-bottom: 16px
+
+.cooperation
+    padding: 100px 0 168px
+    .container
+        max-width: 672px
+    h1
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 128px
+    .subheading
+        text-align: center
+        font-size: 32px
+        line-height: 150%
+        margin-bottom: 32px
+    &-img
+        padding: 104px
+        background-color: #2F3B16
+        margin-bottom: 32px
+    p
+        font-size: 20px
+        line-height: 150%
+
+    &-hero
+        background-image: url('../img/hero.jpg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        position: relative
+        z-index: 1
+        color: #fff
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            background-color: #000
+            opacity: .4
+            left: 0
+            z-index: -1
+        .container
+            height: 100vh
+            min-height: 700px
+            max-height: 940px
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            max-width: 700px
+
+        h2
+            text-align: center
+            margin-bottom: 48px
+
+        .link
+            padding-left: 0
+            color: #fff
+            border-color: #fff
+            &::before
+                border-radius: 0
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-image: url('../img/arrow-down-2.svg')
+                background-color: transparent
+                position: static
+                display: block
+                margin: 0 auto 48px
+                width: 64px
+                height: 64px
+
+.cart
+    &-item
+        display: flex
+        position: relative
+        margin-bottom: 20px
+        padding: 0 0 20px
+        border-bottom: 1px solid #A8A8A8
+        input
+            border: none
+            height: 35px
+            width: 40px
+            padding: 0
+            text-align: center
+            margin: 0
+            background-color: transparent
+            color: #000
+
+        &__subheading
+            font-size: 14px
+            line-height: 130%
+            color: #A8A8A8
+            margin-bottom: 8px
+
+        .inp-radio
+            .label-color
+                margin-right: 0
+                &::before
+                    display: none
+
+        &__img
+            width: 120px
+            margin-right: 24px
+            position: relative
+            img
+                width: 100%
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                object-fit: cover
+
+        &__heading
+            font-size: 20px
+            line-height: 130%
+
+        &__art
+            color: #A8A8A8
+            font-size: 14px
+            line-height: 130%
+            margin-bottom: 10px
+
+        &__price
+            font-size: 20px
+            line-height: 130%
+            margin-bottom: 10px
+        .row
+            display: flex
+
+        .col
+            margin-right: 24px
+            &:last-of-type
+                margin: 0
+
+        .btn
+            &-close
+                position: absolute
+                top: 0
+                right: 0
+                font-size: 24px
+
+.ordering
+    padding: 0 0 168px
+    &-steps
+        width: 100%
+        position: relative
+        z-index: 1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 48px
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 2px
+            position: absolute
+            top: 50%
+            left: 0
+            z-index: -1
+            transform: translateY(-50%)
+            background-color: #E5E5E5
+
+        span
+            width: 24px
+            height: 24px
+            display: inline-block
+            border-radius: 50%
+            background-color: #E5E5E5
+            transition: background-color .2s ease
+            &.active
+                transition-delay: .2s
+                transition-duration: .3s
+                background-color: #FD543B
+
+    &-slide
+        position: absolute
+        top: 50%
+        transition: width .3s ease
+        left: 10px
+        z-index: -1
+        transform: translateY(-50%)
+        display: block
+        width: 0
+        max-width: calc( 100% - 24px )
+        height: 2px
+        background-color: #FD543B
+
+    .wrapper
+        justify-content: space-between
+
+    .row
+        width: 100%
+
+    .btn-back
+        margin-bottom: 80px
+
+    &__heading
+        font-size: 32px
+        line-height: 130%
+        text-transform: uppercase
+        color: #393939
+        margin: 0 0 48px
+
+    &__subheading
+        width: 100%
+        font-size: 20px
+        line-height: 130%
+        text-transform: uppercase
+        color: #393939
+        margin-bottom: 24px
+
+    &-section
+        display: none
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        animation: slide .3s ease
+        opacity: 0
+        input
+            width: 47%
+            font-size: 14px
+            height: 32px
+            line-height: 130%
+            color: #000
+            padding: 0 0 8px
+            border: none
+            border-bottom: 1px solid #A8A8A8
+            margin-bottom: 24px
+            &::placeholder
+                color: #A8A8A8
+
+        &.active
+            display: flex
+            opacity: 1
+
+        &__prev,
+        &__next
+            display: inline-block
+            margin-top: 20px
+            font-size: 16px
+            line-height: 16px
+            text-transform: uppercase
+            color: #393939
+            padding-right: 32px
+            background-repeat: no-repeat
+            background-position: center right
+            background-image: url('../img/arrow-right.svg')
+            &:hover
+                opacity: .5
+        &__prev
+            padding: 0 0 0 32px
+            background-position: center left
+            background-image: url('../img/arrow-left.svg')
+
+    &-cart
+        width: 48%
+        max-width: 670px
+        .dropdown
+            &-btn
+                padding-right: 0
+                background-image: none
+                .left
+                    float: right
+                    text-transform: lowercase
+
+            &.last
+                margin-bottom: 80px
+
+            &-content
+                padding: 10px 0 0
+            input
+                padding: 10px
+                display: inline-block
+                max-width: 70%
+            .btn
+                display: inline-block
+                max-width: 30%
+
+    &-info
+        width: 48%
+        max-width: 550px
+        .ordering__heading
+            text-align: center
+
+        ul
+            list-style: none
+            margin-bottom: 48px
+            li
+                font-size: 20px
+                line-height: 130%
+                color: #585858
+                margin-bottom: 24px
+                &:last-of-type
+                    margin: 0
+                .text
+                    float: right
+
+        .btn
+            width: 100%
+            height: 64px
+
+@keyframes slide
+    0%
+        transform: translateX(30px)
+    100%
+        transform: translateX(0)
+
+@media screen and ( max-width: 1600px )
+    .hero
+        h1
+            max-width: 700px
+
+    .about
+        h2
+            max-width: 700px
+
+    .clothes
+        &-item
+            height: 548px
+
+    .inst_section
+        a
+            width: 428px
+            height: 444px
+
+    .recomendtion
+        h2
+            margin-bottom: 56px
+        .container
+            max-width: 1070px
+
+        .slick
+            &-arrow
+                top: -88px
+
+    .contacts
+        &-title
+            p
+                font-size: 14px
+
+    .about_us
+        padding: 80px 0 350px
+        h1
+            margin-bottom: 80px
+
+        &-img
+            &.second
+                bottom: -200px
+                max-width: 340px
+                .descr
+                    font-size: 14px
+
+    .delivery
+        padding: 80px 0 100px
+        h1
+            margin-bottom: 80px
+
+@media screen and ( max-width: 1300px )
+    .catalog
+        padding: 80px 0
+        overflow: hidden
+        .container
+            max-width: 1000px
+
+        &-filter
+            display: none
+            position: fixed
+            top: 0
+            left: 0
+            width: 300px
+            max-width: 800px
+            height: 100vh
+            background-color: #fff
+            box-shadow: 10px 0 50px 0px rgba(0, 0, 0, .1)
+            z-index: 10000
+            padding: 60px 50px 0
+            overflow-y: scroll
+            &::-webkit-scrollbar
+                width: 8px
+                &-track
+                    background: #fff
+                &-thumb
+                    border-radius: 10px
+                    transition: all ease .3s
+                    background: rgba(0, 0, 0, .2)
+                    &:hover
+                        background: rgba(0, 0, 0, .5)
+
+            .btn-filter
+                display: inline-block
+                position: absolute
+                top: 10px
+                font-size: 20px
+                padding: 10px
+                right: 10px
+
+        &__subheading
+            display: none
+
+        &-content
+            width: 100%
+
+        &-items
+            justify-content: flex-start
+
+        &-item
+            width: 30%
+            margin: 0 5% 40px 0
+            &__img
+                height: 372px
+                margin-bottom: 20px
+
+        &-sort
+            border: none
+
+            &__by
+                width: 60%
+                display: flex
+                border: 0.5px solid #A8A8A8
+
+            .btn-filter
+                padding: 12px 16px
+                border-right: 0.5px solid #A8A8A8
+                width: 50%
+                display: inline-block
+                font-weight: normal
+                font-size: 12px
+                line-height: 12px
+                text-transform: uppercase
+                text-align: left
+                background-image: url('../img/arrow-down.svg')
+                padding-right: 30px
+                background-repeat: no-repeat
+                background-position: center right 16px
+                background-size: 24px 24px
+
+            .sort
+                width: 50%
+                padding: 12px 16px
+                background-position: center right 16px
+                button
+                    font-size: 12px
+                    line-height: 12px
+
+                .ps
+                    display: none
+
+                .mobile
+                    display: inline
+
+                &-content
+                    display: none
+
+    .about_us
+        padding: 80px 0
+        .container
+            display: block
+            max-width: 700px
+
+        &-title
+            max-width: 100%
+            width: 100%
+
+        &-img
+            max-width: 100%
+            width: 100%
+            margin-bottom: 32px
+            img
+                margin: 0 0 16px
+            .descr
+                margin: 0
+
+            &.second
+                position: static
+                width: 100%
+                max-width: 100%
+                display: block
+
+    .cooperation
+        padding: 80px 0
+        h1
+            margin-bottom: 80px
+
+@media screen and ( max-width: 1000px )
+    .clothes
+        .container
+            max-width: 700px
+        &-slider
+            margin: 0 auto 80px !important
+            max-width: 533px
+        h2,
+        p
+            max-width: 100%
+            position: static
+
+        h2
+            margin: 0 auto
+            text-align: center
+            margin-bottom: 56px
+            max-width: 700px
+
+    .card
+        .container
+            max-width: 700px
+        .btn
+            &-back
+                margin-bottom: 50px
+
+        &-slider
+            width: 100%
+            max-width: 700px
+            margin: 0 auto 24px
+
+        .on
+            &-pc
+                display: none
+            &-mob
+                display: block
+
+        &-slide
+            .item
+                height: 700px
+
+        &-title
+            max-width: 100%
+            width: 100%
+            .row
+                margin-bottom: 24px
+                &:last-of-type
+                    margin-bottom: 46px
+
+        &__heading
+            margin-bottom: 8px
+
+        &__price
+            margin-bottom: 24px
+
+        &-descr
+            padding: 0
+            .btn
+                margin-top: 56px
+
+    .cart
+        &-item
+            padding-bottom: 16px
+            margin-bottom: 16px
+            &__heading
+                font-size: 14px
+                line-height: 130%
+            &__art
+                font-size: 12px
+                margin-bottom: 8px
+            &__price
+                font-size: 14px
+                margin-bottom: 15px
+
+            &__img
+                width: 102px
+                height: 136px
+                margin-right: 16px
+
+            .col
+                margin-right: 16px
+
+    .recomendtion
+        .container
+            max-width: 700px
+
+        h2
+            text-align: center
+            margin-bottom: 96px
+
+        .slick
+            &-arrow
+                top: -73px
+                left: 50%
+                transform: translateX(-50%)
+            &-prev
+                margin-left: -30px
+            &-next
+                margin-left: 30px
+
+        .item
+            margin-right: 47px
+
+    .contacts
+        padding: 80px 0
+        .container
+            display: block
+
+        h1
+            text-align: center
+            font-size: 28px
+            max-width: 100%
+            position: static
+            width: 100%
+            margin-bottom: 56px
+
+        &-img
+            max-width: 600px
+            margin: 0 auto 32px
+            width: 100%
+            text-align: center
+
+        &-title
+            width: 100%
+            margin: 0 auto
+            padding: 0
+            .link
+                position: relative
+
+    .descr_section
+        padding: 80px 0 24px
+        .container
+            display: block
+            max-width: 700px
+        p
+            width: 100%
+            max-width: 100%
+            margin-bottom: 56px
+        .link
+            position: relative
+            display: block
+            max-width: 180px
+            margin-top: 56px
+
+        img
+            max-width: 100%
+            width: unset
+            min-height: unset
+
+    .team
+        padding: 80px 0
+        .container
+            max-width: 700px
+        &-item
+            img
+                height: 338px
+
+    .delivery
+        .container
+            max-width: 700px
+        p
+            font-size: 16px
+
+        &-info
+            .container
+                max-width: 700px
+                display: block
+            .title
+                max-width: 100%
+                width: 100%
+                margin-bottom: 56px
+            img
+                display: block
+                max-width: 90%
+                margin: 0 auto
+                width: unset
+
+    .ordering
+        padding: 24px 0 80px
+        .btn-back
+            margin-bottom: 56px
+        .container
+            max-width: 700px
+            display: block
+        &__heading
+            text-align: center
+            font-size: 20px
+            line-height: 130%
+            margin-bottom: 32px
+
+        &-cart,
+        &-info
+            width: 100%
+            max-width: 100%
+
+        &-cart
+            margin-bottom: 54px
+            .dropdown.last
+                margin-bottom: 56px
+
+@media screen and ( max-width: 900px )
+    .catalog
+        .container
+            max-width: 700px
+
+        &-items
+            justify-content: space-between
+
+        &-item
+            width: 48%
+            max-width: 48%
+            margin: 0 0 30px
+            &__img
+                height: 410px
+                margin-bottom: 10px
+
+            &__heading,
+            &__price
+                text-align: left
+                max-width: 100%
+                float: none
+
+@media screen and ( max-width: 700px )
+    .hero
+        &-title
+            bottom: 80px
+        .container
+            min-height: 600px
+            max-height: 640px
+            max-width: 100%
+
+    .clothes
+        &-slider
+            width: 100%
+            margin: 0 0 56px !important
+            .slick
+                &-dots
+                    display: none !important
+
+        &-item
+            height: 330px
+
+    .inst_section
+        a
+            width: unset
+            height: unset
+
+    .about
+        h2
+            margin-bottom: 56px
+        .container
+            max-width: 400px
+        img
+            width: 100%
+            margin: 0 0 24px
+        .wrapper
+            display: block
+
+        &-title
+            width: 100%
+
+        .link
+            margin: 56px 0 0
+            display: inline-block
+            position: relative
+            bottom: auto
+            right: auto
+
+    .catalog
+        padding: 50px 0
+        &-sort
+            flex-wrap: wrap
+            padding-top: 60px
+            position: relative
+            margin-bottom: 24px
+            &__by
+                top: 0
+                left: -16px
+                width: calc( 100% + 32px )
+                position: absolute
+
+            .sort
+                background-position: center right
+
+        &-items
+            max-width: 335px
+            margin: 0 auto
+
+        &-item
+            &__img
+                height: 208px
+                margin-bottom: 8px
+            &__heading
+                font-size: 14px
+                line-height: 130%
+                margin-bottom: 4px
+
+            &__price
+                font-size: 12px
+                .current
+                    font-size: 14px
+
+    .card
+        overflow: hidden
+        padding: 20px 0 80px
+
+        .btn
+            &-back
+                margin-bottom: 40px
+
+        &-slider
+            position: relative
+            width: calc( 100% + 30px )
+            left: -16px
+
+        &-slide
+            .item
+                height: 430px
+
+        &__heading
+            font-size: 20px
+
+        &-preview
+            display: none
+
+    .recomendtion
+        .container
+            padding: 0 5px
+            max-width: 400px
+
+        .item
+            margin-right: 8px
+
+        &-slider
+            max-width: 328px
+            margin: 0 auto
+
+    .item
+        width: 160px
+        &-img
+            height: 208px
+            margin-bottom: 8px
+
+        &__heading
+            font-size: 14px
+            line-height: 130%
+            margin-bottom: 4px
+
+        &__price
+            font-size: 12px
+            .current
+                font-size: 14px
+
+    .contacts
+        &-title
+            p
+                margin-bottom: 24px
+                line-height: 140%
+                a
+                    margin-bottom: 24px
+
+                &:last-of-type
+                    margin-bottom: 56px
+
+            .descr
+                display: none
+
+    .about_us
+        h1
+            font-size: 28px
+            text-align: center
+
+        &-title
+            margin-bottom: 80px
+
+        p
+            font-size: 18px
+
+    .descr_section
+        img
+            height: 400px
+
+    .team
+        padding-bottom: 56px
+        h2
+            text-align: center
+            margin-bottom: 56px
+        .container
+            display: block
+        &-item
+            width: 100%
+            margin-bottom: 24px
+            img
+                margin-bottom: 16px
+                height: unset
+
+    .delivery
+        padding-bottom: 60px
+        .container
+            display: block
+
+        p
+            max-width: 100%
+            width: 100%
+
+        &-info
+            padding: 80px 0 56px
+            h2
+                font-size: 20px
+                line-height: 150%
+                margin-bottom: 24px
+
+        &-descr
+            h2
+                margin-bottom: 48px
+            p
+                font-size: 18px
+
+    .cooperation
+        h1
+            font-size: 28px
+            line-height: 130%
+        &-img
+            position: relative
+            left: -15px
+            width: calc( 100% + 30px )
+            padding: 56px
+            margin-bottom: 24px
+
+        p
+            font-size: 18px
+            line-height: 150%
+
+        &-hero
+            padding: 88px 0
+            h2
+                margin-bottom: 32px
+
+            .link
+                &::before
+                    margin: 0 auto 32px
+                    width: 40px
+                    height: 40px
+
+            .container
+                height: unset
+                min-height: unset
+                max-height: unset
+
+        .subheading
+            font-size: 20px
+            line-height: 130%
+            margin-bottom: 24px
+
+    .ordering
+        &-section
+            input
+                width: 100%
+                max-width: 100%
+
+        &-info
+            ul
+                li
+                    font-size: 16px
+                    line-height: 130%

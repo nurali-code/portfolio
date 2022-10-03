@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=PT+Sans:wght@400;700&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,200;7..72,300;7..72,400;7..72,500&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,600&display=swap')
+$prime: #F47E19
+$black: #272727
+$dark_blue: #172957
+$bg: #545454
+
+h1,h2,h3,h4,h5,h6
+    font-family: 'Oswald', sans-serif
+
+body
+    min-height: 100vh
+    color: $black
+    display: flex
+    flex-direction: column
+    background-color: #fff
+    font-family: 'PT Sans', sans-serif
+    position: relative
+    z-index: 1
+    &.type_2
+        font-family: 'Roboto Flex', sans-serif
+
+        .headline
+            font-weight: 500
+            font-size: 62px
+            line-height: 150%
+
+        h1,h2,h3,h4,h5,h6
+            font-family: 'Literata', sans-serif
+
+.container
+    width: 100%
+    max-width: 1500px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+img
+    max-width: 100%
+
+a,
+button
+    text-decoration: none
+    color: $black
+    transition: all ease .3s
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .6
+
+.btn
+    display: inline-block
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 21px
+    text-transform: uppercase
+    text-align: center
+    color: #FFFFFF
+    background-color: #F47E19
+    border-radius: 45px
+    padding: 26px 20px 25px
+    min-width: 330px
+    max-width: 400px
+    position: relative
+    border: 1px solid transparent
+    z-index: 1
+
+    &:hover
+        opacity: 1
+        color: #F47E19
+        background-color: transparent
+        border-color: #F47E19
+        &::before
+            opacity: 0
+
+    &-sm
+        font-size: 16px
+        line-height: 21px
+        min-width: 260px
+        padding: 20px 20px 19px
+
+    &-link
+        text-transform: uppercase
+        padding: 5px 0 2px
+        font-weight: 700
+        font-size: 18px
+        line-height: 21px
+        display: inline-block
+        color: $black
+        border-bottom: 1px solid $black
+        transition: all ease .3s
+        &:hover
+
+    &-2
+        background-color: transparent
+        color: #fff
+        box-shadow: none
+        padding: 21px 21px 19px
+        border: 2px solid #fff
+
+    &:active
+        opacity: 1
+        transform: scale(.95)
+
+    &[disabled]
+        cursor: unset
+        animation: none
+        opacity: .6
+
+    &-next,
+    &-prev
+        width: 60px
+        height: 60px
+        background-image: url('../img/arrow-right.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        background-color: transparent
+        &[disabled]
+            cursor: unset
+            animation: none
+            opacity: .6
+    &-prev
+        transform: scale(-1) !important
+
+.wrapper, .slider, .wrap, .wrap-strech, .wrap-start, .box-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.wrap
+    flex-wrap: wrap
+    &-strech
+        flex-wrap: wrap
+        align-items: stretch
+
+    &-start
+        flex-wrap: wrap
+        align-items: start
+
+    &.around
+        justify-content: space-around
+
+    &.evenly
+        justify-content: space-evenly
+
+mark
+    background-color: transparent
+    color: $prime
+
+section
+    padding: 75px 0
+
+ul
+    list-style: none
+    &.checklist
+        li
+            font-weight: 400
+            font-size: 18px
+            line-height: 21px
+            padding: 10px 0
+            color: #1F1F1F
+            background-image: url('../img/check-red.svg')
+            background-repeat: no-repeat
+            background-position: center left
+            padding-left: 32px
+
+.headline
+    font-weight: 300
+    font-size: 96px
+    line-height: 110%
+    text-transform: uppercase
+    margin-bottom: 60px
+
+.textline
+    font-weight: 400
+    font-size: 20px
+    line-height: 130%
+    margin: 0 auto 80px
+    color: #1F1F1F
+
+.marquee
+    height: 70px
+    overflow: hidden
+    position: relative
+    border-top: 1px solid #4a4a4a
+    border-bottom: 1px solid #4a4a4a
+    padding: 0
+    margin: 36px 0
+    p
+        font-weight: 700
+        font-size: 22px
+        text-transform: uppercase
+        color: #1F5FFF
+        position: absolute
+        width: 100%
+        height: 70px
+        margin: 0
+        line-height: 70px
+        text-align: center
+        transform: translateX(100%)
+        animation: scroll-left 20s linear infinite
+
+    span
+        display: inline-block
+        margin: 0 30px
+        vertical-align: middle
+
+input:not(input[type="checkbox"]),
+select
+    background-color: #FFFFFF
+    border: 1px solid #D9D9D9
+    border-radius: 30px
+    width: 100%
+    height: 55px
+    padding: 0 30px
+    margin: 0 0 20px
+    &::placeholder
+        color: #C9C9C9
+
+select
+    appearance: none
+    background-image: url('../img/arrow-down.svg')
+    background-repeat: no-repeat
+    background-position: center right 30px
+
+.politics
+    &-wrap
+        position: relative
+        padding-left: 24px
+
+        label
+            font-weight: 400
+            font-size: 12px
+            line-height: 130%
+            color: #C9C9C9
+            &::before
+                content: ''
+                width: 14px
+                height: 14px
+                cursor: pointer
+                display: inline-block
+                background-color: #FFFFFF
+                border: 1px solid #C9C9C9
+                background-repeat: no-repeat
+                background-position: center center
+                border-radius: 3px
+                position: absolute
+                top: 5px
+                left: 0
+        input
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0
+            visibility: hidden
+            &:checked ~ label::before
+                background-image: url('../img/check.svg')
+
+        a
+            color: #C9C9C9
+            text-decoration: underline
+
+@keyframes scroll-left
+    0%
+        transform: translateX(100%)
+
+    100%
+        transform: translateX(-100%)
+
+@media screen and ( max-width: 1500px  )
+    body
+        &.type_2
+            .headline
+                font-size: 58px
+                line-height: 130%
+    .container
+        max-width: 1200px
+
+    .headline
+        font-size: 70px
+
+    .marquee
+        margin: 26px 0
+
+    section
+        padding: 65px 0
+
+@media screen and ( max-width: 1200px  )
+    body
+        &.type_2
+            .headline
+                font-size: 50px
+                line-height: 125%
+
+    .container
+        padding: 0 20px
+
+    .headline
+        font-size: 55px
+        line-height: 125%
+        margin-bottom: 50px
+
+    section
+        padding: 40px 0
+
+    .marquee
+        height: 60px
+        margin: 26px 0
+        p
+            height: 60px
+            line-height: 60px
+            font-size: 18px
+
+        span
+            margin: 0 15px
+
+    .btn
+        &-menu
+            display: inline-block
+            vertical-align: middle
+            width: 34px
+            height: 34px
+            margin: 0
+            background-color: transparent
+            transition: all ease .3s
+            position: relative
+            z-index: 999999999
+            span
+                position: absolute
+                top: 50%
+                left: 10px
+                display: block
+                width: calc( 100% - 10px )
+                height: 1px
+                transition: all ease .3s
+                border-radius: 2px
+                background-color: #fff
+                &::before,
+                &::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 1px
+                    background-color: #fff
+                    position: absolute
+                    top: 6px
+                    left: 0
+                    transition: all ease .3s
+                    border-radius: 2px
+                &::after
+                    top: -6px
+
+            &.active
+                span
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%) rotate(-45deg)
+                    background-color: #fff
+                    &::before
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(-90deg)
+                        background-color: #fff
+                    &::after
+                        background-color: transparent
+
+@media screen and ( max-width: 700px  )
+    .headline
+        font-size: 40px
+        margin-bottom: 30px
+        font-style: italic
+
+    .btn
+        font-size: 20px
+        min-width: 268px
+        &-2
+            font-size: 16px
+            border-width: 1px
+
+    .marquee
+        margin: 4px 0
+        height: 27px
+        p
+            font-size: 14px
+            line-height: 17px
+            height: 25px
+            line-height: 24px
+
+    section
+        padding: 35px 0
+
+    .mb-block
+        position: static
+        display: block
+
+    body
+        &.type_2
+            .headline
+                font-size: 40px
+                line-height: 110.14%

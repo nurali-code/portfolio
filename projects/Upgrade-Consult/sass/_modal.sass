@@ -1,0 +1,189 @@
+.modal
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 9999999999
+    background-color: rgba(#000, 0.6)
+    padding: 0
+    box-sizing: border-box
+    &-content
+        width: 94%
+        min-height: 100px
+        max-height: 95%
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: #fff
+        max-width: 664px
+        overflow-y: scroll
+        color: $black
+        text-align: left
+        border-radius: 24px
+        padding: 32px
+        &::before
+            display: none
+
+        .headline
+            font-size: 32px
+            line-height: 120%
+            max-width: unset
+        .textline
+            max-width: unset
+            font-size: 20px
+            line-height: 26px
+            margin-bottom: 40px
+
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+
+        .review
+            &__text
+                height: unset
+                max-height: unset
+                &::after
+                    content: ''
+                    display: none
+
+            &__img
+                position: absolute
+                left: 32px
+                top: 32px
+                width: 70px
+                height: 70px
+
+            &__user
+                padding-left: 86px
+                margin-top: 12px
+            &__descr
+                padding-left: 86px
+                margin-bottom: 28px
+
+    &-close
+        position: absolute
+        top: 32px
+        right: 32px
+        border-radius: 50%
+        font-size: 20px
+        background-color: rgba($black, .2)
+        color: $black
+        width: 36px
+        height: 36px
+
+    &.active
+        visibility: visible
+        opacity: 1
+
+    &.is-open
+        display: block
+
+    &#modal-video
+        .modal
+            &-content
+                overflow: visible
+                text-align: center
+                background-color: transparent
+                padding: 0
+                iframe
+                    max-width: 100% !important
+                    margin: 0
+
+            &-close
+                color: #fff
+                top: -20px
+                right: -20px
+
+    @media screen and ( max-width: 1170px )
+        &-content
+            max-width: 400px
+            padding: 24px
+            .headline
+                font-size: 24px
+                line-height: 32px
+                margin-bottom: 4px
+
+            .textline
+                font-size: 16px
+                line-height: 22px
+                margin-bottom: 30px
+
+            form
+                max-width: 100%
+
+            .btn
+                width: 100%
+
+        &-close
+            top: 24px
+            right: 24px
+            width: 24px
+            height: 24px
+            font-size: 14px
+
+        &#modal-review
+            .modal
+                &-content
+                    max-width: 518px
+                    .review
+                        &__img
+                            width: 60px
+                            height: 60px
+                            top: 24px
+                            left: 24px
+
+                        &__user
+                            margin-top: 9px
+                            padding-left: 76px
+
+                        &__descr
+                            padding-left: 76px
+                            margin-bottom: 25px
+
+        &#modal-video
+            .modal
+                &-close
+                    color: #fff
+                    top: -30px
+                    right: 0px
+
+    @media screen and ( max-width: 700px )
+        &-content
+            max-width: 400px
+            padding: 17px 16px
+            .headline
+                font-size: 20px
+                line-height: 22px
+                margin-bottom: 3px
+
+            .textline
+                font-size: 14px
+                line-height: 20px
+                margin-bottom: 16px
+
+        &-close
+            top: 17px
+            right: 16px
+            font-size: 14px
+
+        &#modal-review
+            .modal
+                &-content
+                    .review
+                        &__img
+                            width: 48px
+                            height: 48px
+                            top: 16px
+                            left: 16px
+
+                        &__user
+                            margin-top: 5px
+                            padding-left: 58px
+
+                        &__descr
+                            padding-left: 58px
+                            margin-bottom: 22px

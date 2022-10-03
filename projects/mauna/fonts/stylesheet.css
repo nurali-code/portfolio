@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Optima Cyr';
+    src: url('Optima.eot');
+    src: local('Optima Cyr'), local('Optima'), url('Optima.eot?#iefix') format('embedded-opentype'), url('Optima.woff') format('woff'), url('Optima.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Optima';
+    src: url('AGOptimaBoldItalic.eot');
+    src: local('Optima Bold Italic'), local('AGOptimaBoldItalic'), url('AGOptimaBoldItalic.eot?#iefix') format('embedded-opentype'), url('AGOptimaBoldItalic.woff') format('woff'), url('AGOptimaBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Optima';
+    src: url('Optima-Italic.eot');
+    src: local('Optima Italic'), local('Optima-Italic'), url('Optima-Italic.eot?#iefix') format('embedded-opentype'), url('Optima-Italic.woff') format('woff'), url('Optima-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Optima';
+    src: url('Optima-Bold.eot');
+    src: local('Optima Bold'), local('Optima-Bold'), url('Optima-Bold.eot?#iefix') format('embedded-opentype'), url('Optima-Bold.woff') format('woff'), url('Optima-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond';
+    src: url('CormorantGaramond-Regular.eot');
+    src: local('Cormorant Garamond Regular'), local('CormorantGaramond-Regular'), url('CormorantGaramond-Regular.eot?#iefix') format('embedded-opentype'), url('CormorantGaramond-Regular.woff') format('woff'), url('CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

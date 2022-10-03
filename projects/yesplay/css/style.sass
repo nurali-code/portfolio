@@ -1,0 +1,312 @@
+@import 'normolize'
+@import 'elements'
+// @import 'modal'
+@import 'confeti'
+
+main
+    position: relative
+    z-index: 1
+    overflow: hidden
+    .container
+        min-height: 100vh
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    h1
+        font-size: 38px
+        margin: 0 0 40px
+        color: transparent
+        background-image: url('../img/text.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        text-transform: uppercase
+
+    .content
+        text-align: center
+        position: relative
+        z-index: 1
+        margin-bottom: 30px
+        align-self: self-start
+        &::after
+            content: ''
+            height: 150%
+            background-image: url('../img/trigle.svg')
+            background-repeat: no-repeat
+            background-position: top center
+            background-size: 100% auto
+            width: 150vw
+            max-width: 1900px
+            display: block
+            position: absolute
+            z-index: -1
+            top: 0
+            left: -85%
+
+    .logo
+        width: 700px
+        margin-bottom: 20px
+
+    .btn
+        animation: scale .5s ease-in-out infinite alternate
+        &:hover
+            animation: none
+
+    .left
+        align-self: self-end
+        position: relative
+
+    .girl
+        position: absolute
+        bottom: 0
+        z-index: 100
+        left: -80px
+        width: 300px
+
+    .spin
+        &-container
+            width: 100%
+            position: relative
+            z-index: 1
+            max-width: 600px
+            margin: 0 auto
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                z-index: -1
+                top: 92%
+                left: 50%
+                transform: translateX(-50%)
+                width: 220px
+                height: 120px
+                background-image: url('../img/wheel-bottom.svg')
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center center
+
+            &::before
+                content: ''
+                display: block
+                width: 120%
+                height: 120%
+                position: absolute
+                z-index: -1
+                top: 50%
+                left: 54%
+                transform: translate(-50%, -50%)
+                background-image: url('../img/cards.svg')
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+
+        &-middle
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 100
+            width: 80px
+            height: 80px
+            border-radius: 50%
+            background-image: url('../img/wheel-middle.svg')
+            background-size: contain
+            background-position: center center
+            background-repeat: no-repeat
+            animation: lights 5s ease-in-out infinite alternate-reverse
+            transform-origin: 0 0
+
+            &__light
+                width: 100%
+                height: 100%
+                position: absolute
+                z-index: 100
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -53%)
+                background-image: url('../img/wheel-middle__lights.svg')
+                background-size: 85% 85%
+                background-position: center center
+                background-repeat: no-repeat
+
+    .spinflapper
+        width: 520px
+        height: 520px
+        background-color: transparent
+        position: absolute
+        z-index: 1
+        top: 49.5%
+        left: 50%
+        z-index: 1
+        transform: translate(-50%, -50%)
+        background-image: url('../img/wheel-arrow.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 94% 94%
+
+    .spinit
+        width: 520px
+        height: 520px
+        border-radius: 50%
+        margin: 0 auto 60px
+        background-image: url('../img/wheel.svg')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        transform: rotate(12deg)
+        transition: all ease 4s
+
+        &-light
+            width: 100%
+            height: 100%
+            position: absolute
+            z-index: 10
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-image: url('../img/wheel-lights.svg')
+            background-size: 98% 98%
+            background-position: center center
+            background-repeat: no-repeat
+            background-repeat: no-repeat
+            background-position: center
+            animation: opacity 1s infinite alternate-reverse
+
+        &.first
+            transform: rotate(4973deg)
+            &.second
+                transform: rotate(9023deg)
+                &.third
+                    transform: rotate(14738deg)
+
+        &.win
+            transform: rotate(14738deg) !important
+
+        &.onspin
+            transform: rotate(2637deg)
+
+        &.anim
+            animation: wheal 40s ease-in-out
+
+    .wrapper
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 100
+        width: 100%
+        height: 100%
+        pointer-events: none
+
+    @media screen and ( max-width: 1100px )
+        .logo
+            max-width: 100%
+            width: 600px
+            margin: 0 auto 30px
+            position: relative
+            z-index: 1
+            top: -1px
+
+        .container
+            flex-direction: column
+            padding: 0
+
+        .left
+            width: 100%
+
+        h1
+            font-size: 32px
+            width: 60%
+            background-position: left center
+            text-align: left
+            margin: 0
+
+        .content
+            padding: 0 15px 45px
+            margin-bottom: 100px
+            flex-wrap: wrap
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+        .content
+            background-color: #0F2335
+            &::after
+                display: none
+
+        .girl
+            bottom: -62px
+            left: 0
+
+    @media screen and ( max-width: 600px )
+        .content
+            text-align: center
+            display: block
+            background-color: transparent
+            margin-bottom: 40px
+            padding: 0 0 0
+            &::after
+                width: 1800px
+                display: block
+                left: 50%
+                top: -120px
+                transform: translateX(-50%)
+
+        .logo
+            margin-bottom: 20px
+
+        h1
+            font-size: 24px
+            min-height: 74px
+            text-align: center
+            background-position: center center
+            width: 100%
+            margin-bottom: 30px
+
+        .girl
+            width: 192px
+            bottom: -7px
+
+        .spinit
+            width: 300px
+            height: 300px
+
+        .spin
+            &-middle
+                width: 50px
+                height: 50px
+
+        .spinflapper
+            width: 300px
+            height: 300px
+
+@keyframes wheal
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+@keyframes scale
+    0%
+        transform: scale(0.95)
+    100%
+        transform: scale(1.1)
+
+@keyframes lights
+    0%
+        transform: rotate(0deg) translate(-50%, -50%)
+    100%
+        transform: rotate(360deg) translate(-50%, -50%)
+
+@keyframes shadow
+    0%
+        box-shadow: 0 0 50px 20px red
+    100%
+        box-shadow: 0 0 50px 40px #d1ae00a3
+
+@keyframes opacity
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+

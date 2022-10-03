@@ -1,0 +1,552 @@
+@import 'elements'
+@import 'header'
+@import 'slick'
+@import 'footer'
+
+.hero
+    padding: 80px 0 0
+    background-image: url('../img/hero-3.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh
+    padding-bottom: 80px
+    min-height: 600px
+    max-height: 1080px
+    color: #000
+    background-position: center center
+    .section
+        &__heading
+            font-size: 60px
+            margin-bottom: 15px
+
+        &__descr
+            margin: 0 0 60px
+
+    &-form
+        max-width: 80%
+        margin: 0 auto
+        padding: 40px 50px 50px
+        background-color: #fff
+        border-radius: 30px
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, .2)
+        .input-group
+            background-color: #eee
+        .input-group,
+        .btn
+            max-width: 32%
+
+        &__caption
+            font-weight: 600
+            font-size: 18px
+            text-align: center
+            max-width: 500px
+            margin: 0 auto 30px
+
+.benefits
+    padding-top: 120px
+    &-item
+        font-size: 18px
+        line-height: 140%
+        img
+            max-width: 100%
+            max-height: 100px
+            margin: 0 auto 20px
+
+.coating
+    .section
+        &__heading
+            margin-bottom: 60px
+
+.card
+    margin: 10px
+    width: 275px
+    border: none
+    transition: transform .3s ease
+    &:hover
+        transform: translateY(-10px)
+
+    &-img
+        width: 100%
+        height: 220px
+        object-fit: cover
+        border-radius: 4px
+        position: relative
+        z-index: -1
+
+    &-top
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 50%
+            position: absolute
+            bottom: 0
+            left: 0
+            z-index: 1000
+            opacity: .6
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,212,255,0) 100%)
+
+        .shades,
+        .shapes
+            position: absolute
+            bottom: 10px
+            left: 15px
+            color: #fff
+            font-size: 15px
+            z-index: 10000
+        .shapes
+            left: auto
+            right: 15px
+
+    &-body
+        border-radius: 4px
+        padding: 15px 15px 0
+        border: 1px solid #eee
+        margin-bottom: 15px
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .05)
+
+    &-title
+        font-weight: 700
+        font-size: 20px
+        line-height: 130%
+        margin: 0 0 10px
+
+    &-text
+        font-size: 14px
+        line-height: 140%
+        margin: 0 0 15px
+
+    &-price
+        display: inline-block
+        padding: 10px 25px
+        font-weight: 600
+        border-radius: 30px
+        background-color: #eee
+        margin: 0 0 20px
+
+    .btn
+        width: 90%
+        margin: 0 auto
+        padding: 6px 0
+        font-size: 14px
+
+.form-section
+    max-width: 450px
+    margin: 0
+    border: 15px solid #039329
+    padding: 50px 40px
+    .input
+        &-group
+            width: 100%
+            margin-bottom: 14px
+
+    .section__subheading
+        text-align: center
+        font-weight: 700
+        font-size: 26px
+        line-height: 120%
+        margin: 0 0 15px
+
+    &__text
+        font-size: 15px
+        text-align: center
+        margin: 0 auto 30px
+
+    form
+        width: 90%
+        margin: 0 auto
+
+    .btn
+        height: 55px
+        margin-top: 30px
+
+.info-section
+    padding: 90px
+    max-width: 60%
+    &::before
+        opacity: .8
+
+    .section__subheading
+        text-align: left
+        font-weight: 900
+        margin-bottom: 15px
+
+    &__img
+        z-index: -111
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__text
+        font-size: 14px
+        margin-bottom: 16px
+
+    ul
+        font-size: 14px
+        li
+            margin-bottom: 5px
+
+.services
+    .section__heading
+        margin-bottom: 60px
+
+    &-item
+        max-width: 49%
+        padding: 40px 220px 40px 40px
+        overflow: hidden
+        margin-bottom: 2%
+        transition: all ease .3s
+        &:hover
+            transform: scale(1.01)
+            box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .5)
+
+        &::before
+            opacity: .8
+
+    &-title
+        font-size: 20px
+        font-weight: 700
+        line-height: 120%
+        margin: 0 0 15px 0
+
+    &-img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -100000
+        object-fit: cover
+
+    &-icon
+        position: absolute
+        z-index: 100
+        bottom: 5%
+        right: 0%
+        width: 40%
+
+    ul
+        margin-bottom: 20px
+
+    .btn
+        max-width: 250px
+        width: 100%
+
+.guarantee
+    .section
+        &__heading
+            margin-bottom: 10px
+
+        &__subheading
+            text-align: center
+            margin-bottom: 60px
+
+.item-o
+    width: 32%
+    border: 3px solid rgba(0, 0, 0, .2)
+    border-radius: 80px
+    position: relative
+    padding: 25px 30px 25px 140px
+    transition: all .3s ease
+    background-color: #fff
+    &-img
+        position: absolute
+        left: 40px
+        top: 50%
+        transform: translateY(-50%)
+        max-width: 70px
+
+    &-heading
+        font-weight: 700
+        font-size: 24px
+        margin: 0 0 4px 0
+
+    &-text
+        margin: 0
+        font-size: 18px
+
+    &:hover
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1)
+        transform: scale(1.03)
+
+.projects
+    .section
+        &__subheading
+            margin-bottom: 60px
+
+    &-item
+        width: 100%
+        min-height: 400px
+        margin: 10px
+        border: 15px solid #039329
+        position: relative
+
+    &-img
+        width: 50%
+        height: 100%
+        object-fit: cover
+        position: absolute
+        top: 0
+        left: 0
+
+    &-body
+        margin: 0 0 0 auto
+        width: 50%
+        padding: 40px 30px
+
+    &-heading
+        font-size: 26px
+        margin: 0 0 20px
+        font-weight: 700
+        text-transform: uppercase
+
+    &-text
+        margin: 0 0 20px
+
+    .slick
+        &-slide
+            opacity: .3
+            transition: all ease .3s
+        &-arrow
+            box-shadow: none
+
+        &-center
+            opacity: 1
+
+.contacts
+    padding-bottom: 0
+    .form-section
+        max-width: unset
+        padding: 50px 20px
+
+    &-label
+        font-weight: bold
+        margin: 0 0 2px
+        font-size: 18px
+
+    &-box
+        background-color: #eee
+        text-align: left
+        padding: 50px 40px
+        max-width: 48%
+        margin: 0 0 0 auto
+        .section
+            &__subheading
+                text-align: left
+                margin-bottom: 20px
+
+            &__text
+                margin: 0 0 10px
+
+    &-item
+        border-bottom: 1px solid rgba(0, 0, 0, .1)
+        padding: 8px 0
+        a
+            margin: 0
+            padding: 0
+
+    address
+        padding: 15px 0 0
+        font-style: italic
+
+    iframe
+        border: none
+        margin: 100px 0 0
+        width: 100%
+        height: 450px
+        background-color: rgba(0, 0, 0, .1)
+
+@media screen and ( max-width: 1280px )
+    .hero
+        padding-bottom: 100px
+        min-height: unset
+        height: unset
+
+        &-form
+            max-width: 90%
+
+    .info-section
+        padding: 70px
+        max-width: 56%
+
+@media screen and ( max-width: 992px )
+    .hero
+        &-form
+            .input-group
+                max-width: 49%
+                height: 50px
+                padding: 5px
+                margin: 0 0 18px
+
+            .btn
+                max-width: unset
+                width: 100%
+
+    .benefits
+        padding-bottom: 20px
+        &-item
+            margin: 0 auto 40px
+
+    .coating
+        .container
+            max-width: 100%
+
+    .services
+        &-item
+            padding: 36px 30px 30px
+            li
+                font-size: 14px
+
+        &-icon
+            position: absolute
+            top: 30px
+            left: 30px
+            max-width: 40px
+            max-height: 40px
+
+        &-title
+            padding-left: 50px
+            margin-bottom: 25px
+
+    .item-o
+        width: 48%
+        margin: 0 auto 30px
+        padding: 20px 30px 20px 120px
+
+        &-img
+            max-width: 55px
+            left: 34px
+
+    .projects
+        .container
+            max-width: 100%
+            padding: 0
+        &-item
+            max-width: 500px
+            min-height: unset
+        &-img
+            position: static
+            display: block
+            width: 100%
+
+        &-body
+            width: 100%
+            padding: 30px 30px 40px
+
+    .info-section
+        max-width: 100%
+        margin: 0
+        order: 1
+
+    .form-section
+        order: 2
+        max-width: 520px
+        margin: 30px auto
+
+    .contacts
+        &-box
+            max-width: 100%
+            width: 100%
+            order: 1
+
+        iframe
+            order: 3
+
+        .form-section
+            margin-bottom: 0
+
+@media screen and ( max-width: 767px )
+    .hero
+        &-form
+            max-width: 100%
+            padding: 40px 40px 50px
+            .input-group
+                max-width: 100%
+
+            &__caption
+                font-size: 16px
+
+        .section__heading
+            font-size: 46px
+            max-width: 336px
+            margin: 0 auto 15px
+
+    .services
+        &-item
+            padding: 30px 20px
+            max-width: 90%
+            margin: 0 auto 30px
+
+        &-title
+            font-size: 18px
+            min-height: 40px
+            display: flex
+            align-items: center
+            padding-left: 60px
+
+        &-icon
+            top: 30px
+
+    .guarantee
+
+    .item-o
+        width: 90%
+
+@media screen and ( max-width: 576px )
+    .hero 
+        padding-top: 50px
+    .benefits
+        &-item
+            padding-top: 35px
+            border-top: 1px solid rgba(0, 0, 0, .1)
+            &:last-of-type
+                padding-bottom: 40px
+                border-bottom: 1px solid rgba(0, 0, 0, .1)
+
+    .projects
+        &-img
+            min-height: 250px
+
+        &-item
+            border-width: 10px
+            max-width: unset
+            margin: 5px
+
+        &-body
+            padding: 20px 20px 30px
+
+        &-heading
+            font-size: 20px
+            margin-bottom: 15px
+
+        &-text
+            font-size: 14px
+            line-height: 120%
+            margin-bottom: 10px
+
+        ul
+            li
+                font-size: 14px
+                line-height: 120%
+                margin-bottom: 8px
+
+    .info-section
+        padding: 40px 20px
+
+    .form-section
+        border-width: 10px
+        padding: 40px 20px
+        form
+            width: 100%
+
+        .section__subheading
+            font-size: 20px
+            line-height: 130%
+
+        &__text
+            font-size: 13px

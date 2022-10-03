@@ -1,0 +1,71 @@
+header
+    padding: 7px 0 13px
+    position: fixed
+    background-color: #000
+    z-index: 999999
+    top: 0
+    left: 0
+    width: 100%
+    .container
+
+    .btn
+        &-menu
+            display: none
+
+    .nav
+        position: absolute
+        z-index: 111
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        &__link
+            font-weight: 400
+            font-size: 24px
+            line-height: 23px
+            text-transform: uppercase
+            padding: 4px 15px
+            &:hover
+                opacity: 1
+                color: #D1B941
+
+        .btn
+            display: none
+
+        .socials__link
+            display: none
+
+    @media screen and ( max-width: 800px )
+        .nav
+            display: none
+            position: absolute
+            background-color: #000
+            top: 60px
+            width: 100%
+            padding: 10px 0 0
+            border: 1px solid #fff
+            border-left: none
+            border-right: none
+            li
+                padding: 10px
+                text-align: left
+                a
+                    display: block
+
+            .socials__link
+                display: inline-block
+                padding: 0 10px
+
+        .btn
+            margin: 0 30px 0 auto
+            &-menu
+                display: block
+
+    @media screen and ( max-width: 500px )
+        .btn
+            display: none
+
+        .nav
+            padding-bottom: 10px
+            .btn
+                display: block
+                margin: 0

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Jura:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap')
+
+$prime: #FF9A24
+
+body
+    color: #000
+    font-family: 'Roboto', sans-serif
+
+    // &::-webkit-scrollbar
+    //     width: 14px
+
+    // &::-webkit-scrollbar-track
+    //     background: linear-gradient(157.06deg, #FFDB5B 0%, #E6AC0D 100%)
+    //     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset
+    //     box-shadow: 0 0 2px rgba(112, 112, 112, 0.2) inset
+
+    // &::-webkit-scrollbar-thumb
+    //     background: linear-gradient(157.06deg, #7CE0E1 0%, #279293 100%)
+    //     border-radius: 8px
+    //     &:hover
+    //         background: linear-gradient(157.06deg, #7CE0E1 0%, #279293 100%)
+
+h1,h2,h3,h4,h5,h6
+    font-family: "Jura", sans-serif
+
+img
+    max-width: 100%
+
+.btn
+    font-weight: 600
+    // font-size: 16px
+    // line-height: 19px
+    outline: none
+    box-shadow: none !important
+    transition: all ease .3s
+    border-radius: 0 15px 0 15px
+    &:hover,
+    &:focus
+        color: $prime
+        background-color: transparent
+        border-color: $prime
+
+    &-primary
+        border-color: transparent
+        background-color: $prime
+        color: #fff
+        &:active,
+        &:focus
+            background-color: transparent !important
+            border-color: $prime !important
+            color: $prime !important
+
+    &-outline
+        &-primary
+            border-color: $prime
+            color: $prime
+            &:hover,
+            &:focus
+                border-color: $prime
+                background-color: $prime
+                color: #fff
+            &:active
+                border-color: $prime !important
+                background-color: $prime !important
+                color: #fff !important
+
+    &:active
+        transform: scale(.95)
+
+    &-lg
+        padding: 10px 28px 10px
+
+p
+    margin: 0
+
+section
+    padding: 100px 0
+
+.section
+    &-heading
+        font-weight: 700
+        font-size: 50px
+        line-height: 110%
+        margin-bottom: 60px
+
+    &-text
+        text-align: center
+        font-weight: 400
+        font-size: 18px
+        line-height: 160%
+        margin-bottom: 30px
+
+    &-subheading
+        font-weight: 700
+        font-size: 36px
+        line-height: 110%
+        margin-bottom: 60px
+
+.its-image
+    display: inline-block
+    overflow: hidden
+    border-radius: 0 30%
+    height: 550px
+    width: 650px
+    img
+        height: 100%
+        width: 100%
+        object-fit: cover
+        z-index: -1000
+        position: relative
+
+.bg
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 1
+    position: relative
+    color: #fff
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        opacity: .6
+        z-index: -1
+        background-color: #000
+
+@media screen and ( max-width: 1140px )
+    section
+        padding: 80px 0
+
+    .section
+        &-heading
+            font-size: 46px
+            line-height: 110%
+
+        &-subheading
+            font-size: 28px
+
+        &-text
+            font-size: 16px
+            line-height: 140%
+
+    .item
+        &:last-child
+            margin-bottom: 0
+
+@media screen and ( max-width: 768px )
+    section
+        padding: 60px 0
+
+    .section
+        &-heading
+            font-size: 34px
+            line-height: 110%
+            margin-bottom: 50px
+
+        &-subheading
+            font-size: 20px
+
+        &-text
+
+@media screen and ( max-width: 768px )
+
+    // .section
+    //     &-heading
+    //         font-size: 28px
+    //         line-height: 120%
+
+    //     &__descr
+    //         font-size: 18px
+    //         line-height: 125%

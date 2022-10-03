@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Любимая кухня</title>
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="img/logo.png" class="logo" alt="logo">
+        <button class="menu"></button>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Запись на встречу с дизайнером</h1>
+            <form onsubmit="window.location.href = './thanks.html'; return false;" class="wrapper">
+                <div class="left">
+                    <div class="dropdown">
+                        <p class="dropdown-btn">Выберите салон</p>
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">
+                                <input type="radio" name="designer" id="designer-1">
+                                <label for="designer-1">
+                                    <span class="dropdown__heading">МЦ Румянцево</span>
+                                    <span class="text">Москва, Киевское шоссе, 22 км, МЦ Румянцево вл4 блок В, 3 этаж</span>
+                                </label>
+                            </div>
+                            <div class="dropdown-item">
+                                <input type="radio" name="designer" id="designer-2">
+                                <label for="designer-2">
+                                    <span class="dropdown__heading">МТК «Гранд»</span>
+                                    <span class="text">г. Химки, Бутаково 4, 1 сектор, 2 этаж (Ленинградское шоссе, 100м. от МКАД)</span>
+                                </label>
+                            </div>
+                            <div class="dropdown-item">
+                                <input type="radio" name="designer" id="designer-3">
+                                <label for="designer-3">
+                                    <span class="dropdown__heading">ТК Шоколад</span>
+                                    <span class="text">
+                                        г. Реутов, МКАД, 2-й километр, д. 2, 3 этаж (парковка уровень F)
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="datepicker"></div>
+                </div>
+                <div class="fieldset">
+                    <p class="fieldset__heading">Удобное для вас время</p>
+                    <div class="row">
+                        <div class="inp-wrap">
+                            <input type="radio" name="time" id="time-1">
+                            <label for="time-1">10:00</label>
+                        </div>
+                        <div class="inp-wrap">
+                            <input type="radio" name="time" id="time-2">
+                            <label for="time-2">12:00</label>
+                        </div>
+                        <div class="inp-wrap">
+                            <input type="radio" name="time" id="time-3">
+                            <label for="time-3">14:00</label>
+                        </div>
+                        <div class="inp-wrap">
+                            <input type="radio" name="time" id="time-7">
+                            <label for="time-7">14:00</label>
+                        </div>
+                        <div class="inp-wrap">
+                            <input type="radio" name="time" id="time-4">
+                            <label for="time-4">16:00</label>
+                        </div>
+                        <div class="inp-wrap">
+                            <input type="radio" name="time" id="time-5">
+                            <label for="time-5">18:00</label>
+                        </div>
+                        <div class="inp-wrap">
+                            <input type="radio" name="time" id="time-6">
+                            <label for="time-6">20:00</label>
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Имя" required>
+                    <input type="tel" placeholder="+7" class="inp-tel" required>
+                    <button type="submit" class="btn">Записаться</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+.modal
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 900009
+    background-color: rgba(#000, 0.6)
+    padding: 0
+    box-sizing: border-box
+    &-close
+        display: inline-block
+        transform: none
+        color: #000
+        font-size: 24px
+        margin-bottom: 68px
+        background-color: transparent
+        &:hover
+            opacity: 0.4
+
+    &-content
+        display: block
+        position: absolute
+        top: 0
+        background: #FFFFFF
+        width: 480px
+        max-width: 100%
+        height: 100vh
+        max-height: 100vh
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+
+        nav
+            margin-bottom: 80px
+
+        .bottom,
+        nav
+            a
+                text-transform: uppercase
+                margin: 0 0 32px
+                display: block
+                font-size: 16px
+                line-height: 16px
+                &:last-of-type
+                    margin-bottom: 0
+
+    &.is-open
+        display: block
+
+    &#menu
+        .modal
+            &-content
+                left: 0
+                padding: 105px
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: flex-start
+
+    &#cart
+        .modal
+            &-content
+                overflow-y: scroll
+                right: 0
+                padding: 40px 48px
+                height: 100vh
+                max-height: unset
+                display: block
+                .cart
+                    &__heading
+                        text-align: center
+                        font-size: 20px
+                        line-height: 130%
+                        text-transform: uppercase
+                        margin-bottom: 48px
+                    &-item
+                        &__heading
+                            font-size: 16px
+                            line-height: 130%
+                        &__art
+                            font-size: 12px
+                            margin-bottom: 8px
+                        &__price
+                            font-size: 16px
+                            margin-bottom: 16px
+                        &__img
+                            width: 120px
+                            height: 152px
+
+                        .col
+                            margin-right: 16px
+                            &:last-of-type
+                                margin: 0
+
+                    &__total
+                        font-size: 16px
+                        line-height: 130%
+                        text-transform: uppercase
+                        color: #393939
+                        margin-bottom: 48px
+
+                .btn
+                    display: block
+                    font-size: 14px
+                    margin-bottom: 20px
+                    &-2
+                        display: block
+
+                &::-webkit-scrollbar
+                    width: 10px
+                    &-track
+                        background: #fff
+                    &-thumb
+                        border-radius: 10px
+                        transition: all ease .3s
+                        background: rgba(0, 0, 0, .2)
+                        &:hover
+                            background: rgba(0, 0, 0, .5)
+
+            &-close
+                display: block
+                max-width: 40px
+                margin: 0 0 40px auto
+
+    &#search
+        .modal
+            &-content
+                right: 0
+                padding: 70px 48px
+                input
+                    font-size: 16px
+                    line-height: 130%
+                    border: none
+                    border-bottom: 1px solid #A8A8A8
+                    padding: 0 0 8px
+                    height: 32px
+                    margin: 0 0 48px 0
+                    color: #000
+                    &::placeholder
+                        color: #A8A8A8
+
+                .search
+                    &__heading
+                        margin-bottom: 16px
+                        font-size: 14px
+                        line-height: 130%
+                        text-transform: uppercase
+                        color: #585858
+
+                    &__item
+                        display: block
+                        font-size: 14px
+                        line-height: 130%
+                        color: #585858
+                        margin-bottom: 8px
+
+            &-close
+                display: block
+                max-width: 40px
+                margin: 0 0 100px auto
+
+    @media screen and ( max-width: 1600px )
+        &#menu
+            .modal
+                &-content
+                    padding: 50px
+
+    @media screen and ( max-width: 900px )
+        &-content
+            max-width: 100%
+            padding: 24px 16px
+
+        &#cart
+            .modal
+                &-close
+                    top: 20px
+                    right: 16px
+                &-content
+                    max-height: unset
+                    margin: 0 auto
+                    padding: 20px 15px
+                    .cart
+                        &__heading
+                            margin-bottom: 40px
+                        &__total
+                            font-size: 14px
+                            margin-bottom: 40px
+
+                    .btn
+                        margin-bottom: 16px
+
+        &#menu
+            background-color: #fff
+
+            .modal
+                &-content
+                    max-width: 300px
+                    max-height: 640px
+                &-close
+                    margin-bottom: 0
+
+    @media screen and ( max-width: 700px )
+        &#cart,
+        &#search
+            padding: 0
+            background-color: #fff
+            .modal
+                &-content
+                    padding: 24px 16px
+                    width: 100%

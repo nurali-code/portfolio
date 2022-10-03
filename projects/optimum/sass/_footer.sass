@@ -1,0 +1,56 @@
+.footer
+    padding: 150px 0 150px
+    background-color: #222222
+    color: #fff
+    a:hover
+        text-decoration: underline
+    .headline
+        margin-bottom: 40px
+
+    &__heading
+        font-weight: 700
+        font-size: 18px
+        line-height: 23px
+        color: #FFFFFF
+        margin: 0 0 6px
+
+    &__text,
+    .nav__link
+        font-weight: 400
+        font-size: 18px
+        line-height: 160%
+        color: #FFFFFF
+        margin-bottom: 30px
+
+    &-bottom
+        margin-top: 60px
+        border-top: 1px solid #fff
+        padding: 70px 0 0
+
+    .nav
+        width: 500px
+        &__link
+            display: block
+            min-width: 34%
+            max-width: 49%
+            padding: 10px 0
+            margin-bottom: 0
+
+    @media screen and ( max-width: 1200px  )
+        padding: 60px 0 70px
+
+        .wrap-start:not(.nav)
+            display: block
+
+        .headline
+            margin-bottom: 20px
+
+        &-col
+            margin-bottom: 60px
+            &:last-of-type
+                margin-bottom: 0
+
+        .nav 
+            width: 100%
+            &__link
+                width: 49%

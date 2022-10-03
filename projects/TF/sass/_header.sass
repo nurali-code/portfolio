@@ -1,0 +1,127 @@
+.header
+    .container
+        padding: 30px 0
+        border-bottom: 1px solid #2F2F2F
+
+    .logo
+        display: block
+        margin: 0 45px 0 0
+
+    .btn
+        &-menu
+            display: none
+
+        &-close 
+            display: none
+
+    a
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+
+    .nav
+        white-space: nowrap
+        margin: 0 auto 0 0
+        &__link
+            padding: 30px 15px
+            margin: 0
+            &:hover
+                opacity: 1
+                color: $prime
+                text-decoration: underline
+
+    .login
+        &__link
+            text-transform: uppercase
+            border-bottom: 1px solid #2F2F2F
+            margin-left: 30px
+
+    @media screen and ( max-width: 1500px )
+
+        a
+            font-size: 14px
+
+        .logo
+            max-width: 54px
+            margin-right: 35px
+
+        .nav
+            &__link
+                padding: 30px 10px
+
+        .login
+            &__link
+                margin-left: 15px
+
+    @media screen and ( max-width: 1200px )
+        position: relative
+        z-index: 999999999
+        padding: 0 20px
+
+        .container
+            z-index: 999999999
+            padding: 20px 0
+            max-width: 800px
+
+        .nav
+            display: none
+            width: 100%
+            position: fixed
+            z-index: 999999999
+            top: 0
+            height: 100%
+            left: 0
+            background-color: #fff
+            padding: 0 20px
+
+            &__link
+                font-size: 24px
+                line-height: 29px
+                text-transform: uppercase
+                padding: 10px 0
+                display: block
+                width: 100%
+                &:first-of-type
+                    padding-top: 20px
+                    border-top: 1px solid $black
+                &:last-of-type
+                    padding-bottom: 20px
+                    border-bottom: 1px solid $black
+
+        .btn
+            &-menu
+                display: block
+                height: 40px
+                width: 36px
+                background-image: url('../img/menu.svg')
+                background-repeat: no-repeat
+                background-position: center center
+                background-color: #fff
+                background-size: contain
+                order: 3
+
+            &-close
+                width: 100%
+                text-align: left
+                display: inline-block
+                font-weight: 400
+                font-size: 13px
+                line-height: 130%
+                background-color: transparent
+                color: $black
+                padding: 33px 0 34px
+
+        .login
+            margin: 0 30px 0 auto
+
+    @media screen and ( max-width: 700px )
+        .login
+            display: none
+
+        .btn-menu
+            order: 1
+
+        .logo
+            order: 2
+            margin: 0
+            max-width: 44px

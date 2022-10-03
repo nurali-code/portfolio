@@ -1,0 +1,52 @@
+header
+    background-color: #000
+    .btn
+        margin-left: 30px
+    
+    .navbar
+        width: 100%
+        padding: 5px 0
+        &-brand
+            margin: 0 0 0
+            font-size: 40px
+            font-weight: bolder
+            img
+                max-width: 160px
+
+        &-collapse
+            justify-content: end
+
+        &-nav
+            align-items: center
+
+    .nav
+        &-link
+            font-weight: 400
+            font-size: 18px
+            line-height: 21px
+            padding: 30px 27px !important
+            text-transform: uppercase
+
+    @media screen and ( max-width: 992px )
+        .navbar
+            &-brand
+                font-size: 34px
+                img
+                    max-width: 100px
+
+            &-nav
+                align-items: end
+                padding-bottom: 20px
+                .btn
+                    margin-top: 25px
+                .nav
+                    &-link
+                        width: 100%
+                        border-bottom: 1px solid rgba(#fff, .1)
+                        text-align: right
+                        padding: 12px !important
+
+            &-toggler[aria-expanded="true"]
+                .navbar-toggler-icon
+                    background-image: url('../img/x.svg')
+                    background-repeat: no-repeat

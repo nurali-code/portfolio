@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap')
+
+$prime: #1F5FFF
+$black: #2F2F2F
+$dark_blue: #172957
+
+body
+    min-height: 100vh
+    color: $black
+    display: flex
+    flex-direction: column
+    background-color: #fff
+    font-family: 'Inter', sans-serif
+    position: relative
+    z-index: 1
+
+.container
+    width: 100%
+    max-width: 1400px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+img
+    max-width: 100%
+
+a,
+button
+    text-decoration: none
+    color: $black
+    transition: all ease .3s
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .6
+
+.btn
+    display: inline-block
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    line-height: 25px
+    text-transform: uppercase
+    text-align: center
+    color: #FFFFFF
+    padding: 22px 20px 20px
+    min-width: 286px
+    border-radius: 5px
+    position: relative
+    z-index: 1
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+    padding-right: 72px
+
+    &::before
+        content: ''
+        border-radius: 5px
+        background: linear-gradient(256.74deg, #172957 0%, #1A3F91 100%), #172957
+        transition: all ease .3s
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -10000
+
+    &::after
+        content: ''
+        display: block
+        transition: all ease .3s
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: -1
+        border-radius: 5px
+        top: 0
+        left: 0
+        background-image: url('../img/arrow.svg')
+        background-repeat: no-repeat
+        background-position: center right 38px
+        border: 2px solid transparent
+        box-sizing: border-box
+
+    &:hover
+        padding-right: 20px
+        opacity: 1
+        color: #1A3F91
+        background: transparent
+        &::after
+            background-position: center right -22px
+            border-color: #1A3F91
+        &::before
+            opacity: 0
+
+    &-link
+        text-transform: uppercase
+        padding: 5px 0 2px
+        font-weight: 700
+        font-size: 18px
+        line-height: 21px
+        display: inline-block
+        color: $black
+        border-bottom: 1px solid $black
+        transition: all ease .3s
+        &:hover
+
+    &-2
+        background-color: transparent
+        color: #fff
+        box-shadow: none
+        padding: 21px 21px 19px
+        border: 2px solid #fff
+        &::before,
+        &::after
+            display: none
+        &:hover
+            padding: 21px 21px 19px
+            background-color: #fff
+            color: $dark_blue
+
+    &:active
+        opacity: 1
+        transform: scale(.95)
+
+    &[disabled]
+        cursor: unset
+        animation: none
+
+.wrapper, .slider, .wrap, .wrap-strech, .wrap-start, .box-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.wrap
+    flex-wrap: wrap
+    &-strech
+        flex-wrap: wrap
+        align-items: stretch
+
+    &-start
+        flex-wrap: wrap
+        align-items: start
+
+    &.around
+        justify-content: space-around
+
+    &.evenly
+        justify-content: space-evenly
+
+mark
+    background-color: transparent
+    color: $prime
+
+section
+    padding: 75px 0
+
+ul
+    list-style: none
+    &.checklist
+        li
+            font-weight: 400
+            font-size: 18px
+            line-height: 21px
+            padding: 10px 0
+            color: #1F1F1F
+            background-image: url('../img/check-red.svg')
+            background-repeat: no-repeat
+            background-position: center left
+            padding-left: 32px
+
+.headline
+    padding-top: 20px
+    font-weight: 400
+    font-size: 65px
+    line-height: 79px
+    text-transform: uppercase
+    margin: 0 0 60px
+    border-top: 1px solid #000
+    position: relative
+    z-index: 1
+    min-height: 120px
+    img
+        display: inline-block
+        vertical-align: middle
+
+    &__link
+        position: absolute
+        top: 0
+        right: 0
+        color: #000
+        min-width: 330px
+        height: 120px
+        font-weight: 500
+        font-size: 20px
+        padding: 0 20px
+        line-height: 24px
+        line-height: 120px
+        text-align: center
+        display: inline-block
+        vertical-align: middle
+        text-decoration: underline
+        border-left: 1px solid #000
+        &:hover
+            opacity: 1 
+            color: #1F5FFF
+
+.textline
+    font-weight: 400
+    font-size: 20px
+    line-height: 130%
+    margin: 0 auto 80px
+    color: #1F1F1F
+
+.inp-wrap
+    padding-top: 30px
+    position: relative
+    z-index: 1
+    label
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        display: block
+        position: absolute
+        left: 0
+        top: 38px
+        padding: 0 20px
+        transition: all ease .3s
+
+    input
+        padding: 0 20px
+        position: relative
+        z-index: 10000
+        display: block
+        width: 100%
+        width: 100%
+        height: 40px
+        border-bottom: 1px solid $black
+        margin: 0
+        background-color: transparent
+
+    textarea
+        width: 100%
+        resize: none
+        padding: 4px 20px 0
+        height: 110px
+        border-bottom: 1px solid $black
+
+    textarea,
+    input
+        &:focus ~ label
+            top: 13px
+            font-size: 14px
+            line-height: 17px
+            color: #A2A2A2
+
+    &.active
+        label
+            top: 13px
+            font-size: 14px
+            line-height: 17px
+            color: #A2A2A2
+
+.marquee
+    height: 70px
+    overflow: hidden
+    position: relative
+    border-top: 1px solid #4a4a4a
+    border-bottom: 1px solid #4a4a4a
+    padding: 0
+    margin: 36px 0
+    p
+        font-weight: 700
+        font-size: 22px
+        text-transform: uppercase
+        color: #1F5FFF
+        position: absolute
+        width: 100%
+        height: 70px
+        margin: 0
+        line-height: 70px
+        text-align: center
+        transform: translateX(100%)
+        animation: scroll-left 20s linear infinite
+
+    span
+        display: inline-block
+        margin: 0 30px
+        vertical-align: middle
+
+@keyframes scroll-left
+    0%
+        transform: translateX(100%)
+
+    100%
+        transform: translateX(-100%)
+
+@media screen and ( max-width: 1500px  )
+    .container
+        max-width: 1200px
+
+    .headline
+        font-size: 54px
+        line-height: 58px
+        img
+            max-height: 38px
+
+    .textline
+        font-size: 18px
+        line-height: 130%
+
+    .marquee
+        margin: 26px 0
+
+    section
+        padding: 65px 0
+
+@media screen and ( max-width: 1200px  )
+    .container
+        padding: 0 20px
+
+    .headline
+        font-size: 40px
+        line-height: 125%
+        margin-bottom: 50px
+        min-height: 80px
+        padding-right: 260px
+        &__link
+            min-width: 260px
+            font-size: 16px
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+
+    section
+        padding: 40px 0
+
+    .marquee
+        height: 60px
+        margin: 26px 0
+        p
+            height: 60px
+            line-height: 60px
+            font-size: 18px
+
+        span
+            margin: 0 15px
+
+@media screen and ( max-width: 700px  )
+    .headline
+        font-size: 30px
+        line-height: 36px
+        margin-bottom: 30px
+        padding-right: 150px
+        min-height: 56px
+        &__link
+            font-size: 12px
+            min-width: 150px
+        &.mb-block
+            padding: 20px 0 0
+            .headline__link
+                position: static
+                display: block
+                height: unset
+                min-height: unset
+                padding: 20px 0 0
+                line-height: 100%
+                text-align: left
+                border: none
+
+    .textline
+        font-size: 13px
+        line-height: 130%
+        margin-bottom: 60px
+
+    .btn
+        font-size: 20px
+        min-width: 240px
+        &-2 
+            border-width: 1px
+            padding: 10px 10px
+
+    .marquee
+        margin: 4px 0
+        height: 27px
+        p
+            font-size: 14px
+            line-height: 17px
+            height: 25px
+            line-height: 24px
+
+    section
+        padding: 35px 0
+
+    .mb-block
+        position: static
+        display: block

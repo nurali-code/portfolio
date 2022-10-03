@@ -1,0 +1,261 @@
+@import 'elements'
+@import 'modal'
+
+main
+    margin: 0
+    padding: 20px 0 0
+    min-height: 100vh
+    height: unset
+    overflow: hidden
+    // max-height: 1500px
+    position: relative
+    z-index: 1
+
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -11
+        background-image: url('../img/bg-11.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: left bottom
+        opacity: .5
+
+    .container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        padding-bottom: 100px
+
+    .logo
+        display: block
+        max-width: 250px
+        background-color: #fff
+        border-radius: 20px
+        padding: 10px 60px 10px 60px
+        position: relative
+        box-shadow: 0 0 15px rgba(#000, .5)
+        margin: 0 0 60px 0
+
+    form
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        position: fixed
+        border-radius: 0
+        background-color: rgba(0, 0, 0, .5)
+        top: 0
+        left: 0
+        z-index: 999999999
+        width: 100%
+        height: 100%
+        max-width: 100%
+        visibility: hidden
+        opacity: 0
+        transition: all ease .3s
+
+        &.active
+            visibility: visible
+            opacity: 1
+
+        &::before
+            content: ''
+            display: block
+            width: 400px
+            max-width: 95%
+            background-color: #fff
+            height: 380px
+            position: absolute
+            top: 51%
+            transform: translate(-50%, -50%)
+            left: 50%
+            z-index: -1
+            border-radius: 30px
+
+        input
+            display: block
+            width: 320px
+            max-width: 80%
+
+        .btn
+            margin: 0
+            max-width: 50%
+            &-close
+                right: 30px
+                top: 30px
+
+    h1
+        font-family: 'Gilroy', sans-serif
+        text-transform: uppercase
+        font-weight: 900
+        max-width: 700px
+        font-size: 72px
+        // letter-spacing: 2px
+        line-height: 110%
+        margin: 0 0 60px
+        mark
+            // color: #fff
+
+    .container
+        min-height: 100vh
+
+    .player
+        position: absolute
+        right: -50px
+        bottom: 20px
+        max-height: 92vh
+        max-width: 65%
+        filter: drop-shadow(0 0px 50px rgba(#ffe873, .7))
+
+    .btn
+        margin-top: 10px
+
+    @media screen and ( max-width: 1540px )
+        .logo
+            max-width: 200px
+            padding: 9px 50px 9px 50px
+            border-radius: 18px
+            margin-bottom: 40px
+
+        h1
+            font-size: 48px
+            max-width: 400px
+            margin-bottom: 30px
+
+        p
+            font-size: 16px
+            max-width: 400px
+            margin-bottom: 50px
+
+        .subheading
+            max-width: 405px
+            font-size: 26px
+
+        .player
+            max-width: 62%
+
+        form
+            .btn
+                min-height: 60px
+                line-height: 60px
+                font-size: 22px
+                min-width: 220px
+                margin-top: 10px
+
+            &::before
+                height: 320px
+                width: 350px
+
+            input
+                max-width: 280px
+
+        input
+            min-height: 50px
+            margin-bottom: 15px
+
+footer
+    font-size: 14px
+    padding: 15px 0
+    text-align: left
+    a
+        color: #fff
+
+    .container
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+
+    .right
+        text-align: right
+
+@media screen and ( max-width: 940px )
+    main
+        text-align: center
+        &::before
+            background-position: right bottom
+
+        .container
+            padding-bottom: 0
+
+        .logo
+            left: 0
+            margin: 0 auto 30px
+
+        .btn
+            position: relative
+            z-index: 1000
+            transform-origin: 50% 50%
+
+        h1
+            max-width: 600px
+            margin: 0 auto 40px
+
+        .btn
+            margin: 0 auto
+
+        form
+            &::before
+                height: 300px
+
+        .player
+            position: static
+            display: block
+            width: 100%
+            max-width: 100%
+
+    footer
+        padding: 15px 0
+        .container
+            display: block
+            padding: 0 15px
+        .right
+            text-align: left
+            padding-top: 10px
+
+@media screen and ( max-width: 700px )
+    main
+        &::before
+            background-position: center bottom
+
+        .container
+            padding: 0 15px 30px
+
+        h1
+            font-size: 35px
+            line-height: 120%
+            margin-bottom: 20px
+            max-width: 300px
+
+        p
+            font-size: 13px
+            max-width: 310px
+
+        .logo
+            max-width: 130px
+            padding: 0
+            background-color: transparent
+            box-shadow: none
+            margin-bottom: 10px
+
+        .btn-sm
+            margin-bottom: 40px
+
+        .player
+            margin: auto 0 0 0
+            transform: scale(1.2)
+
+        .btn
+            min-height: 50px
+            line-height: 50px
+            font-size: 18px
+            min-width: 180px
+
+    footer
+        font-size: 13px

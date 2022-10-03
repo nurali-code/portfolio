@@ -1,0 +1,36 @@
+footer
+    margin-top: 75px
+    padding: 55px 0
+    font-weight: 400
+    font-size: 24px
+    line-height: 27px
+    background-color: #EFEFEF
+    .nav
+        &__link
+            margin: 0 30px
+
+    @media screen and ( max-width: 1200px  )
+        padding: 40px 0
+        .container
+            display: block
+            text-align: center
+        nav
+            margin: 10px 0 30px
+        .nav
+            &__link 
+                margin: 0
+                &:nth-child(2)
+                    margin: 0 10px
+
+    @media screen and ( max-width: 700px  )
+        padding: 50px 0 10px
+        font-size: 18px
+        nav
+            margin: 20px 0 30px
+            margin-bottom: 60px
+        .nav
+            &__link 
+                margin: 0
+                display: block
+                &:nth-child(2)
+                    margin: 20px 0

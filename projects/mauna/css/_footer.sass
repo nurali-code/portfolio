@@ -1,0 +1,126 @@
+.footer
+    padding: 80px 0
+    background: #F9F9F9
+    margin: auto 0 0 0
+    .container
+        max-width: 1240px
+
+    .container,
+    &-bottom,
+    nav
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+
+    &__subheading
+        text-transform: uppercase
+        font-size: 16px
+        line-height: 16px
+        margin: 0 0 24px
+
+    nav
+        width: 670px
+        .col
+            max-width: 30%
+            &:last-child
+                max-width: 39%
+
+    address
+        display: block
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 140%
+        color: #585858
+
+    &-form
+        width: 344px
+        form
+            margin: 0 0 16px
+            display: flex
+            input
+                width: 70%
+            .btn
+                width: 30%
+        p
+            font-weight: normal
+            font-size: 14px
+            line-height: 130%
+            color: #A8A8A8
+            margin-bottom: 24px
+            a
+                color: #A8A8A8
+                text-decoration: underline
+
+    &-socials
+        a
+            display: inline-block
+            margin-right: 14px
+            color: #585858
+            &:last-child
+                margin: 0
+
+    &-bottom
+        width: 100%
+        padding-top: 48px
+        p
+            font-size: 14px
+            line-height: 130%
+            letter-spacing: 0.03em
+            color: #A8A8A8
+            a
+                color: #A8A8A8
+                text-decoration: underline
+
+    nav
+        a
+            display: block
+            font-size: 16px
+            line-height: 16px
+            color: #585858
+            margin-bottom: 16px
+    
+    @media screen and ( max-width: 1390px )
+        .container 
+            max-width: 1100px
+
+    @media screen and ( max-width: 1100px )
+        padding: 60px 0
+        nav 
+            width: 100%
+            
+        &-form 
+            padding-top: 40px
+            max-width: 400px
+            margin: 0 auto 0 0
+
+    @media screen and ( max-width: 1100px )
+        padding: 56px 0
+        .container 
+            max-width: 400px
+        nav 
+            .col 
+                max-width: 49%
+                min-width: 132px
+                margin-bottom: 56px
+                &:last-child
+                    width: 100%
+                    max-width: 100%
+                    a 
+                        display: inline-block
+                        &:nth-child(2)
+                            float: right
+
+        address
+            max-width: 280px
+
+        &-bottom 
+            padding-top: 56px
+            display: block
+            p 
+                &:last-child
+                    margin-top: 24px
+
+        &-form 
+            padding: 0

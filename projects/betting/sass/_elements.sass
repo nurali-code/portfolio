@@ -1,0 +1,144 @@
+
+body
+    color: #fff
+    background-color: #000
+    min-height: 100vh
+    font-family: 'Gilroy', sans-serif
+    position: relative
+    z-index: 1
+
+    // &::-webkit-scrollbar
+    //     width: 14px
+
+    // &::-webkit-scrollbar-track
+    //     background: linear-gradient(157.06deg, #FFDB5B 0%, #E6AC0D 100%)
+    //     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset
+    //     box-shadow: 0 0 2px rgba(112, 112, 112, 0.2) inset
+
+    // &::-webkit-scrollbar-thumb
+    //     background: linear-gradient(157.06deg, #7CE0E1 0%, #279293 100%)
+    //     border-radius: 8px
+    //     &:hover
+    //         background: linear-gradient(157.06deg, #7CE0E1 0%, #279293 100%)
+
+*
+    border: none
+    outline: none
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.container
+    width: 100%
+    max-width: 1520px
+    margin: 0 auto
+    padding: 0
+    position: relative
+
+img
+    max-width: 100%
+
+.btn
+    text-decoration: none
+    cursor: pointer
+    overflow: hidden
+    font-family: 'Gilroy', sans-serif
+    text-align: center
+    min-width: 350px
+    font-weight: 700
+    font-size: 30px
+    line-height: 80px
+    min-height: 90px
+    color: #000
+    border-radius: 100px
+    background-color: #ffd500
+    box-shadow: 0 7px 0 0px #a48800
+    transition: all ease .3s
+    position: relative
+    z-index: 1
+
+    &::after
+        content: ''
+        display: inline-block
+        width: 0px
+        height: 200%
+        position: absolute
+        z-index: -1
+        top: -40%
+        left: -100px
+        box-shadow: 0 0 80px 20px rgba(255, 255, 255, 1)
+        transform: rotateZ(45deg)
+        animation: blink 3.5s ease infinite
+
+    &:active
+        transform: scale(.95)
+
+    &-close
+        cursor: pointer
+        z-index: 1000000
+        position: absolute
+        right: 0
+        padding: 30px
+        text-align: center
+        line-height: 40px
+        font-size: 42px
+        display: inline-block
+        color: #fff
+
+mark
+    background-color: transparent
+    color: #ff7b00
+
+p
+    margin: 0
+
+    font-family: 'Gilroy', sans-serif
+a
+    color: #000
+
+input
+    display: block
+    width: 100%
+    max-width: 500px
+    border-radius: 50px
+    min-height: 70px
+    margin-bottom: 20px
+    background-color: #fff
+    font-family: 'Gilroy', sans-serif
+    padding: 0 40px
+    font-size: 20px
+    // box-shadow: inset 0px 3px 15px 0px rgba(0, 0, 0, .5)
+    // box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, .5)
+    border: 1px solid #000
+    font-weight: 500
+    &::placeholder
+        font-weight: 400
+        color: rgba(0, 0, 0, .9)
+
+@keyframes blink
+    0%
+        transform: translateX(-40px) rotateZ(45deg)
+    80%
+        transform: translateX(-40px) rotateZ(45deg)
+    100%
+        transform: translateX(600px) rotateZ(45deg)
+
+@media screen and ( max-width: 1540px )
+    .container
+        padding: 0 50px
+        max-width: 1200px
+
+    .btn
+        min-height: 70px
+        line-height: 70px
+        font-size: 25px
+        min-width: 250px
+        box-shadow: 0 4px 0 0px #d3b000, 0 0px 20px -5px #ffd500
+
+    input
+        padding: 0 20px 0 30px
+        font-size: 16px
+
+@media screen and ( max-width: 500px )
+    .btn
+        font-size: 22px
